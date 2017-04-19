@@ -2,14 +2,14 @@
 	Settings
 \******************************************************************************/
 
-@import url('https://fonts.googleapis.com/css?family=Poppins:300,700');
+@import url('https://fonts.googleapis.com/css?family=Heebo:100,400,900');
 // Variables
-$base-font: 'Poppins',
+$base-font: 'Heebo',
 'Open Sans',
 'Roboto',
 'Helvetica Neue',
 sans-serif;
-$header-font: 'Poppins',
+$header-font: 'Heebo',
 'Open Sans',
 'Roboto',
 'Helvetica Neue',
@@ -50,7 +50,7 @@ html {
 body {
     font-family: $base-font;
     line-height: $base-line-height;
-    font-weight: 300;
+    font-weight: 400;
 }
 
 em,
@@ -94,36 +94,47 @@ h5,
 h6 {
     font-family: $header-font;
     line-height: 1.2;
-    text-transform: uppercase;
+    margin: 0;
 }
 
-h1,
-.h1 {
+h1.display {
+    font-weight: 100;
     @include font-size(2.5);
-    @include leading-rows(1);
-    @include trailing-rows(1);
+    font-size: 5vw;
+    text-transform: none !important;
 }
 
-h2,
-.h2 {
+h1 {
+    @include font-size(2.5);
+    &.h1 {
+        @include leading-rows(1);
+        @include trailing-rows(1);
+        text-transform: uppercase;
+    }
+}
+
+h2 {
     @include font-size(1.8);
-    @include leading-rows(2);
-    @include trailing-rows(1);
+    &.h2 {
+        @include leading-rows(1);
+        @include trailing-rows(1);
+        text-transform: uppercase;
+    }
 }
 
-h3,
-.h3 {
+h3 {
     @include font-size(1.1);
-    @include leading-rows(1.5);
-    @include trailing-rows(0.5);
+    text-transform: uppercase;
+    &.h3 {
+        @include leading-rows(1);
+        @include trailing-rows(1);
+    }
 }
 
 h4,
 h5,
 h6 {
     @include font-size(1);
-    @include leading-rows(1.5);
-    @include trailing-rows(0.5);
 }
 
 h2,

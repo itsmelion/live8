@@ -84,6 +84,10 @@ function alive8_enqueue_scripts() {
 	wp_enqueue_script( 'jquery' );
 	wp_register_script('jquery-ui', 'https://code.jquery.com/ui/1.12.1/jquery-ui.min.js', false, '1.12.1', true);
 	wp_enqueue_script('jquery-ui');
+	wp_register_script('tween-max', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js', false, '1.19.1', true);
+	wp_enqueue_script('tween-max');
+	wp_register_script('scroll-magic', '//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js', false, '2.0.5', true);
+	wp_enqueue_script('scroll-magic');
 	wp_register_script('tether',  'https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js', false, '1.4.0', true);
 	wp_enqueue_script('tether');
   wp_register_script('bootstrap-js', 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/js/bootstrap.min.js', false, '4.0.0-alpha.6', true);

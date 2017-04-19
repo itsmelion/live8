@@ -24,14 +24,15 @@
 		<![endif]-->
 		<?php wp_head(); ?>
 	</head>
-	<body <?php body_class(); ?> >
+	<body  data-spy="scroll" data-target=".navbar" <?php body_class(); ?> >
 
 			<nav class="navbar navbar-toggleable-md navbar-inverse sticky-top menu">
-
 						<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
 							<span class="navbar-toggler-icon"></span>
 						</button>
-						<a class="navbar-brand" href="#">Live8</a>
+						<a class="blog-name navbar-brand" href="/">
+						<img class="d-inline-block align-middle" src="wp-content/themes/alive/images/logo-white.svg" width="50px" height="auto" alt="logo live8"/>
+						</a>
 						<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 						<div class="navbar-nav">
 							<?php
@@ -46,4 +47,7 @@
 					); ?>
 							</div>
 						</div>
+						<span class="navbar-text hidden-sm-down">
+      				<?php bloginfo( 'description' ); ?>
+    				</span>
 				</nav>

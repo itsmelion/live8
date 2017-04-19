@@ -1,14 +1,14 @@
 header {
 	position: relative;
-	height: 100%;
-	height: 100vh;
+	height: 60%;
+	height: 60vh;
 	width: 100%;
 	border: none;
 	margin: 0;
-	display: block;
 	background-image: url('./images/header.jpg');
 	background-size: cover;
 	background-attachment: fixed;
-	background-position: center bottom;
-	color: white;
+	background-position: center -225px;
+	color: white; // margin-bottom: -64px;
+	// padding-bottom: 110px;
 }

@@ -5,9 +5,23 @@
 }
 
 nav {
-	height: 80px;
+	height: 64px;
 	background-color: #151515;
-	li {
-		padding: 0 1.5rem;
+	li a {
+		border: 1px solid transparent;
+		border-radius: 36px;
+		padding: .5rem 1.5rem;
+		display: inline-block;
+		position: relative;
+		transition: .1s ease-in-out;
+		&:hover,
+		&:focus {
+			border: 1px solid darken($alien, 20%);
+		}
 	}
+}
+
+.current-menu-item {
+	border: 1px solid #2c331a;
+	border-radius: 36px;
 }

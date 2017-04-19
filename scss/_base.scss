@@ -1,81 +1,82 @@
-// variables
-$color1: white;
-$color2: #efefef;
-$color3: #111111;
-$alien: #A1CD3A;
-// default styling
-body {
-	background: $color3;
-	color: $color2;
-}
-
-a {
-	color: $alien;
-	text-decoration: none;
-	cursor: pointer;
-	&:hover {
-		text-decoration: none;
-		color: lighten($alien, 15%);
+	// variables
+	$color1: white;
+	$color2: #efefef;
+	$color3: #111111;
+	$alien: #A1CD3A;
+	$black8: rgba(0, 0, 0, .8);
+	$black5: rgba(0, 0, 0, .5);
+	$black8: rgba(0, 0, 0, .25);
+	$white7: rgba(255, 255, 255, .75);
+	$white5: rgba(255, 255, 255, .5);
+	$white3: rgba(255, 255, 255, .3); // default styling
+	body {
+		background: $color3;
+		position: relative;
+		color: $color2;
 	}
-}
 
-h1 a {
-	color: $color2;
-	&:hover {
-		text-decoration: none;
-		color: lighten($alien, 15%);
+	::selection {
+		background: $alien;
+		color: white;
 	}
-}
 
-img {
-	max-width: 100%;
-	height: auto;
-}
+	::-moz-selection {
+		background: $alien;
+		color: white;
+	}
 
-input,
-textarea {
-	border: 1px solid $color2;
-	background: $color1;
-	padding: 0.3em 0.4em;
-	box-shadow: inset -1px -1px 6px $color1;
-}
+	a {
+		color: $alien;
+		text-decoration: none;
+		cursor: pointer;
+		&:hover {
+			text-decoration: none;
+			color: lighten($alien, 15%);
+		}
+	}
 
-.size-auto,
-.size-full,
-.size-large,
-.size-medium,
-.size-thumbnail {
-	max-width: 100%;
-	height: auto;
-}
+	h1 a {
+		color: $color2;
+		&:hover {
+			text-decoration: none;
+			color: lighten($alien, 15%);
+		}
+	}
 
-.page-content {
-	min-height: calc(100vh - 241px);
-}
-
-section {
-	padding: 2rem 0;
-}
-
-footer {
-	background-color: #151515;
-}
-
-#alia-footer {
-	padding: .5rem 3rem;
-	background-color: #181818;
-	color: #333333;
 	img {
-		width: 25px;
-		height: 25px;
-		margin: 0 18px 0 6px;
+		max-width: 100%;
+		height: auto;
 	}
-}
 
-.reveal {
-	opacity: 1;
-}
+	input,
+	textarea {
+		border: 1px solid $color2;
+		background: $color1;
+		padding: 0.3em 0.4em;
+		box-shadow: inset -1px -1px 6px $color1;
+	}
 
-.disapear {
-	opacity: 0 !important;
-}
+	.size-auto,
+	.size-full,
+	.size-large,
+	.size-medium,
+	.size-thumbnail {
+		max-width: 100%;
+		height: auto;
+	}
+
+	.page-content {
+		min-height: calc(100vh - 241px);
+	}
+
+	section {
+		padding: 2rem 0;
+	}
+
+	.reveal {
+		opacity: 1;
+	}
+
+	.disapear {
+		opacity: 0 !important;
+	}

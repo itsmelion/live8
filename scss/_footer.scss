@@ -1,0 +1,26 @@
+footer {
+  padding: 2em 0 0 0;
+  background-color: #151515;
+  img:not(#alicon) {
+    display: block
+  }
+  address {
+    text-align: center;
+    font-style: normal;
+  }
+  li {
+    text-align: right;
+    list-style: none;
+  }
+}
+
+#alia-footer {
+  padding: .5rem 3rem;
+  background-color: #181818;
+  color: #333333;
+  img {
+    width: 25px;
+    height: 25px;
+    margin: 0 18px 0 6px;
+  }
+}
