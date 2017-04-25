@@ -13,6 +13,13 @@ grunt/node_modules
 ./grunt/node_modules
 /grunt/node_modules
 
+grunt/.sass-cache/
+./grunt/.sass-cache/
+/grunt/.sass-cache/
+grunt/.sass-cache
+./grunt/.sass-cache
+/grunt/.sass-cache
+
 dist/
 ./dist
 ./dist/

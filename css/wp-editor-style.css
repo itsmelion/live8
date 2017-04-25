@@ -6,17 +6,17 @@ body {
 }
 
 ::selection {
-  background: #A1CD3A;
+  background: #a1cd3a;
   color: white;
 }
 
 ::-moz-selection {
-  background: #A1CD3A;
+  background: #a1cd3a;
   color: white;
 }
 
 a {
-  color: #A1CD3A;
+  color: #a1cd3a;
   text-decoration: none;
   cursor: pointer;
 }
@@ -200,5 +200,3 @@ html .mceContentBody {
   font-size: 100%;
   max-width: 650px;
 }
-
-/*# sourceMappingURL=wp-editor-style.css.map */

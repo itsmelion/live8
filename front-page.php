@@ -110,7 +110,7 @@
 			</div>
 
 			<div class="col-sm-12 text-center">
-				<img src="wp-content/themes/alive/images/360.svg" alt="360 gif" width="150" />
+				<img src="wp-content/themes/alive/images/360.gif" alt="360 gif" width="75" />
 				<h1 class="display">360 View</h1>
 				<h3>Dont miss a thing!</h3>
 				<p class="text-justify">
@@ -122,7 +122,7 @@
 
 		<div class="row hidden-sm-down">
 			<div class="col text-center">
-				<img src="wp-content/themes/alive/images/360.svg" alt="360 gif" width="90" />
+				<img src="wp-content/themes/alive/images/360.gif" alt="360 gif" width="90" />
 				<h3>Dont miss a thing!</h3>
 				<p>
 					360degreees experience for living. Uma experiencia 360graus, para guardar na memória.
@@ -133,12 +133,7 @@
 				<img id="oculos" src="wp-content/themes/alive/images/rift.png" alt="oculos <?php bloginfo( 'name' ); ?>" />
 			</div>
 			<div class="col text-center">
-				<img src="wp-content/themes/alive/images/360.svg" alt="360 gif" width="90" />
-				<h3>Dont miss a thing!</h3>
-				<p>
-					360degreees experience for living. Uma experiencia 360graus, para guardar na memória.
-					Voce leva um oculos rift pra levar pra todos seus amigos assistirem e não perder absolutamente nada.
-				</p>
+				<img src="wp-content/themes/alive/images/oculus-right-list.svg" alt="right list" width="300px" />
 			</div>
 		</div>
 		<div id="videoSample" class="row">
