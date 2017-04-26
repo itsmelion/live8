@@ -1,0 +1,15 @@
+#headerhunter {
+	position: relative;
+	height: 60%;
+	height: 75vh;
+	width: 100%;
+	border: none;
+	margin: 0;
+	background-image: url('./images/soundhunter/header1.jpg');
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center top;
+	.lead {
+		margin-top: -250px
+	}
+}

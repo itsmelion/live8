@@ -18,7 +18,7 @@
 			<div class="container">
 			<div class="row">
 				<div class="col-sm-12 col-md-2">
-					<img src="wp-content/themes/alive/images/logo-white.svg" width="75px" height="auto" alt="logo live8"/>
+					<img src="<?php echo get_bloginfo('template_url') ?>/images/logo-white.svg" width="75px" height="auto" alt="logo live8"/>
 					<caption><?php bloginfo( 'description' ); ?></caption>
 				</div>
 				<div class="col-sm-12 col-md-8">
@@ -45,7 +45,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col">
-					<img id="alicon" src="http://alia.ml/logo-small.svg" alt="alia logo"/>
+					<img id="alicon" src="<?php echo get_bloginfo('template_url') ?>/images/alia-icon.svg" alt="alia logo"/>
 					An exclusive design by <a href="http://alia.ml">Alia</a>
 					</div>
 				</div>

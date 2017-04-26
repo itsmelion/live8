@@ -31,7 +31,7 @@
 							<span class="navbar-toggler-icon"></span>
 						</button>
 						<a class="blog-name navbar-brand" href="/">
-						<img class="d-inline-block align-middle" src="wp-content/themes/alive/images/logo-white.svg" width="50px" height="auto" alt="logo live8"/>
+						<img class="d-inline-block align-middle" src="<?php echo get_bloginfo('template_url') ?>/images/logo-white.svg" width="50px" height="auto" alt="logo live8"/>
 						</a>
 						<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 						<div class="navbar-nav">
