@@ -11,9 +11,9 @@
 	</div>
 </header>
 
-<section id="wave-section">
+<section class="wave-section">
 
-	<div id="wave-btn-container">
+	<div class="wave-btn-container">
 		<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 2839 410">
 			<defs>
 				<style>

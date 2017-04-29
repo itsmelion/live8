@@ -8546,9 +8546,162 @@ p ~ h1 {
 
 .apple-card {
   background-position: center center;
+  display: flex;
+  width: 100%;
   background-origin: border-box;
   background-size: cover;
+  padding: 20%;
+  margin: 1rem;
+  min-height: 350px;
+  min-width: 300px;
+  border-radius: 50px;
+  overflow: hidden;
+  transition: transform .1s ease-in-out;
+  box-shadow: 0 0 15px 3px #270831, 0px 2px 3px #1d171f;
+}
+.apple-card .play-btn {
+  width: 50px;
+  height: auto;
+}
+.apple-card .legenda {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 50px;
+  max-height: 200px;
+  position: absolute;
+  height: 50%;
   padding: 1rem;
+  overflow: hidden;
+}
+.apple-card .legenda h3 {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.apple-card:hover .legenda, .apple-card:focus .legenda {
+  height: 120px;
+}
+
+.wave-section {
+  margin-top: 0;
+  padding: 0;
+}
+.wave-section .wave-btn-container {
+  width: 100%;
+  overflow: hidden;
+}
+.wave-section .wave-btn-container svg {
+  width: 1024px;
+  margin: 0 auto;
+  display: block;
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  margin-left: -512px;
+}
+.wave-section .wave-btn-container ul {
+  width: 487px;
+  position: relative;
+  margin: 0 auto;
+  display: block;
+  padding: 0;
+  margin-top: 13px;
+  height: 150px;
+}
+.wave-section .wave-btn-container ul li {
+  width: 125px;
+  height: 125px;
+  position: absolute;
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.4);
+  box-sizing: border-box;
+  border: 3px solid rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  text-align: center;
+  list-style: none;
+  transition: 1s ease;
+}
+.wave-section .wave-btn-container ul li a {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  z-index: 10;
+  color: rgba(255, 255, 255, 0.75);
+  transition: .2s ease;
+}
+.wave-section .wave-btn-container ul li a svg {
+  width: 52px;
+  height: auto;
+  margin: 12px -26px;
+  pointer-events: none;
+}
+.wave-section .wave-btn-container ul li a > span.caption {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.5);
+  display: block;
+  position: relative;
+  top: 74px;
+  font-size: .8rem;
+}
+.wave-section .wave-btn-container ul li:hover, .wave-section .wave-btn-container ul li:focus {
+  background-color: #252f0c;
+  border-color: #749526;
+}
+.wave-section .wave-btn-container ul li:hover a, .wave-section .wave-btn-container ul li:focus a {
+  color: #d2e7a0;
+}
+.wave-section .wave-btn-container ul li:hover .svg-fill, .wave-section .wave-btn-container ul li:focus .svg-fill {
+  fill: white;
+}
+.wave-section .wave-btn-container ul li:nth-of-type(2) {
+  margin: 0 auto;
+  display: block;
+  left: 50%;
+  margin-left: -62px;
+}
+.wave-section .wave-btn-container ul li:nth-of-type(1) {
+  left: 35px;
+}
+.wave-section .wave-btn-container ul li:nth-of-type(3) {
+  right: 35px;
+}
+.wave-section article {
+  margin: 25px auto;
+  width: 100%;
+  min-height: 175px;
+  /*>div {
+    display: inline-block;
+    position: absolute;
+    text-align: center;
+    min-height: 175px;
+    .img-clip {
+      height: 250px;
+      width: 100%;
+      overflow: hidden;
+      display: block;
+      >img {
+        margin: auto;
+        top: -50%;
+        position: relative;
+        width: 100%;
+      }
+    }
+  }*/
+}
+.wave-section article .wave-thing {
+  /*opacity: 0;*/
+  display: inline-block;
+  position: absolute;
+  text-align: center;
+  min-height: 175px;
+}
+@media screen and (max-width: 670px) {
+  .wave-section article {
+    width: 320px;
+  }
+  .wave-section article div {
+    width: 320px;
+  }
 }
 
 .alignleft {
@@ -8688,8 +8841,8 @@ p ~ h1 {
 
 header.home {
   position: relative;
-  height: 60%;
-  height: 60vh;
+  height: 80%;
+  height: 85vh;
   width: 100%;
   border: none;
   margin: 0;
@@ -8698,11 +8851,12 @@ header.home {
   background-attachment: fixed;
   background-position: center -225px;
   color: white;
+  margin-top: -64px;
 }
 
 nav {
   height: 64px;
-  background-color: #151515;
+  background-color: rgba(11, 12, 9, 0.6);
 }
 nav li a {
   border: 1px solid transparent;
@@ -8860,123 +9014,6 @@ article::after {
 .svg-fill {
   fill: #A1CD3A;
   transition: .2s ease;
-}
-
-#wave-section {
-  margin-top: 5rem;
-}
-#wave-section #wave-btn-container {
-  width: 100%;
-  overflow: hidden;
-}
-#wave-section #wave-btn-container svg {
-  width: 1024px;
-  margin: 0 auto;
-  display: block;
-  position: absolute;
-  z-index: -1;
-  left: 50%;
-  margin-left: -512px;
-}
-#wave-section #wave-btn-container ul {
-  width: 487px;
-  position: relative;
-  margin: 0 auto;
-  display: block;
-  padding: 0;
-  margin-top: 13px;
-  height: 150px;
-}
-#wave-section #wave-btn-container ul li {
-  width: 125px;
-  height: 125px;
-  position: absolute;
-  display: inline-block;
-  background-color: #151515;
-  box-sizing: border-box;
-  border: 3px solid #181818;
-  border-radius: 50%;
-  text-align: center;
-  list-style: none;
-  transition: 1s ease;
-}
-#wave-section #wave-btn-container ul li a {
-  display: block;
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  line-height: 85px;
-  z-index: 10;
-  color: rgba(255, 255, 255, 0.75);
-  transition: .2s ease;
-}
-#wave-section #wave-btn-container ul li a svg {
-  width: 60px;
-  height: auto;
-  margin: 10px -30px;
-  position: relative;
-  pointer-events: none;
-}
-#wave-section #wave-btn-container ul li a > span.caption {
-  text-align: center;
-  color: rgba(255, 255, 255, 0.5);
-}
-#wave-section #wave-btn-container ul li:hover, #wave-section #wave-btn-container ul li:focus {
-  background-color: #252f0c;
-  border-color: #749526;
-}
-#wave-section #wave-btn-container ul li:hover a,
-#wave-section #wave-btn-container ul li:hover span.caption, #wave-section #wave-btn-container ul li:focus a,
-#wave-section #wave-btn-container ul li:focus span.caption {
-  color: #d2e7a0;
-}
-#wave-section #wave-btn-container ul li:hover .svg-fill, #wave-section #wave-btn-container ul li:focus .svg-fill {
-  fill: white;
-}
-#wave-section #wave-btn-container ul li:nth-of-type(2) {
-  margin: 0 auto;
-  display: block;
-  left: 50%;
-  margin-left: -62px;
-}
-#wave-section #wave-btn-container ul li:nth-of-type(1) {
-  left: 35px;
-}
-#wave-section #wave-btn-container ul li:nth-of-type(3) {
-  right: 35px;
-}
-#wave-section article {
-  margin: 25px auto;
-  width: 100%;
-  min-height: 175px;
-}
-#wave-section article > div {
-  display: inline-block;
-  position: absolute;
-  text-align: center;
-  min-height: 175px;
-  overflow: hidden;
-}
-#wave-section article > div .img-clip {
-  height: 250px;
-  width: 100%;
-  overflow: hidden;
-  display: block;
-}
-#wave-section article > div .img-clip > img {
-  margin: auto;
-  top: -50%;
-  position: relative;
-  width: 100%;
-}
-@media screen and (max-width: 670px) {
-  #wave-section article {
-    width: 320px;
-  }
-  #wave-section article div {
-    width: 320px;
-  }
 }
 
 .card {
@@ -9244,10 +9281,14 @@ footer li {
   margin: 0 auto;
 }
 
+body.page-template-page-soundhunter {
+  background-color: #420c5a;
+}
+
 #headerhunter {
   position: relative;
-  height: 60%;
-  height: 75vh;
+  height: 90%;
+  height: 90vh;
   width: 100%;
   border: none;
   margin: 0;
@@ -9255,9 +9296,48 @@ footer li {
   background-size: cover;
   background-attachment: fixed;
   background-position: center top;
+  margin-top: -64px;
+  margin-bottom: -80px;
+}
+#headerhunter::after {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  content: '';
+  background: -moz-linear-gradient(top, rgba(125, 185, 232, 0) 50%, #420c5a 94%);
+  background: -webkit-linear-gradient(top, rgba(125, 185, 232, 0) 50%, #420c5a 94%);
+  background: linear-gradient(to bottom, rgba(125, 185, 232, 0) 50%, #420c5a 94%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#873caf', endColorstr='#873caf', GradientType=0);
 }
 #headerhunter .lead {
-  margin-top: -250px;
+  margin-top: -150px;
+}
+
+.triplex {
+  background-color: #46155a;
+  box-shadow: 0 0 15px 3px #270831, 0px 2px 3px #1d171f;
+  border-radius: 150px;
+  padding: 0;
+}
+.triplex article {
+  padding: 1.5rem 1rem;
+  width: 100%;
+  padding-right: 75px;
+}
+.triplex .triplex-pic,
+.triplex .triplex-icon {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: auto;
+  border-radius: 0 150px 150px 0;
+}
+.triplex .triplex-icon {
+  width: 70px;
+  height: auto;
+  padding: 12px 20px 12px 0;
+  margin-left: 35px;
 }
 
 /*# sourceMappingURL=style.css.map */
