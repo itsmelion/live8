@@ -4,7 +4,9 @@
 	// Variables
 	var clickedTab = $(".tabs > .active");
 	var tabWrapper = $(".tab__content");
+	var wavebg = $(".wave-bg");
 	var activeTab = tabWrapper.find(".active");
+	var activewavebg = wavebg.find(".active");
 	var activeTabHeight = activeTab.outerHeight();
 
 	// Show tab on page load
@@ -14,24 +16,28 @@
 	tabWrapper.height(activeTabHeight);
 
 	$(".tabs > li").on("click", function () {
-
+		var el = $(this);
+		var clickedtab = parseInt(el.attr("data-id"));
+		console.log(clickedtab);
 		// Remove class from active tab
 		$(".tabs > li").removeClass("active");
+		wavebg.removeClass("active");
 
 		// Add class active to clicked tab
-		$(this).addClass("active");
+		el.addClass("active");
+		wavebg.eq(clickedtab).addClass("active");
 
 		// Update clickedTab variable
 		clickedTab = $(".tabs .active");
 
 		// fade out active tab
-		activeTab.fadeOut(250, function () {
+		activeTab.fadeOut(150, function () {
 
 			// Remove active class all tabs
 			$(".tab__content > li").removeClass("active");
 
 			// Get index of clicked tab
-			var clickedTabIndex = clickedTab.index();
+			var clickedTabIndex = clickedTab.index() + 1;
 
 			// Add class active to corresponding tab
 			$(".tab__content > li").eq(clickedTabIndex).addClass("active");
@@ -43,38 +49,16 @@
 			activeTabHeight = activeTab.outerHeight();
 
 			// Animate height of wrapper to new tab height
-			tabWrapper.stop().delay(50).animate({
+			tabWrapper.stop().animate({
 				height: activeTabHeight
-			}, 500, function () {
+			}, 300, function () {
 
 				// Fade in active tab
-				activeTab.delay(50).fadeIn(250);
+				activeTab.fadeIn(150);
 
 			});
 		});
 	});
-
-	// Variables
-	var colorButton = $(".colors li");
-
-	colorButton.on("click", function () {
-
-		// Remove class from currently active button
-		$(".colors > li").removeClass("active-color");
-
-		// Add class active to clicked button
-		$(this).addClass("active-color");
-
-		// Get background color of clicked
-		var newColor = $(this).attr("data-color");
-
-		// Change background of everything with class .bg-color
-		$(".bg-color").css("background-color", newColor);
-
-		// Change color of everything with class .text-color
-		$(".text-color").css("color", newColor);
-	});
-
 
 	// Modal
 	function autoPlayModal() {
@@ -93,3 +77,9 @@
 	$(".videoBtn").on("click", autoPlayModal());
 
 })(jQuery);
+
+// Change background of everything with class .bg-color
+//$(".bg-color").css("background-color", newColor);
+
+// Change color of everything with class .text-color
+// $(".text-color").css("color", newColor);
