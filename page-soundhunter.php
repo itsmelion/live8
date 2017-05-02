@@ -7,6 +7,7 @@
 
 
 
+
 /* Template Name: Sound Hunter */
 ?>
 <?php
@@ -19,8 +20,9 @@
 
 
 
+
 /**
-g Pages
+Pages
  *
  * @package WordPress
  * @subpackage alive8
@@ -37,7 +39,8 @@ g Pages
 		 <a>Inscreva a sua banda</a>
 	</div>
  </header>
-<section class="container">
+ <div class="container">
+<section>
 	<div class="row triplex">
 		<div class="col-md-2 col-sm-3 triplex-icon">
 			<img src="<?php echo get_bloginfo('template_url') ?>/images/soundwave.svg" alt="soundwave" />
@@ -51,14 +54,13 @@ g Pages
 		</article>
 	</div>
 </section>
-<div class="container">
-	<div class="row">
+<div class="row">
 		<div class="col-md-12 text-center" style="margin-top: 3em">
 			<h1>Como Funciona?</h1>
 			<p>É bem simples, são 3 etapas te oferecer a melhor experiencia possível.</p>
 		</div>
 	</div>
-</div>
+ </div>
 <?php
 			$itemCaption = array('Briefing', 'Triagem', 'Apresentação');
 $edgeColor = '#420C5A';
@@ -87,8 +89,6 @@ include( locate_template( 'partials/wave.php', false, false ) );
 			</article>
 		</section>
 	</div>
-</div>
-<section class="container">
 	<div class="row triplex">
 		<div class="col-md-2 col-sm-2 triplex-icon">
 			<img src="<?php echo get_bloginfo('template_url') ?>/images/soundwave.svg" alt="soundwave" />
@@ -103,7 +103,7 @@ include( locate_template( 'partials/wave.php', false, false ) );
 		<div class="col-md-3 col-sm-3 triplex-pic" style="background-image: url('<?php echo get_bloginfo('template_url') ?>/images/soundhunter/acoustic.jpg')">
 		</div>
 	</div>
-</section>
+</div>
 <?php get_footer();
 ?>
 <div class="modal fade video-lightbox liveModal" id="liveModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">    

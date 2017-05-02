@@ -17,9 +17,9 @@
 $edgeColor = '#101010';
 include( locate_template( 'partials/wave.php', false, false ) );
 ?>
+<div class="container">
 <section id="insight360">
 	<!-- 360 Insight -->
-	<div class="container-fluid">
 		<div class="row hidden-sm-up">
 			<div class="col-sm-12 text-center">
 				<img id="oculos" src="<?php echo get_bloginfo('template_url') ?>/images/rift.png" alt="oculos <?php bloginfo( 'name' );
@@ -57,9 +57,8 @@ include( locate_template( 'partials/wave.php', false, false ) );
 			<iframe src="https://www.youtube.com/embed/v64KOxKVLVg?ecver=1" frameborder="0" allowfullscreen></iframe>
 			</div>
 		</div>
-	</div>
 </section>
-<div class="container" id="posts">
+<div id="posts">
 	<div class="row">
 		<?php
 			if ( have_posts() ) :
@@ -97,6 +96,7 @@ endif;
       <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
     </div>
   </div>
+</div>
 </div>
 	<?php get_footer();
 ?>

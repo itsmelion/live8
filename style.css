@@ -8597,25 +8597,6 @@ p ~ h1 {
   transition-duration: .5s;
 }
 
-.tabs {
-  display: flex;
-  width: 100%;
-}
-.tabs > li {
-  transition-duration: .25s;
-  display: block;
-  list-style: none;
-  text-align: center;
-  padding: 20px 20px 25px 20px;
-  position: relative;
-  overflow: hidden;
-  cursor: pointer;
-  color: white;
-}
-.tabs > li.active {
-  color: #50555a;
-}
-
 .tab__content {
   position: relative;
   width: 100%;
@@ -8630,7 +8611,6 @@ p ~ h1 {
 }
 .tab__content > li .content__wrapper {
   width: 100%;
-  padding: 45px 40px 40px 40px;
 }
 
 .wave-section {
@@ -8640,6 +8620,10 @@ p ~ h1 {
 .wave-section .wave-btn-container {
   width: 100%;
   overflow: hidden;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
 }
 .wave-section .wave-btn-container svg {
   width: 1024px;
@@ -8658,26 +8642,31 @@ p ~ h1 {
   opacity: 1;
 }
 .wave-section .wave-btn-container .tabs {
-  width: 487px;
   position: relative;
   margin: 0 auto;
-  display: block;
   padding: 0;
-  margin-top: 13px;
   height: 150px;
+  display: inline-flex;
+  width: 487px;
+  flex-wrap: nowrap;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
 }
 .wave-section .wave-btn-container .tabs li {
   width: 125px;
   height: 125px;
   position: absolute;
-  display: inline-block;
+  display: flex;
   background-color: rgba(0, 0, 0, 0.4);
   box-sizing: border-box;
   border: 3px solid rgba(0, 0, 0, 0.5);
   border-radius: 50%;
   text-align: center;
   list-style: none;
-  transition: 1s ease;
+  transition-duration: .25s;
+  overflow: hidden;
+  cursor: pointer;
 }
 .wave-section .wave-btn-container .tabs li.active {
   border-color: #a1cd3a;
