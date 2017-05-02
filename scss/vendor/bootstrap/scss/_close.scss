@@ -1,17 +1,17 @@
 .close {
   float: right;
-  font-size: $close-font-size;
-  font-weight: $close-font-weight;
+  font-size: 42px;
+  font-weight: 100;
   line-height: 1;
-  color: $close-color;
-  text-shadow: $close-text-shadow;
+  width: 48px;
+  color: rgba(white, .7);
   opacity: .5;
-
   @include hover-focus {
-    color: $close-color;
+    color: white;
     text-decoration: none;
     cursor: pointer;
     opacity: .75;
+    outline: #A1CD3A;
   }
 }
 
@@ -19,13 +19,15 @@
 // iOS requires the button element instead of an anchor tag.
 // If you want the anchor version, it requires `href="#"`.
 // See https://developer.mozilla.org/en-US/docs/Web/Events/click#Safari_Mobile
-
 // scss-lint:disable QualifyingElement
 button.close {
-  padding: 0;
+  padding: 6px;
+  line-height: 40px;
   cursor: pointer;
   background: transparent;
   border: 0;
   -webkit-appearance: none;
+  padding-bottom: 12px;
 }
+
 // scss-lint:enable QualifyingElement

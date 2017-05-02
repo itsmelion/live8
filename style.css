@@ -4490,26 +4490,29 @@ button.list-group-item-danger.active {
 
 .close {
   float: right;
-  font-size: 1.5rem;
-  font-weight: bold;
+  font-size: 42px;
+  font-weight: 100;
   line-height: 1;
-  color: black;
-  text-shadow: 0 1px 0 white;
+  width: 48px;
+  color: rgba(255, 255, 255, 0.7);
   opacity: .5;
 }
 .close:focus, .close:hover {
-  color: black;
+  color: white;
   text-decoration: none;
   cursor: pointer;
   opacity: .75;
+  outline: #A1CD3A;
 }
 
 button.close {
-  padding: 0;
+  padding: 6px;
+  line-height: 40px;
   cursor: pointer;
   background: transparent;
   border: 0;
   -webkit-appearance: none;
+  padding-bottom: 12px;
 }
 
 .modal-open {
@@ -4543,18 +4546,16 @@ button.close {
 .modal-dialog {
   position: relative;
   width: auto;
-  margin: auto;
+  margin: 0;
 }
 
 .modal-content {
   position: relative;
   display: flex;
   flex-direction: column;
-  background-color: white;
+  background-color: #111111;
   background-clip: padding-box;
-  border: none;
   outline: 0;
-  width: 80%;
 }
 
 .modal-backdrop {
@@ -4577,7 +4578,8 @@ button.close {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem;
+  padding: 3px;
+  color: white;
 }
 
 .modal-title {
@@ -4588,12 +4590,15 @@ button.close {
 .modal-body {
   position: relative;
   flex: 1 1 auto;
+  padding: 0;
 }
 
 .modal-footer {
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  padding: 0;
+  border-top: 1px solid #eceeef;
 }
 .modal-footer > :not(:first-child) {
   margin-left: .25rem;
@@ -4610,6 +4615,21 @@ button.close {
   overflow: scroll;
 }
 
+@media (min-width: 576px) {
+  .modal-dialog {
+    max-width: 920px;
+    margin: 0 auto;
+  }
+
+  .modal-sm {
+    max-width: 320px;
+  }
+}
+@media (min-width: 992px) {
+  .modal-lg {
+    max-width: 1280px;
+  }
+}
 .tooltip {
   position: absolute;
   z-index: 1070;
@@ -8565,6 +8585,125 @@ p ~ h1 {
 }
 .apple-card:nth-of-type(odd) {
   margin-right: 1rem;
+}
+
+.bg-color {
+  background-color: #46a1de;
+  transition-duration: .5s;
+}
+
+.text-color {
+  color: #46a1de;
+  transition-duration: .5s;
+}
+
+.tabs {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  -webkit-transform: translateY(5px);
+  transform: translateY(5px);
+}
+.tabs > li {
+  transition-duration: .25s;
+  display: table-cell;
+  list-style: none;
+  text-align: center;
+  padding: 20px 20px 25px 20px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  color: white;
+}
+.tabs > li:before {
+  z-index: -1;
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 120%;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.3);
+  -webkit-transform: translateY(100%);
+  transform: translateY(100%);
+  transition-duration: .25s;
+  border-radius: 5px 5px 0 0;
+}
+.tabs > li:hover:before {
+  -webkit-transform: translateY(70%);
+  transform: translateY(70%);
+}
+.tabs > li.active {
+  color: #50555a;
+}
+.tabs > li.active:before {
+  transition-duration: .5s;
+  background-color: white;
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+
+.tab__content {
+  background-color: white;
+  position: relative;
+  width: 100%;
+}
+.tab__content > li {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  list-style: none;
+}
+.tab__content > li .content__wrapper {
+  width: 100%;
+  padding: 45px 40px 40px 40px;
+  background-color: white;
+}
+
+.colors {
+  text-align: center;
+  padding-top: 20px;
+}
+.colors > li {
+  list-style: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border-bottom: 5px solid rgba(0, 0, 0, 0.1);
+  display: inline-block;
+  margin: 0 10px;
+  cursor: pointer;
+  transition-duration: .2s;
+  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+.colors > li:hover {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+  border-bottom: 10px solid rgba(0, 0, 0, 0.15);
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+}
+.colors > li.active-color {
+  -webkit-transform: scale(1.2) translateY(-10px);
+  transform: scale(1.2) translateY(-10px);
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+  border-bottom: 20px solid rgba(0, 0, 0, 0.15);
+}
+.colors > li:nth-child(1) {
+  background-color: #2ecc71;
+}
+.colors > li:nth-child(2) {
+  background-color: #D64A4B;
+}
+.colors > li:nth-child(3) {
+  background-color: #8e44ad;
+}
+.colors > li:nth-child(4) {
+  background-color: #46a1de;
+}
+.colors > li:nth-child(5) {
+  background-color: #bdc3c7;
 }
 
 .wave-section {

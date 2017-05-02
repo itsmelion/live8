@@ -2,87 +2,94 @@
 	// jquery goodness
 
 	// Variables
-	var clickedTab = null;
-	var article = $(".wave-section article > div");
-	var activeStuff = $(".wave-thing").hasClass("active");
-	var activeStuffHeight = article.eq(0).outerHeight();
+	var clickedTab = $(".tabs > .active");
+	var tabWrapper = $(".tab__content");
+	var activeTab = tabWrapper.find(".active");
+	var activeTabHeight = activeTab.outerHeight();
 
+	// Show tab on page load
+	activeTab.show();
 
 	// Set height of wrapper on page load
-	article.height(activeStuffHeight);
+	tabWrapper.height(activeTabHeight);
 
-
-	$(".wave-btn").on("click", function () {
+	$(".tabs > li").on("click", function () {
 
 		// Remove class from active tab
-		$(".wave-thing").removeClass("active");
+		$(".tabs > li").removeClass("active");
 
 		// Add class active to clicked tab
 		$(this).addClass("active");
 
 		// Update clickedTab variable
-		clickedTab = $(".wave-btn .active");
+		clickedTab = $(".tabs .active");
 
 		// fade out active tab
-		article.fadeOut(200, function () {
+		activeTab.fadeOut(250, function () {
 
 			// Remove active class all tabs
-			$(".wave-section article > div").removeClass("active");
+			$(".tab__content > li").removeClass("active");
 
 			// Get index of clicked tab
 			var clickedTabIndex = clickedTab.index();
 
 			// Add class active to corresponding tab
-			$(".wave-thing").eq(clickedTabIndex).addClass("active");
+			$(".tab__content > li").eq(clickedTabIndex).addClass("active");
 
 			// update new active tab
-			activeStuff = article.hasClass("active");
+			activeTab = $(".tab__content > .active");
 
 			// Update variable
-			activeStuffHeight = activeStuff.outerHeight();
+			activeTabHeight = activeTab.outerHeight();
 
 			// Animate height of wrapper to new tab height
-			article.stop().delay(50).animate({
-				height: activeStuffHeight
-			}, 300, function () {
+			tabWrapper.stop().delay(50).animate({
+				height: activeTabHeight
+			}, 500, function () {
 
 				// Fade in active tab
-				activeStuff.delay(50).fadeIn(200);
+				activeTab.delay(50).fadeIn(250);
 
 			});
 		});
 	});
 
+	// Variables
+	var colorButton = $(".colors li");
+
+	colorButton.on("click", function () {
+
+		// Remove class from currently active button
+		$(".colors > li").removeClass("active-color");
+
+		// Add class active to clicked button
+		$(this).addClass("active-color");
+
+		// Get background color of clicked
+		var newColor = $(this).attr("data-color");
+
+		// Change background of everything with class .bg-color
+		$(".bg-color").css("background-color", newColor);
+
+		// Change color of everything with class .text-color
+		$(".text-color").css("color", newColor);
+	});
+
 
 	// Modal
-
-	/*var url = "//youtube.com/embed/" + vid + "?autoplay=1&wmode=transparent&autohide=1&modestbranding=1&rel=0&hd=1";
-		jQuery(iframe, {
-			name: 'videoframe',
-			id: 'videoframe',
-			src: url,
-			width: width_f,
-			height: height_f,
-			frameborder: 0,
-			class: 'youtube-player',
-			type: 'text/html',
-			allowfullscreen: true
-		}).appendTo($midlayer);
-	});*/
 	function autoPlayModal() {
 		var trigger = $("body").find('[data-toggle="modal"]');
 		trigger.click(function () {
 			var theFrame = $(this).data("frame");
 			var theModal = $(this).data("target");
 			var videoSRC = $(this).attr("data-theVideo");
-			var videoSRCauto = videoSRC + "?autoplay=1";
+			var videoSRCauto = videoSRC + "?autoplay=1&wmode=transparent&autohide=1&modestbranding=1&rel=0&hd=1";
 			$(theModal + ' ' + theFrame).attr('src', videoSRCauto);
 			$("[id*=liveModal]").on('hidden.bs.modal', function () {
 				$("[id*=liveModal] " + theFrame).removeAttr('src');
 			});
 		});
 	}
-
 	$(".videoBtn").on("click", autoPlayModal());
 
 })(jQuery);
