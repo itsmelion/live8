@@ -54,4 +54,35 @@
 	});
 
 
+	// Modal
+
+	/*var url = "//youtube.com/embed/" + vid + "?autoplay=1&wmode=transparent&autohide=1&modestbranding=1&rel=0&hd=1";
+		jQuery(iframe, {
+			name: 'videoframe',
+			id: 'videoframe',
+			src: url,
+			width: width_f,
+			height: height_f,
+			frameborder: 0,
+			class: 'youtube-player',
+			type: 'text/html',
+			allowfullscreen: true
+		}).appendTo($midlayer);
+	});*/
+	function autoPlayModal() {
+		var trigger = $("body").find('[data-toggle="modal"]');
+		trigger.click(function () {
+			var theFrame = $(this).data("frame");
+			var theModal = $(this).data("target");
+			var videoSRC = $(this).attr("data-theVideo");
+			var videoSRCauto = videoSRC + "?autoplay=1";
+			$(theModal + ' ' + theFrame).attr('src', videoSRCauto);
+			$("[id*=liveModal]").on('hidden.bs.modal', function () {
+				$("[id*=liveModal] " + theFrame).removeAttr('src');
+			});
+		});
+	}
+
+	$(".videoBtn").on("click", autoPlayModal());
+
 })(jQuery);

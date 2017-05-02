@@ -4,30 +4,32 @@
 
 .apple-card {
   background-position: center center;
-  display: flex;
-  width: 100%;
   background-origin: border-box;
   background-size: cover;
-  padding: 20%;
-  margin: 1rem;
-  min-height: 350px;
+  margin: 1rem 0;
+  height: 326px;
   min-width: 300px;
+  width: 50%;
   border-radius: 50px;
   overflow: hidden;
-  transition: transform .1s ease-in-out;
   @include shadow();
   .play-btn {
     width: 50px;
-    height: auto;
+    height: 50px;
+    margin: auto;
+    position: absolute;
+    margin-top: 128px;
   }
   .legenda {
     background: rgba(0, 0, 0, .5);
-    border-radius: 50px;
-    max-height: 200px;
-    position: absolute;
-    height: 50%;
-    padding: 1rem;
+    border-radius: 45px 45px 0 0;
+    position: relative;
+    bottom: 0;
+    height: 163px;
+    padding: 3px 35px 20px 45px;
     overflow: hidden;
+    transition: .6s ease-in-out;
+    transform: translate3d(0, 272px, 0);
     h3 {
       white-space: nowrap;
       text-overflow: ellipsis;
@@ -37,8 +39,11 @@
   &:hover,
   &:focus {
     .legenda {
-      height: 120px;
+      transform: translate3d(0, 173px, 0);
     }
+  }
+  &:nth-of-type(odd) {
+    margin-right: 1rem;
   }
 }
 

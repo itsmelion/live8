@@ -1,14 +1,42 @@
-<?php /* Template Name: Sound Hunter */ ?>
+<?php 
+
+
+
+
+
+
+
+
+
+
+
+
+/* Template Name: Sound Hunter */
+?>
 <?php
+
+
+
+
+
+
+
+
+
+
+
+
+
 /**
- * alive8 template for displaying Pages
+ate for displaying Pages
  *
  * @package WordPress
  * @subpackage alive8
  * @since alive8 1.0
  */
  ?>
-<?php get_header(); ?>
+<?php get_header();
+?>
  <header id="headerhunter" class="d-flex flex-column align-items-center justify-content-center">
  	<div class="lead text-center">
 		 <h1 class="display">SoundHunters</h1>
@@ -17,13 +45,12 @@
 		 <a>Inscreva a sua banda</a>
 	</div>
  </header>
-
-<section class="container triplex">
-	<div class="d-inline-flex flex-row align-items-center align-content-center">
-		<div>
-			<img class="triplex-icon" src="<?php echo get_bloginfo('template_url') ?>/images/soundwave.svg" alt="soundwave" />
+<section class="container">
+	<div class="row triplex">
+		<div class="col-md-2 col-sm-3 triplex-icon">
+			<img src="<?php echo get_bloginfo('template_url') ?>/images/soundwave.svg" alt="soundwave" />
 		</div>
-		<article class="align-items-stretch align-content-stretch">
+		<article class="col-md-10 col-sm-9 d-flex flex-column align-items-stretch align-content-stretch">
 			<h3>O que é SoundHunter?</h3>
 			<p>
 				É um serviço para ajudar a escolher o melhor tipo de música para o seu evento 
@@ -32,7 +59,6 @@
 		</article>
 	</div>
 </section>
-
 <div class="container">
 	<div class="row">
 		<div class="col-md-12 text-center" style="margin-top: 3em">
@@ -41,7 +67,6 @@
 		</div>
 	</div>
 </div>
-
 <section class="wave-section">
 	<div class="wave-btn-container">
 		<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 2839 410">
@@ -52,25 +77,21 @@
 					#wave2{fill:url(#item2)}
 					#wave-none{fill:url(#item-none)}
 				</style>
-
 				<linearGradient id="item-none" y1="50%" x2="100%" y2="50%">
 					<stop offset="0" stop-color="#420C5A"/>
 					<stop offset="0.5" stop-color="#A1CD3A"/>
 					<stop offset="1" stop-color="#420C5A"/>
 				</linearGradient>
-
 				<linearGradient id="item0" y1="50%" x2="100%" y2="50%">
 					<stop offset="0.2" stop-color="#420C5A"/>
 					<stop offset="0.36" stop-color="#A1CD3A"/>
 					<stop offset="0.5" stop-color="#420C5A"/>
 				</linearGradient>
-
 				<linearGradient id="item1" y1="50%" x2="100%" y2="50%">
 					<stop offset="0.35" stop-color="#420C5A"/>
 					<stop offset="0.50" stop-color="#A1CD3A"/>
 					<stop offset="0.65" stop-color="#420C5A"/>
 				</linearGradient>
-
 				<linearGradient id="item2" y1="50%" x2="100%" y2="50%">
 					<stop offset="0.50" stop-color="#420C5A"/>
 					<stop offset="0.64" stop-color="#A1CD3A"/>
@@ -83,7 +104,6 @@
 			<path id="wave2" class="wave-thing" d="M2634.5.5C2521.56.5,2430,92.06,2430,205a200.5,200.5,0,0,1-401,0c0-.15,0-.3,0-.44s0,0,0-.06C2029,91.56,1937.44,0,1824.5,0S1620,91.56,1620,204.5a200.5,200.5,0,0,1-401,0C1219,91.56,1127.44,0,1014.5,0S810,91.56,810,204.5c0,0,0,0,0,.06s0,.3,0,.44a200.5,200.5,0,0,1-401,0C409,92.06,317.44.5,204.5.5S0,92.06,0,205a2,2,0,0,0,2,2v-2H4a200.5,200.5,0,0,1,401,0c0,112.94,91.56,204.5,204.5,204.5S814,317.94,814,205a200.5,200.5,0,1,1,401,0h0c.27,112.71,91.72,204,204.49,204S1623.72,317.71,1624,205h0a200.5,200.5,0,0,1,401,0c0,112.94,91.56,204.5,204.5,204.5S2434,317.94,2434,205a200.5,200.5,0,1,1,401,0h2v2a2,2,0,0,0,2-2C2839,92.06,2747.44.5,2634.5.5Z"/>
 			<path id="wave-none" class="wave-thing active" d="M2634.5.5C2521.56.5,2430,92.06,2430,205a200.5,200.5,0,0,1-401,0c0-.15,0-.3,0-.44s0,0,0-.06C2029,91.56,1937.44,0,1824.5,0S1620,91.56,1620,204.5a200.5,200.5,0,0,1-401,0C1219,91.56,1127.44,0,1014.5,0S810,91.56,810,204.5c0,0,0,0,0,.06s0,.3,0,.44a200.5,200.5,0,0,1-401,0C409,92.06,317.44.5,204.5.5S0,92.06,0,205a2,2,0,0,0,2,2v-2H4a200.5,200.5,0,0,1,401,0c0,112.94,91.56,204.5,204.5,204.5S814,317.94,814,205a200.5,200.5,0,1,1,401,0h0c.27,112.71,91.72,204,204.49,204S1623.72,317.71,1624,205h0a200.5,200.5,0,0,1,401,0c0,112.94,91.56,204.5,204.5,204.5S2434,317.94,2434,205a200.5,200.5,0,1,1,401,0h2v2a2,2,0,0,0,2-2C2839,92.06,2747.44.5,2634.5.5Z"/>
 		</svg>
-
 		<ul>
 			<li>
 				<a data-id="0" class="wave-btn wave-thing">
@@ -104,7 +124,6 @@
 				</a>
 			</li>
 		</ul>
-				
 <div class="container">
 	<div class="row">
 		<div class="col">
@@ -135,20 +154,23 @@
 	</div>
 </div>
 </section>
-
-
 <div class="container">
 	<div class="row">
-		<section class="d-flex flex-row align-items-stretch align-content-stretch justify-content-between">
-			<article class="p-2 d-flex flex-column align-items-stretch align-content-stretch apple-card" style="background-image: url('<?php echo get_bloginfo('template_url') ?>/images/soundhunter/header.jpg')">
-				<center><img class="play-btn" src="<?php echo get_bloginfo('template_url') ?>/images/play.svg" alt="play" /></center>
+		<section class="d-flex flex-row align-items-stretch align-content-stretch justify-content-between" style="width: 100%">
+			<article class="apple-card" style="background-image: url('<?php echo get_bloginfo('template_url') ?>/images/soundhunter/header.jpg')">
+				<center>
+					<a href="#" class="portfolio-link" data-toggle="modal" data-frame="iframe" data-target="#liveModal" data-theVideo="https://www.youtube.com/embed/yRuVYkA8i1o?autoplay=1&autohide=1&modestbranding=1&rel=0&hd=1">
+					<img class="play-btn" src="<?php echo get_bloginfo('template_url') ?>/images/play.svg" alt="play" />
+					</a>
+				</center>
 				<div class="legenda">
-					<h2>Be spotlighted</h2>
+					<h2>Assista 360graus</h2>
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 				</div>
 			</article>
-			<article class="p-2 apple-card" style="background-image: url('<?php echo get_bloginfo('template_url') ?>/images/soundhunter/header.jpg')">
+			<article class="apple-card" style="background-image: url('<?php echo get_bloginfo('template_url') ?>/images/soundhunter/header.jpg')">
 				<div class="legenda">
+					<span></span>
 					<h2>Be spotlighted</h2>
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 				</div>
@@ -156,21 +178,35 @@
 		</section>
 	</div>
 </div>
-
-<section class="container d-flex flex-row align-items-stretch align-content-stretch justify-content-between triplex">
-	<div class="row">
-		<div class="col-md-3 col-sm-2">
-			<img class="triplex-icon" src="<?php echo get_bloginfo('template_url') ?>/images/soundwave.svg" alt="soundwave" />
+<section class="container">
+	<div class="row triplex">
+		<div class="col-md-2 col-sm-2 triplex-icon">
+			<img src="<?php echo get_bloginfo('template_url') ?>/images/soundwave.svg" alt="soundwave" />
 		</div>
-		<article class="col-md-6 col-sm-7 p-2 d-flex flex-column align-items-stretch align-content-stretch">
+		<article class="col-md-7 col-sm-7 d-flex flex-column align-items-stretch align-content-stretch">
 			<h3>O que é SoundHunter?</h3>
 			<p>
 				É um serviço para ajudar a escolher o melhor tipo de música para o seu evento 
 				e te oferecer uma melhor experiência de show ao vivo.
 			</p>
 		</article>
-		<div class="col-md-3 col-sm-3"><img class="triplex-pic" src="<?php echo get_bloginfo('template_url') ?>/images/soundhunter/acoustic.jpg" alt="play" /></div>
+		<div class="col-md-3 col-sm-3 triplex-pic" style="background-image: url('<?php echo get_bloginfo('template_url') ?>/images/soundhunter/acoustic.jpg')">
+		</div>
 	</div>
 </section>
-
-<?php get_footer(); ?>
+<?php get_footer();
+?>
+<div class="modal fade video-lightbox liveModal" id="liveModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">    
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            </div>
+            <div class="modal-body">
+							<div align="center" class="embed-responsive embed-responsive-16by9">
+								<iframe width="420" height="315" src="" frameborder="0" allowfullscreen></iframe>
+							</div>
+						</div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

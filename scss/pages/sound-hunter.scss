@@ -34,25 +34,35 @@ body.page-template-page-soundhunter {
 	background-color: #46155a;
 	@include shadow;
 	border-radius: 150px;
-	padding: 0;
 	article {
 		padding: 1.5rem 1rem;
 		width: 100%;
 		padding-right: 75px;
 	}
-	.triplex-pic,
-	.triplex-icon {
+	.triplex-pic img,
+	.triplex-icon img {
 		position: relative;
-		width: 100%;
+		width: 170px;
 		height: auto;
 		display: block;
 		margin: auto;
-		border-radius: 0 150px 150px 0;
 	}
 	.triplex-icon {
-		width: 70px;
-		height: auto;
-		padding: 12px 20px 12px 0;
-		margin-left: 35px;
+		img {
+			width: 70px;
+			height: 70px;
+			top: 50%;
+			margin-top: -35px;
+		}
+	}
+	.triplex-pic {
+		padding: 0;
+		background-position: center right;
+		background-size: 50% auto;
+		background-repeat: no-repeat;
+		border-radius: 0 150px 150px 0;
+		img {
+			border-radius: 0 150px 150px 0;
+		}
 	}
 }
