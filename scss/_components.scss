@@ -1,12 +1,12 @@
 @mixin shadow {
-  box-shadow: 0 0 15px 3px #270831, 0px 2px 3px #1d171f;
+  box-shadow: 0 0 15px 3px rgba(0, 0, 0, 0.27), 0px 2px 3px rgba(0, 0, 0, 0.45);
 }
 
 .apple-card {
   background-position: center center;
   background-origin: border-box;
   background-size: cover;
-  margin: 1rem 0;
+  margin: .5rem;
   height: 326px;
   min-width: 300px;
   width: 50%;
@@ -22,19 +22,17 @@
   }
   .legenda {
     background: rgba(0, 0, 0, .5);
-    border-radius: 45px 45px 0 0;
     position: relative;
     bottom: 0;
     height: 163px;
     padding: 3px 35px 20px 45px;
     overflow: hidden;
     transition: .6s ease-in-out;
-    transform: translate3d(0, 272px, 0);
+    transform: translate3d(0, 293px, 0);
     h3 {
       white-space: nowrap;
       text-overflow: ellipsis;
     }
-    p {}
   }
   &:hover,
   &:focus {
@@ -42,8 +40,52 @@
       transform: translate3d(0, 173px, 0);
     }
   }
-  &:nth-of-type(odd) {
-    margin-right: 1rem;
+}
+
+.swipe-card {
+  margin: .5rem;
+  height: 234px;
+  width: 416px;
+  border-radius: 50px;
+  overflow: hidden;
+  @include shadow();
+  img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.slick-arrow{
+  position: absolute;
+  top: 124px;
+  height: 70px;
+  width: 75px;
+  z-index: 3;
+  display: inline-block;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  border: $input-btn-border-width solid transparent;
+  background-color: $color3;
+  color: white;
+  @include hover-focus {
+    text-decoration: none;
+    color: $alien;
+  }
+  &:focus,
+  &.focus {
+    outline: 0;
+    color: $alien;
+  }
+  &.slick-prev{
+    left: 0px;
+    border-radius: 0 36px 36px 0;
+  }
+  &.slick-next{
+    right: 0px;
+    border-radius: 36px 0 0 36px;
   }
 }
 
@@ -216,4 +258,24 @@
       }
     }
   }
+}
+
+.duplex-hunter {
+	background-color: #46155a;
+	border-radius: 150px;
+	padding: 5rem 50px;
+	background-image: url('./images/soundhunter/i-want-you.png');
+	background-size: contain;
+	background-position: bottom right;
+	background-repeat: no-repeat;
+  @include shadow;
+	article {
+		padding: 0 80px;
+	}
+	/*.duplex-pic img{
+		width: auto;
+		height: 250px;
+		display: block;
+		margin: auto;
+	}*/
 }

@@ -150,7 +150,6 @@ article {
 
 #insight360 {
 	margin: 6em 0;
-	background: #101010;
 	#oculos {
 		position: relative;
 		width: 100%;
@@ -158,16 +157,13 @@ article {
 		padding: 0 2rem;
 	}
 	#videoSample {
-		margin: 5rem 0 2rem 0;
+		margin: 5rem 0 0 0;
 		min-height: 300px;
 		iframe {
 			position: relative;
-			width: 100%;
-			height: 100%;
-			max-height: 540px;
-			@media screen and (max-width: 600px) {
-				max-height: 150px;
-			}
+			width: 1024px;
+			height: 414px;
+			margin: auto;
 		}
 	}
 }

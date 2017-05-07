@@ -65,7 +65,8 @@
     </li>
 	</ul>
     </div>
-    <ul class="tab__content">
+		<div class="container">
+			<ul class="row tab__content">
       <li class="active"><div class="content__wrapper"></div></li>
 		<li>
 			<div class="content__wrapper">
@@ -95,4 +96,6 @@
 			</div>
 		</li>
 	</ul>
+		</div>
+    
 </section>

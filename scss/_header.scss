@@ -13,3 +13,127 @@ header.home {
 	margin-top: -64px;
 	margin-bottom: -75px;
 }
+
+header#headerFX {
+	position: relative;
+	height: 70%;
+	height: 75vh;
+	width: 100%;
+	border: none;
+	margin: 0;
+	/*background-image: url('./images/fx/1.jpg');
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center -225px;*/
+	color: white;
+	margin-top: -64px;
+	margin-bottom: -20px;
+	.lead{
+		z-index: 1;
+		margin-top: -120px;
+	}
+}
+
+/*.carousel-fade {
+	height: 100%;
+	.carousel-inner {
+			height: 100%;
+			.carousel-item {
+			transition: 3s linear;
+			width: auto;
+			height: 100%;
+			opacity: 0;
+			img {
+				width: auto;
+				height: 100%;
+				display: block;
+				margin: auto;
+			}
+		}
+		.active.carousel-item-left,
+			.active.carousel-item-right {
+			opacity: 0;
+		}
+		.active,
+		.carousel-item-next.carousel-item-left,
+				.carousel-item-prev.carousel-item-right {
+			opacity: 1;
+		}
+		.carousel-item-next,
+		.carousel-item-prev,
+		.active.carousel-item-left,
+			.active.carousel-item-right {
+			left: 0;
+			transform: translate3d(0, 0, 0);
+		}
+	}
+}*/
+
+.swipe {
+	background-attachment: fixed;
+	background-position: center;
+	background-size: cover;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	-webkit-animation: flash ease-out 6s infinite;
+	-moz-animation: flash ease-out 6s infinite;
+	animation: flash ease-out 6s infinite;
+	@media screen and (max-width: 720px){
+		background-image: url('./images/fx/fxSM.jpg');
+		animation: none;
+	}
+}
+
+@-webkit-keyframes flash {
+	from { opacity: 0; }
+	33% { opacity: 1; }
+	66% { opacity: 0; }
+	to { opacity: 0;}
+}
+
+@keyframes flash {
+	from { opacity: 0; }
+	33% { opacity: 1; }
+	66% { opacity: 0; }
+	to { opacity: 0;}
+}
+.fx1{
+	animation-delay: 0;
+	opacity: 1;
+	@media screen and (max-width: 1360px){
+		background-image: url('./images/fx/fxMD.jpg');
+	}
+	@media screen and (min-width: 1361px){
+		background-image: url('./images/fx/fxHD.jpg');
+	}
+	@media screen and (max-width: 720px){
+		display: none;
+	}
+}
+.fx2{
+	opacity: 0;
+	animation-delay: 2s;
+	@media screen and (max-width: 1360px){
+		background-image: url('./images/fx/fxhue1MD.jpg');
+	}
+	@media screen and (min-width: 1361px){
+		background-image: url('./images/fx/fxhue1HD.jpg');
+	}
+	@media screen and (max-width: 720px){
+		display: none;
+	}
+}
+.fx3{
+	opacity: 0;
+	animation-delay: 4s;
+	@media screen and (max-width: 1360px){
+		background-image: url('./images/fx/fxhue2MD.jpg');
+	}
+	@media screen and (min-width: 1361px){
+		background-image: url('./images/fx/fxhue2HD.jpg');
+	}
+	@media screen and (max-width: 720px){
+		display: none;
+	}
+}

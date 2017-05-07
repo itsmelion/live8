@@ -1,36 +1,14 @@
+<?php /* Template Name: Sound Hunter */ ?>
 <?php 
-
-
-
-
-
-
-
-
-
-/* Template Name: Sound Hunter */
-?>
-<?php
-
-
-
-
-
-
-
-
-
-
-/**
-Pages
+/*
+ * Pages
  *
  * @package WordPress
  * @subpackage alive8
  * @since alive8 1.0
  */
  ?>
-<?php get_header();
-?>
+<?php get_header(); ?>
  <header id="headerhunter" class="d-flex flex-column align-items-center justify-content-center">
  	<div class="lead text-center">
 		 <h1 class="display">SoundHunters</h1>
@@ -43,10 +21,10 @@ Pages
 <section>
 	<div class="row triplex">
 		<div class="col-md-2 col-sm-3 triplex-icon">
-			<img src="<?php echo get_bloginfo('template_url') ?>/images/soundwave.svg" alt="soundwave" />
+			<img src="<?php echo get_bloginfo('template_url') ?>/images/SoundHunter.svg" alt="soundwave" />
 		</div>
 		<article class="col-md-10 col-sm-9 d-flex flex-column align-items-stretch align-content-stretch">
-			<h3>O que é SoundHunter?</h3>
+			<h3>O que é um SoundHunter?</h3>
 			<p>
 				É um serviço para ajudar a escolher o melhor tipo de música para o seu evento 
 				e te oferecer uma melhor experiência de show ao vivo.
@@ -59,12 +37,12 @@ Pages
 			<h1>Como Funciona?</h1>
 			<p>É bem simples, são 3 etapas te oferecer a melhor experiencia possível.</p>
 		</div>
-	</div>
+</div>
  </div>
 <?php
-			$itemCaption = array('Briefing', 'Triagem', 'Apresentação');
-$edgeColor = '#420C5A';
-include( locate_template( 'partials/wave.php', false, false ) );
+	$itemCaption = array('Briefing', 'Triagem', 'Apresentação');
+	$edgeColor = '#420C5A';
+	include( locate_template( 'partials/wave.php', false, false ) );
 ?>
 <div class="container">
 	<div class="row">
@@ -89,20 +67,22 @@ include( locate_template( 'partials/wave.php', false, false ) );
 			</article>
 		</section>
 	</div>
-	<div class="row triplex">
-		<div class="col-md-2 col-sm-2 triplex-icon">
-			<img src="<?php echo get_bloginfo('template_url') ?>/images/soundwave.svg" alt="soundwave" />
-		</div>
-		<article class="col-md-7 col-sm-7 d-flex flex-column align-items-stretch align-content-stretch">
-			<h3>O que é SoundHunter?</h3>
-			<p>
-				É um serviço para ajudar a escolher o melhor tipo de música para o seu evento 
-				e te oferecer uma melhor experiência de show ao vivo.
-			</p>
+
+	<div class="row duplex-hunter" id="joinCast">
+			
+		<article class="col-md-8 d-flex flex-row align-items-start align-content-center">
+				<div><h3>Entre pro time!</h3>
+				<p>
+					Inscreva a sua banda, seja visto!
+					<br>Nós temos uma excelente infraestrutura para os seus shows,
+					e conosco voce ganha mais visibilidade
+				</p></div>
 		</article>
-		<div class="col-md-3 col-sm-3 triplex-pic" style="background-image: url('<?php echo get_bloginfo('template_url') ?>/images/soundhunter/acoustic.jpg')">
-		</div>
+
+		<div class="col-md-4"></div>
+
 	</div>
+
 </div>
 <?php get_footer();
 ?>

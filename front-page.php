@@ -1,10 +1,7 @@
 <?php get_header();
 ?>
 <header class="home d-flex flex-column align-items-center justify-content-center">
-	<div class="p-2">
-		<h1 class="display">A Live Experience</h1>
-	</div>
-	<div class="p-2">
+	<div>
 	<a class="logo" href="<?php echo home_url();
 ?>" title="<?php bloginfo( 'name' );
 ?>">
@@ -14,10 +11,43 @@
 </header>
 <?php
 			$itemCaption = array('item1', 'dois', 'tres');
-$edgeColor = '#101010';
+$edgeColor = '#131313';
 include( locate_template( 'partials/wave.php', false, false ) );
 ?>
 <div class="container">
+
+
+<div class="row duplex">
+			
+		<article class="col-md-8 d-flex flex-column align-items-stretch align-content-stretch">
+			<h3>This</h3>
+			<p>
+				Lorem ipsum
+			</p>
+		</article>
+
+		<div class="col-md-4"></div>
+
+	</div>
+
+<div class="row">
+	<section class="d-flex flex-row align-items-stretch align-content-stretch justify-content-between" style="width: 100%">
+			<article class="apple-card" style="background-image: url('<?php echo get_bloginfo('template_url') ?>/images/gallery/thumbnails/4.jpg')">
+				<div class="legenda">
+					<span></span>
+					<h2>Be spotlighted</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+				</div>
+			</article>
+			<article class="apple-card" style="background-image: url('<?php echo get_bloginfo('template_url') ?>/images/gallery/thumbnails/5.jpg')">
+				<div class="legenda">
+					<span></span>
+					<h2>Be spotlighted</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+				</div>
+			</article>
+		</section>
+</div>
 <section id="insight360">
 	<!-- 360 Insight -->
 		<div class="row hidden-sm-up">
@@ -48,16 +78,14 @@ include( locate_template( 'partials/wave.php', false, false ) );
 				<img id="oculos" src="<?php echo get_bloginfo('template_url') ?>/images/rift.png" alt="oculos <?php bloginfo( 'name' );
 ?>" />
 			</div>
-			<div class="col text-center">
-				<img src="<?php echo get_bloginfo('template_url') ?>/images/oculus-right-list.svg" alt="right list" width="300px" />
-			</div>
 		</div>
 		<div id="videoSample" class="row">
 			<div class="col">
-			<iframe src="https://www.youtube.com/embed/v64KOxKVLVg?ecver=1" frameborder="0" allowfullscreen></iframe>
+			<iframe src="https://www.youtube.com/embed/v64KOxKVLVg?ecver=1" width="100%" height="auto" frameborder="0" allowfullscreen></iframe>
 			</div>
 		</div>
 </section>
+
 <div id="posts">
 	<div class="row">
 		<?php
@@ -71,32 +99,7 @@ endif;
 ?>
 	</div>
 </div>
-<div class="card-deck">
-  <div class="card card-inverse">
-    <img class="card-img-top" src="<?php echo get_bloginfo('template_url') ?>/images/book/6.jpg" alt="Show">
-    <div class="card-block">
-      <h4 class="card-title">Sua banda quebrando o pau!</h4>
-      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-    </div>
-  </div>
-  <div class="card card-inverse">
-    <img class="card-img-top" src="<?php echo get_bloginfo('template_url') ?>/images/book/4.jpg" alt="Show">
-    <div class="card-block">
-      <h4 class="card-title">Boite</h4>
-      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-    </div>
-  </div>
-  <div class="card card-inverse">
-    <img class="card-img-top" src="<?php echo get_bloginfo('template_url') ?>/images/book/5.jpg" alt="Show">
-    <div class="card-block">
-      <h4 class="card-title">Iluminação</h4>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-    </div>
-  </div>
-</div>
+
 </div>
 	<?php get_footer();
 ?>

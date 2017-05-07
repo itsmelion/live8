@@ -76,6 +76,40 @@
 	}
 	$(".videoBtn").on("click", autoPlayModal());
 
+	$('.carousel').carousel({
+		interval: 4000,
+		pause: false,
+		ride: 'carousel'
+	});
+
+	$('.card-container').slick({
+  	infinite: true,
+  	slidesToShow: 4,
+		slidesToScroll: 4,
+		variableWidth: true,
+		adaptiveHeight: true,
+		lazyLoad: 'ondemand',
+		responsive: [
+    {
+      breakpoint: 1366,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true,
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+  ]
+	});
+
+	$('.card-container').photoSwipe();
+
 })(jQuery);
 
 // Change background of everything with class .bg-color
