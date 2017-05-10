@@ -14,31 +14,57 @@ ges
  ?>
 <?php get_header();
 ?>
- <header id="headerhunter" class="d-flex flex-column align-items-center justify-content-center">
- 	<div class="lead text-center">
-		 <h1 class="display">Virtual Reality</h1>
-		 <h3>Para guardar, e reviver sem perder nada</h3>
+ <header id="headerVR" class="d-flex flex-column align-items-start justify-content-center">
+ 	<div class="lead">
+		<h1 class="display">Virtual Reality</h1>
+		<h3>Para guardar, e reviver sem perder nada</h3>
+		<p>
+			Seu evento gravado com tecnologia inovadora. Usando técnicas de realidade aumentada e time-lapse.
+			E acompanha um box com óculos para você ver seus vídeos em 360º.
+		</p>
 	</div>
  </header>
 
 <div class="container">
 
-	<div class="row duplex">
-			
-		<article class="col-md-8 d-flex flex-column align-items-stretch align-content-stretch">
-			<h3>Realidade Virtual, visão 360graus</h3>
-			<p>
-				Lorem impsum
-			</p>
-		</article>
+<section id="insight360">
+	<!-- 360 Insight -->
+		<div class="row hidden-sm-up">
+			<div class="col-sm-12 text-center">
+				<img id="oculos" src="<?php echo get_bloginfo('template_url') ?>/images/rift.png" alt="oculos <?php bloginfo( 'name' );?>" />
+			</div>
+			<div class="col-sm-12 text-center">
+				<img src="<?php echo get_bloginfo('template_url') ?>/images/360.gif" alt="360 gif" width="75" />
+				<h1 class="display">Visão 360º</h1>
+				<h3>Dont miss a thing!</h3>
+				<p class="text-justify">
+					360degreees experience for living. Uma experiencia 360graus, para guardar na memória.
+					Voce leva um oculos rift pra levar pra todos seus amigos assistirem e não perder absolutamente nada.
+				</p>
+			</div>
+		</div>
+		<div class="row hidden-sm-down">
+			<div class="col text-center">
+				<img src="<?php echo get_bloginfo('template_url') ?>/images/360.gif" alt="360 gif" width="90" />
+				<h3>Dont miss a thing!</h3>
+				<p>
+					360degreees experience for living. Uma experiencia 360graus, para guardar na memória.
+					Voce leva um oculos rift pra levar pra todos seus amigos assistirem e não perder absolutamente nada.
+				</p>
+			</div>
+			<div class="col text-center">
+				<img id="oculos" src="<?php echo get_bloginfo('template_url') ?>/images/rift.png" alt="oculos <?php bloginfo( 'name' );?>" />
+			</div>
+		</div>
+		<div id="videoSample" class="row">
+			<div class="col">
+			<div class="videoWrapper">
+				<iframe src="https://www.youtube.com/embed/v64KOxKVLVg?ecver=1" width="100%" height="auto" frameborder="0" allowfullscreen></iframe>
+			</div>
+			</div>
+		</div>
+</section>
 
-		<div class="col-md-4"></div>
-
-	</div>
-
-</div>
-
-<div class="container">
 	<div class="row">
 		<div class="col-md-12 text-center" style="margin-top: 3em">
 			<h2>Galeria</h2>

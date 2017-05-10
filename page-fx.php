@@ -8,8 +8,7 @@
  * @since alive8 1.0
  */
  ?>
-<?php get_header();
-?>
+<?php get_header(); ?>
 <header id="headerFX" class="d-flex flex-column align-items-center justify-content-center">
 	<div class="swipe fx1"></div>
 	<div class="swipe fx2"></div>
@@ -48,53 +47,15 @@
 	</div>
 	<div class="row">
 		<section class="card-container" style="width: 100%">
-
-			<article class="swipe-card">
-				<img src="<?php echo get_bloginfo('template_url') ?>/images/gallery/thumbnails/1.jpg"
-				data-original-src="<?php echo get_bloginfo('template_url') ?>/images/gallery/1.jpg"
-				data-original-src-width="1920" data-original-src-height="1080" alt="caption text">
-			</article>
-			<article class="swipe-card">
-				<img src="<?php echo get_bloginfo('template_url') ?>/images/gallery/thumbnails/2.jpg"
-				data-original-src="<?php echo get_bloginfo('template_url') ?>/images/gallery/2.jpg"
-				data-original-src-width="1920" data-original-src-height="1080" alt="caption text">
-			</article>
-			<article class="swipe-card">
-				<img src="<?php echo get_bloginfo('template_url') ?>/images/gallery/thumbnails/3.jpg"
-				data-original-src="<?php echo get_bloginfo('template_url') ?>/images/gallery/3.jpg"
-				data-original-src-width="1920" data-original-src-height="1080" alt="caption text">
-			</article>
-			<article class="swipe-card">
-				<img src="<?php echo get_bloginfo('template_url') ?>/images/gallery/thumbnails/4.jpg"
-				data-original-src="<?php echo get_bloginfo('template_url') ?>/images/gallery/4.jpg"
-				data-original-src-width="1920" data-original-src-height="1080" alt="caption text">
-			</article>
-			<article class="swipe-card">
-				<img src="<?php echo get_bloginfo('template_url') ?>/images/gallery/thumbnails/5.jpg"
-				data-original-src="<?php echo get_bloginfo('template_url') ?>/images/gallery/5.jpg"
-				data-original-src-width="1920" data-original-src-height="1080" alt="caption text">
-			</article>
-			<article class="swipe-card">
-				<img src="<?php echo get_bloginfo('template_url') ?>/images/gallery/thumbnails/6.jpg"
-				data-original-src="<?php echo get_bloginfo('template_url') ?>/images/gallery/6.jpg"
-				data-original-src-width="1920" data-original-src-height="1080" alt="caption text">
-			</article>
-			<article class="swipe-card">
-				<img src="<?php echo get_bloginfo('template_url') ?>/images/gallery/thumbnails/7.jpg"
-				data-original-src="<?php echo get_bloginfo('template_url') ?>/images/gallery/7.jpg"
-				data-original-src-width="1920" data-original-src-height="1080" alt="caption text">
-			</article>
-			<article class="swipe-card">
-				<img src="<?php echo get_bloginfo('template_url') ?>/images/gallery/thumbnails/8.jpg"
-				data-original-src="<?php echo get_bloginfo('template_url') ?>/images/gallery/8.jpg"
-				data-original-src-width="1920" data-original-src-height="1080" alt="caption text">
-			</article>
-
+			<?php include( locate_template( 'partials/fx-gallery.php', false, false ) ); ?>
 		</section>
 	</div>
+
+	<div class="row">
+		
+	</div>
 </div>
-<?php get_footer();
-?>
+<?php get_footer();?>
 
 <!-- Root element of PhotoSwipe. Must have class pswp. -->
 <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">

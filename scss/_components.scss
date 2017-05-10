@@ -2,6 +2,20 @@
   box-shadow: 0 0 15px 3px rgba(0, 0, 0, 0.27), 0px 2px 3px rgba(0, 0, 0, 0.45);
 }
 
+.videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
 .apple-card {
   background-position: center center;
   background-origin: border-box;

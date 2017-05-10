@@ -1,8 +1,4 @@
 <?php
-
-
-
-
 /**
 ive8 functions file
  *
@@ -11,11 +7,6 @@ ive8 functions file
  * @since alive8 1.0
  */
 
-
-
-
-
-
 /******************************************************************************\
 me support, standard settings, menus and widgets
 \******************************************************************************/
@@ -23,10 +14,6 @@ me support, standard settings, menus and widgets
 add_theme_support( 'post-formats', array( 'image', 'quote', 'status', 'link' ) );
 add_theme_support( 'post-thumbnails' );
 add_theme_support( 'automatic-feed-links' );
-
-
-
-
 
 
 /**
@@ -73,16 +60,10 @@ if ( function_exists( 'register_sidebars' ) ) {
 
 if ( ! isset( $content_width ) ) $content_width = 650;
 
-
-
-
-
 /**
 clude editor stylesheets
  * @return void
  */
-
-
 
 
 /*function alive8_editor_style() {
@@ -92,17 +73,9 @@ add_action( 'init', 'alive8_editor_style' );
 */
 
 
-
-
-
-
 /******************************************************************************\
 ipts and Styles
 \******************************************************************************/
-
-
-
-
 
 /**
 queue alive8 scripts
@@ -124,18 +97,9 @@ wp_enqueue_script( 'default-scripts', get_template_directory_uri() . '/js/script
 }
 add_action( 'wp_enqueue_scripts', 'alive8_enqueue_scripts' );
 
-
-
-
-
-
 /******************************************************************************\
 tent functions
 \******************************************************************************/
-
-
-
-
 
 /**
 splays meta information for a post
