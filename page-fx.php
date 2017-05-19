@@ -9,13 +9,17 @@
  */
  ?>
 <?php get_header(); ?>
+<?php
+	$fields = get_fields(get_the_ID());
+	the_post();
+?>
 <header id="headerFX" class="d-flex flex-column align-items-center justify-content-center">
 	<div class="swipe fx1"></div>
 	<div class="swipe fx2"></div>
 	<div class="swipe fx3"></div>
 	<div class="lead text-center">
-		<h1 class="display">Audio & Effects</h1>
-		<h3>Efeitos visuais e som, do jeito que você precisa.</h3>
+		<h1 class="display"><?= get_the_title() ?></h1>
+		<h3><?= $fields['subtitulo']; ?></h3>
 	</div>
 </header>
 <div class="container">
@@ -23,16 +27,12 @@
 	<div class="row duplex">
 			
 		<article class="col-md-8 d-flex flex-column align-items-stretch align-content-stretch">
-			<h3>Sonorização e efeitos visuais</h3>
+			<h3><?= $fields['sessao-titulo']; ?></h3>
 			<p>
-				Nós vamos além de montar simplesmente um palquinho, e tudo pronto.<br>
-				Cuidamos da iluminação da entrada, dos ambientes e programamos os efeitos especiais
-				das luzes de acordo com as músicas, para que seu evento seja um sucesso
-				e a sua esperiência ao vivo seja única, e inesquecível.
+				<?= $fields['sessao-texto']; ?>
 			</p>
+			<img src="<?= $fields['sessao-imagem']; ?>">
 		</article>
-
-		<div class="col-md-4"></div>
 
 	</div>
 

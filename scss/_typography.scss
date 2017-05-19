@@ -70,6 +70,7 @@ ul,
 ol {
     @include leading-rows(0);
     @include trailing-rows(1);
+    margin: 0;
 }
 
 blockquote {
@@ -102,6 +103,9 @@ h1.display {
     @include font-size(2.5);
     font-size: 5vw;
     text-transform: none !important;
+    @media screen and (max-width: 840px) {
+      font-size: 14vw;
+    }
 }
 
 h1 {

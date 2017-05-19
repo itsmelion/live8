@@ -24,9 +24,9 @@
 		<![endif]-->
 		<?php wp_head(); ?>
 	</head>
-	<body  data-spy="scroll" data-target=".navbar" <?php body_class(); ?> >
+	<body <?php body_class(); ?> >
 
-			<nav class="navbar navbar-toggleable-md navbar-inverse sticky-top menu">
+			<!--<nav class="navbar navbar-toggleable-md navbar-inverse sticky-top menu">
 						<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
 							<span class="navbar-toggler-icon"></span>
 						</button>
@@ -50,4 +50,4 @@
 						<span class="navbar-text hidden-sm-down">
       				<?php bloginfo( 'description' ); ?>
     				</span>
-				</nav>
+				</nav>-->

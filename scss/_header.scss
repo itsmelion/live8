@@ -1,25 +1,24 @@
 header{
 	position: relative;
 	background-size: cover;
-	height: 80%;
-	height: 85vh;
+	background-repeat: no-repeat;
+	height: 50%;
+	height: 50vh;
 	width: 100%;
 	border: none;
 	margin: 0;
-	margin-top: -64px;
-	margin-bottom: -75px;
 	color: white;
 }
 header.home {
 	background-image: url('./images/header.jpg');
-	background-position: center -225px;
+	background-position: center;
 }
 
 header#headerVR {
 	color: #191919;
 	background-color: #fafafa;
 	background-image: url('./images/vr/vrGuy.png');
-	background-position: center right;
+	background-position: bottom right;
 	background-size: contain;
 	background-repeat: no-repeat;
 	.lead{
@@ -29,8 +28,15 @@ header#headerVR {
 		min-width: 320px;
 		max-width: 680px;
 		margin-left: 10%;
-		@media screen and (max-width: 840px){
+		box-sizing: border-box;
+	}
+	@include media-breakpoint-down(sm) {
+		background-size: auto 280px;
+		height: auto;
+		.lead{
 			width: 100%;
+			margin: 0;
+			margin-top: 100px;
 			margin-bottom: 300px;
 		}
 	}

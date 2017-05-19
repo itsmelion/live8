@@ -1,26 +1,54 @@
 footer {
-  padding: 2em 0 0 0;
+  padding: 1em 0 0 0;
   background-color: #151515;
-  img:not(#alicon) {
-    display: block
+  #footer-brand{
+    text-align: center;
   }
   address {
-    text-align: right;
-    font-style: normal;
+    text-align: center;
+    font-style: none;
+    font-weight: 100;
+    font-size: .8rem;
+    color: $white5;
   }
   li {
-    text-align: right;
     list-style: none;
   }
 }
-
+#instagram{
+  text-align: center;
+  img{
+    @include media-breakpoint-down(sm) {
+      width: 50%;
+    }
+  }
+}
+#facebook{
+  display: block;
+  margin: auto;
+  position: relative;
+  img{
+    width: 36px;
+    height: auto;
+  }
+}
 #alia-footer {
   padding: .5rem 3rem;
   background-color: #181818;
   color: #333333;
   img {
-    width: 25px;
-    height: 25px;
-    margin: 0 18px 0 6px;
+    width: 36px;
+    height: 36px;
+    margin: 0 18px 0 0;
+  }
+}
+
+a.iconic{
+  display: block;
+  margin: auto;
+  position: relative;
+  img{
+    width: 24px;
+    height: auto;
   }
 }
