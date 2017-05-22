@@ -33,30 +33,12 @@ function alive8_custom_header() {
 add_action( 'wp_head', 'alive8_custom_header', 11 );
 
 $custom_bg_args = array(
-	'default-color' => '232323',
+	'default-color' => 'e0e0e0',
 	'default-image' => '',
 );
 add_theme_support( 'custom-background', $custom_bg_args );
 
 register_nav_menu( 'main-menu', __( 'Your sites main menu', 'alive8' ) );
-
-if ( function_exists( 'register_sidebars' ) ) {
-	register_sidebar(
-						array(
-							'id' => 'home-sidebar',
-							'name' => __( 'Home widgets', 'alive8' ),
-							'description' => __( 'Shows on home page', 'alive8' )
-						)
-					);
-	
-	register_sidebar(
-						array(
-							'id' => 'footer-sidebar',
-							'name' => __( 'Footer widgets', 'alive8' ),
-							'description' => __( 'Shows in the sites footer', 'alive8' )
-						)
-					);
-}
 
 if ( ! isset( $content_width ) ) $content_width = 650;
 
@@ -64,18 +46,6 @@ if ( ! isset( $content_width ) ) $content_width = 650;
 clude editor stylesheets
  * @return void
  */
-
-
-/*function alive8_editor_style() {
-_editor_style( 'css/wp-editor-style.css' );
-}
-add_action( 'init', 'alive8_editor_style' );
-*/
-
-
-/******************************************************************************\
-ipts and Styles
-\******************************************************************************/
 
 /**
 queue alive8 scripts
@@ -90,30 +60,11 @@ wp_register_script('tether',  'https://cdnjs.cloudflare.com/ajax/libs/tether/1.4
 wp_enqueue_script('tether');
 wp_register_script('bootstrap-js', 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/js/bootstrap.min.js', false, '4.0.0-alpha.6', true);
 wp_enqueue_script('bootstrap-js');
+wp_register_script( 'touchswipe', 'https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js', false, '1.6.18', true);
+wp_enqueue_script('touchswipe');
 wp_register_script('jquery-slick', '//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js', false, '1.6.0', true);
 wp_enqueue_script('jquery-slick');
 wp_enqueue_script( 'lightbox', get_template_directory_uri() . '/js/jquery-photoswipe/min/jquery.photoswipe-global.js', array(), '1.0', true );
 wp_enqueue_script( 'default-scripts', get_template_directory_uri() . '/js/scripts.min.js', array(), '1.0', true );
 }
 add_action( 'wp_enqueue_scripts', 'alive8_enqueue_scripts' );
-
-/******************************************************************************\
-tent functions
-\******************************************************************************/
-
-/**
-splays meta information for a post
- * @return void
- */
-function alive8_post_meta() {
-if ( get_post_type() == 'post' ) {
-	echo sprintf(
-							__( 'Posted %s in %s%s by %s. ', 'alive8' ),
-							get_the_time( get_option( 'date_format' ) ),
-							get_the_category_list( ', ' ),
-							get_the_tag_list( __( ', <b>Tags</b>: ', 'alive8' ), ', ' ),
-							get_the_author_link()
-						);
-}
-edit_post_link( __( ' (edit)', 'alive8' ), '<span class="edit-link">', '</span>' );
-}

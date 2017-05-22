@@ -1,145 +1,61 @@
-/******************************************************************************\
-	General
-\******************************************************************************/
+.overlay {
+	position: absolute;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	background-color: rgba(0,0,0,0.85);
+	opacity: 0;
+	transition: all 450ms cubic-bezier(0.32,1,0.23,1) 0ms;
+	z-index: 1000;
+	.social {
+		position: fixed;
+		bottom: 0;
+		width: 90%;
+		left: 5%;
+		background-color: #f2f2f2;
+		box-sizing: border-box;
+		transform: translate(0,100%);
+		transition: all 450ms cubic-bezier(0.32,1,0.23,1) 100ms;
+		img{
+			margin: auto;
+			margin-top: -50px;
+			display: block;
+			width: auto;
+			height: 100px;
+			margin-bottom: .5rem;
+		}
+		p{padding: 1.5rem;}
+		a.btn{
+			margin-bottom: 2rem;
+		}
 
-article {
-	@include clearfix;
-}
-
-.archive-title,
-.search-title h1 {
-	@include font-size(1.3);
-	font-weight: normal;
-	background: $color2;
-	text-align: center;
-	color: $color1;
-	margin-top: 0;
-	margin-bottom: 0;
-	padding: 0.6em 0;
-}
-
-.archive-description,
-.second-search {
-	@include font-size(0.9);
-	font-style: italic;
-	margin-top: 0;
-	background: $color2;
-	color: $color1;
-	text-align: center;
-	padding-top: 0;
-	padding-bottom: 0.8em;
-	p {
-		margin: 0;
 	}
-	form {
-		margin-top: 0.5em;
-		margin-bottom: 0.6em;
+	.btn-close {
+		color: #666;
+		transform: scale(0,0);
+		transition: all 450ms ease-in-out 0;
 	}
-	input {
-		box-shadow: none;
-	}
-}
+	
+	&:target {
+   // Active animate in modal
+    display: block;
+		position: fixed;
+		top: 0;
+		opacity: 1;
 
-
-/******************************************************************************\
-	Standard-page
-\******************************************************************************/
-
-.post-title {
-	text-align: center;
-	margin-bottom: 0.2em;
-	&:first-child {
-		margin-top: 1em;
-	}
-}
-
-.single .post-title {
-	&:first-child {
-		margin-top: 1em;
-	}
-}
-
-.post-meta {
-	text-align: center;
-	font-style: italic;
-}
-
-.post-content {
-	position: relative;
-}
-
-.page .post-content {
-	margin-bottom: 3.5em;
-}
-
-
-/******************************************************************************\
-	Front-page and archives
-\******************************************************************************/
-
-.home,
-.archive,
-.search,
-.author {
-	.post-content {
-		background: none;
-		color: $color2;
-		padding: 0;
-		text-align: center;
-	}
-}
-
-.pagination {
-	border-bottom: 3px solid $color2;
-	ul {
-		list-style: none;
-		text-align: center;
-		margin: 1em 0 0 0;
-		padding: 0.6em 0;
-		background: $color1;
-	}
-	li {
-		display: inline;
-		margin: 0 0.5em;
-	}
-}
-
-
-/******************************************************************************\
-	Widgets
-\******************************************************************************/
-
-.page-content .widgets {
-	.widgettitle {
-		color: #fff;
-		margin-top: 0;
-		overflow: hidden;
-		text-overflow: ellipsis;
-		white-space: nowrap;
-		line-height: 1.3;
-	}
-	.widget {
-		margin-bottom: 2em;
-		&:last-child {
-			margin-bottom: 0;
+		.social {
+		transform: translate(0, 0);
+		z-index: 1001;
+		}
+		.btn-close {
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			outline: 0 none;
+			transform: scale(1,1);
 		}
 	}
-	.wp-post-image {
-		width: 100%;
-		height: auto;
-		display: block;
-		margin-bottom: 1em;
-	}
-	.read-more {
-		border-bottom: 2px solid #fff;
-		padding-bottom: 0.25em;
-		&:hover {
-			border-bottom: 2px solid #fff;
-		}
-	}
-}
-
-.svg-fill {
-	fill: $alien;
-	transition: .2s ease;
 }

@@ -1,39 +1,55 @@
-body.page-template-page-soundhunter {
-	background-color: rgb(66, 12, 90);
-}
-
 #headerhunter {
 	position: relative;
-	height: 90%;
-	height: 90vh;
+	height: 80%;
+	height: 80vh;
 	width: 100%;
 	border: none;
 	margin: 0;
 	background-image: url('./images/soundhunter/header1.jpg');
 	background-size: cover;
 	background-attachment: fixed;
-	background-position: center top;
-	margin-top: -64px;
-	margin-bottom: -80px;
+	background-position: center bottom;
+	color: white;
 	&::after {
 		position: absolute;
 		width: 100%;
 		height: 100%;
 		content: '';
-		background: -moz-linear-gradient(top, rgba(125, 185, 232, 0) 50%, rgba(66, 12, 90, 1) 94%);
-		background: -webkit-linear-gradient(top, rgba(125, 185, 232, 0) 50%, rgba(66, 12, 90, 1) 94%);
-		background: linear-gradient(to bottom, rgba(125, 185, 232, 0) 50%, rgba(66, 12, 90, 1) 94%);
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#873caf', endColorstr='#873caf', GradientType=0);
+		background-color: rgba(102, 0, 49, 0.57);
 	}
-	.lead {
-		margin-top: -150px
+	.lead{
+		margin-top: -30%;
+		margin-top: -30vh;
+		z-index: 2;
+		text-shadow: 0 0 5px rgb(49, 2, 24);
+	}
+}
+
+.tip{
+	position: relative;
+	margin-top: -150px;
+	width: 80%;
+	left: 10%;
+	background: white;
+	border-radius: $radius;
+	@include shadow;
+	article {
+		margin-top: 50px;
+		padding: 1.5rem 1rem;
+		width: 100%;
+	}
+	img{
+		position: absolute;
+		width: 80px;
+		margin: auto;
+		margin-top: -42px;
+		display: block;
+		right: 6px;
 	}
 }
 
 .triplex {
-	background-color: #46155a;
 	@include shadow;
-	border-radius: 150px;
 	article {
 		padding: 1.5rem 1rem;
 		width: 100%;

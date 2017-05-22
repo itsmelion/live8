@@ -1,36 +1,91 @@
+.arrow{
+  width: 100%;
+  height: 48px;
+  position: relative;
+  @include media-breakpoint-up(md) {
+    display: none;
+  }
+  &:before{
+      content: 'arraste para cima';
+      position: absolute;
+      top: 29px;
+      font-size: .8rem;
+      line-height: 1;
+      color: #888888;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      animation: pulse ease-in-out 1.2s infinite;
+      animation-direction: alternate;
+    }
+  img{
+    margin-top: 3px;
+    width: 24px;
+    height: auto;
+    animation: pulse ease-in-out 1.2s infinite;
+    animation-direction: alternate;
+  }
+  &.light{
+    background-color: rgba(white, .05);
+  }
+  &.dark{
+    background-color: black, .1;
+  }
+  &.down{&:before{content: 'arraste para baixo'}img{transform: rotate(180deg);}}
+}
+
 footer {
-  padding: 1em 0 0 0;
-  background-color: #151515;
+  background-color: $background;
+  position: absolute;
+  width: 100%;
+  z-index: 100;
+  height: 98%;
+  height: 98vh;
+  @include media-breakpoint-up(md) {
+    height: auto;
+    padding: 3em 0;
+  }
   #footer-brand{
     text-align: center;
   }
   address {
     text-align: center;
     font-style: none;
-    font-weight: 100;
+    font-style: normal;
+    font-weight: 400;
     font-size: .8rem;
-    color: $white5;
+    p{margin: 1.5rem 0 .5rem 0;}
   }
   li {
     list-style: none;
   }
 }
-#instagram{
-  text-align: center;
-  img{
-    @include media-breakpoint-down(sm) {
-      width: 50%;
-    }
+.social-links{
+  position: relative;
+  padding: 0;
+  margin: 0 auto;
+  margin-top: 2rem;
+  width: 100%;
+  max-width: 300px;
+  display: inline-flex;
+  flex-wrap: nowrap;
+  align-content: center;
+  align-items: flex-end;
+  justify-content: flex-end;
+  >a{
+    display: block;
+    margin: auto;
+    position: relative;
+    img{ width: 100%; height: auto;}
   }
 }
+#instagram{
+  width: 70%;
+}
 #facebook{
-  display: block;
-  margin: auto;
-  position: relative;
-  img{
-    width: 36px;
-    height: auto;
-  }
+  margin-left: -15%;
+  margin-top: 40%;
+  width: 30%;
 }
 #alia-footer {
   padding: .5rem 3rem;
@@ -46,6 +101,7 @@ footer {
 a.iconic{
   display: block;
   margin: auto;
+  margin-bottom: .5rem;
   position: relative;
   img{
     width: 24px;

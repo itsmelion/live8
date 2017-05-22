@@ -1,17 +1,33 @@
-header{
+body.home{
 	position: relative;
 	background-size: cover;
+	background-attachment: fixed;
 	background-repeat: no-repeat;
-	height: 50%;
-	height: 50vh;
+	background-position: top;
+	@include media-breakpoint-down(sm) {
+		background-image: url('./images/header-iphone.jpg');
+		overflow: hidden;
+	}
+}
+header.home{
+	position: relative;
+	height: calc(100% - 48px);
+	height: calc(100vh - 48px);
 	width: 100%;
 	border: none;
 	margin: 0;
-	color: white;
-}
-header.home {
-	background-image: url('./images/header.jpg');
-	background-position: center;
+	.logo{
+		display: block;
+		margin: auto;
+		position: relative;
+		top: 25%;
+		top: 25vh;
+	}
+	.degrade-icons{
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+	}
 }
 
 header#headerVR {
@@ -61,41 +77,6 @@ header#headerFX {
 		margin-top: -120px;
 	}
 }
-
-/*.carousel-fade {
-	height: 100%;
-	.carousel-inner {
-			height: 100%;
-			.carousel-item {
-			transition: 3s linear;
-			width: auto;
-			height: 100%;
-			opacity: 0;
-			img {
-				width: auto;
-				height: 100%;
-				display: block;
-				margin: auto;
-			}
-		}
-		.active.carousel-item-left,
-			.active.carousel-item-right {
-			opacity: 0;
-		}
-		.active,
-		.carousel-item-next.carousel-item-left,
-				.carousel-item-prev.carousel-item-right {
-			opacity: 1;
-		}
-		.carousel-item-next,
-		.carousel-item-prev,
-		.active.carousel-item-left,
-			.active.carousel-item-right {
-			left: 0;
-			transform: translate3d(0, 0, 0);
-		}
-	}
-}*/
 
 .swipe {
 	background-attachment: fixed;

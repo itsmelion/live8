@@ -25,29 +25,3 @@
 		<?php wp_head(); ?>
 	</head>
 	<body <?php body_class(); ?> >
-
-			<!--<nav class="navbar navbar-toggleable-md navbar-inverse sticky-top menu">
-						<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-							<span class="navbar-toggler-icon"></span>
-						</button>
-						<a class="blog-name navbar-brand" href="/">
-						<img class="d-inline-block align-middle" src="<?php echo get_bloginfo('template_url') ?>/images/logo-white.svg" width="50px" height="auto" alt="logo live8"/>
-						</a>
-						<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-						<div class="navbar-nav">
-							<?php
-					$nav_menu = wp_nav_menu(
-						array(
-							'container' => 'li',
-							'container_class' => '',
-							'items_wrap' => '<li class="%2$s">%3$s</li>',
-							'theme_location' => 'main-menu',
-							'fallback_cb' => '__return_false',
-						)
-					); ?>
-							</div>
-						</div>
-						<span class="navbar-text hidden-sm-down">
-      				<?php bloginfo( 'description' ); ?>
-    				</span>
-				</nav>-->

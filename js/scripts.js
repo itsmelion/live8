@@ -110,10 +110,34 @@
 
 	$('.card-container').photoSwipe();
 
+	$(function() {      
+		$("#home-wrap, .arrow").swipe( {
+			swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
+				if ( direction === 'up' ) {
+					$("footer").animate(
+						{
+							marginTop: '-98vh'
+						}
+					);
+				}
+			},
+			allowPageScroll:"none"
+		});
+
+		$("footer").swipe( {
+			swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
+
+				if ( direction === 'down' ) {
+					$("footer").animate(
+						{
+							marginTop: '0'
+						}
+					);
+				}
+
+			}
+		});
+	
+	});
+
 })(jQuery);
-
-// Change background of everything with class .bg-color
-//$(".bg-color").css("background-color", newColor);
-
-// Change color of everything with class .text-color
-// $(".text-color").css("color", newColor);
