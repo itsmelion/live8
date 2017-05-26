@@ -47,27 +47,24 @@
 <div class="container">
 	<div class="row">
 		<section class="d-flex flex-wrap flex-row align-items-stretch align-content-stretch justify-content-around" style="width: 100%">
-			<article class="apple-card" style="background-image: url('<?php echo get_bloginfo('template_url') ?>/images/soundhunter/header.jpg')">
-					<a href="#" class="portfolio-link" data-toggle="modal" data-frame="iframe" data-target="#liveModal" data-theVideo="https://www.youtube.com/embed/yRuVYkA8i1o?autoplay=1&autohide=1&modestbranding=1&rel=0&hd=1">
+			<?php foreach( $applecard as $card ): ?>
+			<article class="apple-card" style="background-image: url('<?php echo $card['img']; ?>')">
+					<?php if( $card['url'] ): ?>
+					<a href="<?php echo $card['url']; ?>" title="play">
 					<img class="play-btn" src="<?php echo get_bloginfo('template_url') ?>/images/play.svg" alt="play" />
 					</a>
+					<?php endif; ?>
 				<div class="legenda">
 					<img src="<?php echo get_bloginfo('template_url') ?>/images/icons/arrow.svg" alt="Swipe up"/>
-					<h3>Assista 360graus</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					<h3><?php echo $card['title']; ?></h3>
+					<p><?php echo $card['caption']; ?></p>
 				</div>
 			</article>
-			<article class="apple-card" style="background-image: url('<?php echo get_bloginfo('template_url') ?>/images/soundhunter/header.jpg')">
-				<div class="legenda">
-					<img src="<?php echo get_bloginfo('template_url') ?>/images/icons/arrow.svg" alt="Swipe up"/>
-					<h3>Be spotlighted</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-				</div>
-			</article>
+			<?php endforeach; ?>
 		</section>
 	</div>
 
-	<div class="row text-center" style="margin: 2em 0">
+	<div class="row text-center" style="margin-top: 2em; margin-bottom: 2em;">
 		<a class="btn btn-primary btn-block" href="#joinCast">
 			Eu tenho uma banda
 		</a>
@@ -90,19 +87,7 @@
 		</aside>
 		<a href="#close" class="btn-close" aria-hidden="true"><span class="sr-only">Close</span></a>
 </div>
-<div class="modal fade video-lightbox liveModal" id="liveModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">    
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-            </div>
-            <div class="modal-body">
-							<div align="center" class="embed-responsive embed-responsive-16by9">
-								<iframe width="420" height="315" src="" frameborder="0" allowfullscreen></iframe>
-							</div>
-						</div>
-        </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
+
+<?php include( locate_template( 'partials/arrow-swipe.php', false, false ) ); ?>
 
 <?php get_footer(); ?>

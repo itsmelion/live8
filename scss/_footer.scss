@@ -3,7 +3,7 @@
   height: 96px;
   position: relative;
   &:before{
-      content: 'arraste para cima';
+      content: 'arraste ou clique';
       position: absolute;
       top: 29px;
       font-size: .8rem;
@@ -28,7 +28,7 @@
   &.dark{
     background-color: black, .1;
   }
-  &.down{ height: 48px; &:before{content: 'arraste para baixo'}img{transform: rotate(180deg);}}
+  &.down{ height: 48px; img{transform: rotate(180deg);}}
 }
 
 footer {

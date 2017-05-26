@@ -59,22 +59,6 @@
 		});
 	});
 
-	// Modal
-	function autoPlayModal() {
-		var trigger = $("body").find('[data-toggle="modal"]');
-		trigger.click(function () {
-			var theFrame = $(this).data("frame");
-			var theModal = $(this).data("target");
-			var videoSRC = $(this).attr("data-theVideo");
-			var videoSRCauto = videoSRC + "?showinfo=0&autoplay=1&wmode=transparent&autohide=1&modestbranding=1&rel=0&hd=1";
-			$(theModal + ' ' + theFrame).attr('src', videoSRCauto);
-			$("[id*=liveModal]").on('hidden.bs.modal', function () {
-				$("[id*=liveModal] " + theFrame).removeAttr('src');
-			});
-		});
-	}
-	$(".videoBtn").on("click", autoPlayModal());
-
 	$('.carousel').carousel({
 		interval: 4000,
 		pause: false,

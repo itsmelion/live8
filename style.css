@@ -10059,7 +10059,7 @@ header#headerFX .lead {
   position: relative;
 }
 .arrow:before {
-  content: 'arraste para cima';
+  content: 'arraste ou clique';
   position: absolute;
   top: 29px;
   font-size: .8rem;
@@ -10086,9 +10086,6 @@ header#headerFX .lead {
 }
 .arrow.down {
   height: 48px;
-}
-.arrow.down:before {
-  content: 'arraste para baixo';
 }
 .arrow.down img {
   transform: rotate(180deg);
