@@ -83,8 +83,7 @@
 
 
   }
-  &:hover,
-  &:focus {
+  &.touched {
     .legenda {
       background: rgba(black,.7);
       transform: translate3d(0, 100%, 0);
@@ -101,11 +100,9 @@
 }
 
 .swipe-card {
-  margin: .5rem;
-  height: 234px;
-  width: 416px;
   border-radius: $radius;
   overflow: hidden;
+  margin: 0 1em;
   @include shadow();
   img{
     position: relative;
@@ -116,26 +113,20 @@
 
 .slick-arrow{
   position: absolute;
-  top: 124px;
-  height: 70px;
-  width: 75px;
+  top: 50%;
+  margin-top: -1.75em;
+  height: 3.5em;
   z-index: 3;
   display: inline-block;
   text-align: center;
   white-space: nowrap;
   vertical-align: middle;
   user-select: none;
-  border: $input-btn-border-width solid transparent;
-  background-color: $color3;
-  color: white;
+  color: $alien;
   @include hover-focus {
     text-decoration: none;
     color: $alien;
-  }
-  &:focus,
-  &.focus {
-    outline: 0;
-    color: $alien;
+    @include shadow;
   }
   &.slick-prev{
     left: 0px;
@@ -173,7 +164,7 @@
   }
 }
 
-$ratio: 6em !default;
+$ratio: 5em !default;
 
 .degrade-icons {
     ul {
@@ -189,11 +180,12 @@ $ratio: 6em !default;
       li {
         width: $ratio;
         display: flex;
+        margin-right: 1em;
         list-style: none;
         cursor: pointer;
         &:nth-of-type(1){.caption{background-color: $hunter}}
-        &:nth-of-type(2){.caption{background-color: $vr}}
-        &:nth-of-type(3){.caption{background-color: $fx}}
+        &:nth-of-type(2){.caption{background-color: $vr;}}
+        &:nth-of-type(3){margin-right: 0; .caption{background-color: $fx; margin-left: -.4rem;}}
         a {
           display: block;
           position: relative;
@@ -204,18 +196,16 @@ $ratio: 6em !default;
             text-align: center;
             color: $white7;
             position: relative;
+            margin-left: -.25em;
             padding: .2rem .4rem;
             white-space: nowrap;
             border-radius: $radius;
             line-height: 1;
             font-size: .82rem;
             user-select: none;
-            top: -1.5rem;
+            top: -.8rem;
             letter-spacing: -.025rem;
           }
-        }
-        &:hover,
-        &:focus {
         }
       }
     }
@@ -241,7 +231,7 @@ $ratio: 6em !default;
     position: relative;
     svg{
       position: absolute;
-      width: 44rem;
+      height: $ratio + .5em;
     }
     .wave-bg {
       opacity: 0;
@@ -254,7 +244,7 @@ $ratio: 6em !default;
       position: relative;
       padding: 0;
       margin: 0 auto;
-      height: $ratio + .5em;
+      height: $ratio + .7em;
       width: 100%;
       display: inline-flex;
       flex-wrap: nowrap;
@@ -264,7 +254,7 @@ $ratio: 6em !default;
       li {
         width: $ratio;
         height: $ratio;
-        margin: 0 2px;
+        margin: 0 .2em;
         display: flex;
         box-sizing: border-box;
         background-color: rgba(white,.3);
@@ -308,51 +298,53 @@ $ratio: 6em !default;
 }
 
 .intercall{
-  .vr, .soundhunter, .soundfx{
-    padding: 3em;
+  flex-direction: column !important;
+  background-color: white;
+  padding: 1em;
+  margin: 1em 0;
+  @include shadow;
+  border-radius: $radius;
+  .liveCombo{
+    max-width: 200px;
+    height: auto;
+    text-align: center;
+    margin: 1em;
   }
-  .vr{ background-color: #fafafa; }
-  .soundhunter{ background-color: #46155a; }
-  .soundfx{background-color: $alien;}
-  >div:first-of-type{
-    padding-bottom: 80px;
-    &::after{
-      content: "+";
-      border-radius: 50%;
-      position: absolute;
-      width: 70px;
-      height: 70px;
-      line-height: 70px;
-      font-size: 35px;
-      font-weight: normal;
-      color: white;
-      background: #46a1de;
-      @include shadow;
-      z-index: 3;
-      text-align: center;
-      box-sizing: border-box;
-      @include media-breakpoint-up(xs){
-        top: 100%;
-        margin-top: -35px;
-        left: 50%;
-        margin-left: -35px;
-      }
-      @include media-breakpoint-up(md){
-        top: 50%;
-        margin-top: -35px;
-        left: 100%;
-        margin-left: -35px;
-      }
+  .text-combo{
+      font-size: .8rem;
+      color: $black5;
+      margin: 3em;
     }
+  >div{
+    @include transition;
+    margin: .5em 0;
+    width: 100%;
+    max-width: 400px;
+    border: .3em solid rgba(black,.05);
+    border-radius: 4em;
+    vertical-align: middle;
+    color: $black8;
+    font-family: "walkway", sans-serif;
+    font-weight: bold;
+    a{
+      color: $black8;
+    }
+    span{
+      width: 3em;
+      height: 3em;
+      line-height: 3em;
+      margin: -.3em 2em -.3em -.3em;
+      border: .3em solid rgba(black,.07);
+      display: inline-block;
+      text-align: center;
+      box-sizing: content-box;
+      border-radius: 50%;
+      color: white;
+    }
+    &:first-of-type{span{background-color: $fx}}
+    &:nth-of-type(2){span{background-color: $hunter}}
+    &:nth-of-type(3){span{background-color: $vr}}
   }
-  >div:last-of-type{
-    padding-top: 80px;
-  }
-}
-.intercall-title{
-  background-color: lighten($color3, 3%);
-  padding-top: 2em;
-  padding-bottom: 2em;
 }
 
 .plus-container{
@@ -367,7 +359,4 @@ $ratio: 6em !default;
     width: 0;
     height: 100%;
   }
-}
-.plus{
-  
 }

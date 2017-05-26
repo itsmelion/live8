@@ -1,21 +1,9 @@
 .duplex {
 	background-color: #fafafa;
-	border-radius: 150px;
-	padding: 5rem 50px;
-	background-image: url('./images/fx/jokey.png');
-	background-size: contain;
-	background-position: bottom right;
-	background-repeat: no-repeat;
-	article {
-		padding: 0 80px;
+	.artigo{
+		padding: 4em;
+		@media screen and (max-width: 600px)	{
+			padding: 1em
+		}
 	}
-	*{
-		color: $black8;
-	}
-	/*.duplex-pic img{
-		width: auto;
-		height: 250px;
-		display: block;
-		margin: auto;
-	}*/
 }

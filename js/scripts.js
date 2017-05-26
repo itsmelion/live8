@@ -18,7 +18,6 @@
 	$(".tabs > li").on("click", function () {
 		var el = $(this);
 		var clickedtab = parseInt(el.attr("data-id"));
-		console.log(clickedtab);
 		// Remove class from active tab
 		$(".tabs > li").removeClass("active");
 		wavebg.removeClass("active");
@@ -87,7 +86,7 @@
   	slidesToShow: 4,
 		slidesToScroll: 4,
 		variableWidth: true,
-		adaptiveHeight: true,
+		adaptiveHeight: false,
 		lazyLoad: 'ondemand',
 		responsive: [
     {
@@ -108,34 +107,49 @@
   ]
 	});
 
+	$('.apple-card').click(function(){
+		$(this).toggleClass('touched');
+	});
+
 	$('.card-container').photoSwipe();
 
-	$(function() {      
-		$("#home-wrap, .arrow").swipe( {
-			swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
-				if ( direction === 'up' ) {
-					$("footer").animate(
-						{
-							marginTop: '-98vh'
-						}
+  $(function () {
+		$('footer').css({ bottom: '-105vh' });
+		$(".arrow.up").on("click", function () {
+			$("footer").animate({bottom: '0'});
+		}
+		);
+		$(".arrow.down").on("click", function () {
+			$("footer").animate({bottom: '-105vh'});
+		}
+		);
+		$(".arrow").swipe( {
+      swipe: function (event, direction, distance, duration) {
+				if (direction === 'up') {
+          $("footer").animate(
+            {
+              bottom: '0'
+            }
 					);
 				}
 			},
 			allowPageScroll:"none"
 		});
-
+		
 		$("footer").swipe( {
-			swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
+			swipe:function(event, direction, distance, duration) {
 
-				if ( direction === 'down' ) {
+				if (direction === 'down') {
+					console.log("Down");
 					$("footer").animate(
 						{
-							marginTop: '0'
+							bottom: '-105vh'
 						}
 					);
 				}
-
-			}
+			
+			},
+			allowPageScroll:"none"
 		});
 	
 	});

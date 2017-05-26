@@ -22,8 +22,8 @@
 
 <div class="tip">
 	<img src="<?php echo get_bloginfo('template_url') ?>/images/icons/soundhunter.svg" alt="soundwave" />
-	<article class="col-md-10 col-sm-9 d-flex flex-column align-items-stretch align-content-stretch">
-		<h3>O que é um SoundHunter?</h3>
+	<article class="d-flex flex-column align-items-stretch align-content-stretch">
+		<h3 style="padding-right: 90px ">O que é um SoundHunter?</h3>
 		<p>
 			É um serviço para ajudar a escolher o melhor tipo de música para o seu evento 
 			e te oferecer uma melhor experiência de show ao vivo.
@@ -72,6 +72,8 @@
 			Eu tenho uma banda
 		</a>
 	</div>
+	
+<?php include( locate_template( 'partials/combo.php', false, false ) ); ?>
 
 </div>
 
@@ -81,7 +83,7 @@
 			<p class="text-left">Inscreva a sua banda, seja visto!
 				<br>Nós temos uma excelente infraestrutura para os seus shows,
 				e conosco voce ganha mais visibilidade</p>
-			<a class="btn btn-primary" href="mailto:daniel@live8.com.br?cc=alexandre@live8.com.br;subject=Quero%20participar%20do%20Elenco&amp;body=Oi%20vi%20o%20site%20de%20voces%20e%20gostaria%20de%20saber%20mais">
+			<a class="btn btn-primary" href="mailto:daniel@live8.com.br?cc=alexandre@live8.com.br?subject=Quero%20participar%20do%20Elenco&amp;body=Oi%20vi%20o%20site%20de%20voces%20e%20gostaria%20de%20saber%20mais">
 				Entre em contato
 			</a>
 			<img src="<?php echo get_bloginfo('template_url') ?>/images/soundhunter/i-want-you.png" alt="Queremos você!">

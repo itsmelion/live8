@@ -8,8 +8,6 @@ if( $images ): ?>
             data-original-src-width="<?php echo $image['width']; ?>"
             data-original-src-height="<?php echo $image['height']; ?>"
             alt="<?php echo $image['alt']; ?>">
-            
-           <p><?php echo $image['caption']; ?></p>
     </article>
     <?php endforeach; ?>
 <?php endif; ?>

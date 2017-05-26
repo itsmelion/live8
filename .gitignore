@@ -4,6 +4,8 @@
 **/.sass-cache
 **/.sass-cache/
 
+.tmp/
+
 **/bower_components/
 
 grunt/node_modules/

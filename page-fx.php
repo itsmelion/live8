@@ -1,13 +1,11 @@
-<?php 
-/* Template Name: Audio FX */
-?>
+<?php /* Template Name: Audio FX */ ?>
 <?php 
 /*
 @package WordPress
  * @subpackage alive8
  * @since alive8 1.0
  */
- ?>
+?>
 <?php get_header(); ?>
 <?php
 	$fields = get_fields(get_the_ID());
@@ -22,30 +20,30 @@
 		<h3><?= $fields['subtitulo']; ?></h3>
 	</div>
 </header>
-<div class="container">
-
-	<div class="row duplex">
-			
-		<article class="col-md-8 d-flex flex-column align-items-stretch align-content-stretch">
+<div class="container-fluid" style="background-color: #fafafa">
+	<div class="container">
+		<article class="row duplex">
+		<div class="col-md-6 artigo">
 			<h3><?= $fields['sessao-titulo']; ?></h3>
 			<p>
 				<?= $fields['sessao-texto']; ?>
 			</p>
-			<img src="<?= $fields['sessao-imagem']; ?>">
-		</article>
-
+		</div>
+		<div class="col-md-6 text-right">
+		<img src="<?= $fields['sessao-imagem']; ?>">
+		</div>
+	</article>
 	</div>
-
 </div>
 
 <div class="container-fluid">
 	<div class="row">
-		<div class="col-md-12 text-center" style="margin-top: 3em">
+		<div class="col-md-12 text-center" style="margin-top: 3em; margin-bottom: 2em;">
 			<h2>Galeria</h2>
 			<p>Veja abaixo nossas fotos</p>
 		</div>
 	</div>
-	<div class="row">
+	<div class="row" style="margin-bottom: 2em;">
 		<section class="card-container" style="width: 100%">
 			<?php include( locate_template( 'partials/fx-gallery.php', false, false ) ); ?>
 		</section>
@@ -55,6 +53,9 @@
 		
 	</div>
 </div>
+
+<?php include( locate_template( 'partials/combo.php', false, false ) ); ?>
+
 <?php get_footer();?>
 
 <!-- Root element of PhotoSwipe. Must have class pswp. -->

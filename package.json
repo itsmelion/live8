@@ -1,0 +1,58 @@
+{
+  "name": "alive",
+  "version": "1.0.0",
+  "description": "theme for live8",
+  "main": "scripts/scripts.js",
+  "private": true,
+  "engines": {
+    "node": ">=6"
+  },
+  "scripts": {
+    "start": "gulp serve",
+    "serve": "gulp serve:dist",
+    "compile": "gulp"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.18.12",
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-babel": "^6.1.2",
+    "gulp-cache": "^0.4.6",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-eslint": "^3.0.1",
+    "gulp-filter": "^5.0.0",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-if": "^2.0.2",
+    "gulp-imagemin": "^3.2.0",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-size": "^2.1.0",
+    "gulp-sourcemaps": "^2.6.0",
+    "gulp-uglify": "^2.1.2",
+    "gulp-useref": "^3.1.2",
+    "main-bower-files": "^2.13.1",
+    "run-sequence": "^1.2.2",
+    "wiredep": "^4.0.0"
+  },
+  "directories": {
+    "doc": "doc"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/christhopherlion/alive8.git"
+  },
+  "keywords": [
+    "live8",
+    "alia"
+  ],
+  "author": "Christhopher Lion",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://gitlab.com/christhopherlion/alive8/issues"
+  },
+  "homepage": "https://gitlab.com/christhopherlion/alive8#README"
+}

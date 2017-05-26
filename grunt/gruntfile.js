@@ -152,7 +152,6 @@ module.exports = function (grunt) {
 	// Development task
 	grunt.registerTask('default', [
 		'jshint',
-		'uglify',
 		'sass:dev',
 		'sass:editorstyles'
 	]);

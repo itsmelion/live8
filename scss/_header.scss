@@ -4,6 +4,7 @@ body.home{
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 	background-position: top;
+	background-image: url('./images/header.jpg');
 	@include media-breakpoint-down(sm) {
 		background-image: url('./images/header-iphone.jpg');
 		overflow: hidden;
@@ -11,11 +12,12 @@ body.home{
 }
 header.home{
 	position: relative;
-	height: calc(100% - 48px);
-	height: calc(100vh - 48px);
+	height: 100%;
+	height: 100vh;
 	width: 100%;
 	border: none;
 	margin: 0;
+
 	.logo{
 		display: block;
 		margin: auto;
@@ -25,13 +27,14 @@ header.home{
 	}
 	.degrade-icons{
 		position: absolute;
-		bottom: 0;
+		bottom: 100px;
 		width: 100%;
 	}
 }
 
 header#headerVR {
 	color: #191919;
+	height: 60vh;
 	background-color: #fafafa;
 	background-image: url('./images/vr/vrGuy.png');
 	background-position: bottom right;
@@ -41,7 +44,7 @@ header#headerVR {
 		text-align: left;
 		padding: 1rem;
 		width: 45%;
-		min-width: 320px;
+		min-width: 300px;
 		max-width: 680px;
 		margin-left: 10%;
 		box-sizing: border-box;
@@ -50,10 +53,11 @@ header#headerVR {
 		background-size: auto 280px;
 		height: auto;
 		.lead{
-			width: 100%;
-			margin: 0;
-			margin-top: 100px;
-			margin-bottom: 300px;
+			width: 95%;
+			margin: 2.5%;
+			margin-top: 1.5em;
+			margin-bottom: 290px;
+			p{font-size: 1rem; margin-top: 1em;}
 		}
 	}
 }
@@ -61,17 +65,20 @@ header#headerVR {
 header#headerFX {
 	position: relative;
 	height: 70%;
-	height: 75vh;
+	height: 70vh;
 	width: 100%;
 	border: none;
 	margin: 0;
-	/*background-image: url('./images/fx/1.jpg');
-	background-size: cover;
-	background-attachment: fixed;
-	background-position: center -225px;*/
+	background-color: black;
+	@media screen and (max-width: 720px){
+		background-image: url('./images/fx/fxSM.jpg');
+		animation: none;
+		background-size: cover;
+		background-position: center center;
+		opacity: 1;
+		.swipe{animation: none;}
+	}
 	color: white;
-	margin-top: -64px;
-	margin-bottom: -20px;
 	.lead{
 		z-index: 1;
 		margin-top: -120px;
@@ -88,10 +95,6 @@ header#headerFX {
 	-webkit-animation: flash ease-out 6s infinite;
 	-moz-animation: flash ease-out 6s infinite;
 	animation: flash ease-out 6s infinite;
-	@media screen and (max-width: 720px){
-		background-image: url('./images/fx/fxSM.jpg');
-		animation: none;
-	}
 }
 
 @-webkit-keyframes flash {

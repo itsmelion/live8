@@ -3,6 +3,16 @@
 \******************************************************************************/
 
 @import url('https://fonts.googleapis.com/css?family=Heebo:100,400,900');
+@font-face {
+    font-family: 'walkway';
+    src: url('./fonts/walkway/walkway.eot');
+    src: url('./fonts/walkway/walkway.eot?#iefix') format('embedded-opentype'),
+         url('./fonts/walkway/walkway.woff') format('woff'),
+         url('./fonts/walkway/walkway.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 // Variables
 $base-font: 'Heebo',
 'Open Sans',

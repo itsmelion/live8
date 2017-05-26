@@ -30,7 +30,7 @@
 
 			<address>
 				<p class="card-text">Belo Horizonte/MG<br>telefone: (31) 9 9581-0804</p>
-				<a class="btn btn-success iconic" href="mailto:daniel@live8.com.br?cc=alexandre@live8.com.br;subject=Oi%20Live8&amp;body=Oi%20vi%20o%20site%20de%20voces%20e%20gostaria%20de%20saber%20mais">Escrever email</a>
+				<a class="btn btn-success iconic" href="mailto:daniel@live8.com.br?cc=alexandre@live8.com.br?subject=Oi%20Live8&amp;body=Oi%20vi%20o%20site%20de%20voces%20e%20gostaria%20de%20saber%20mais">Escrever email</a>
 				<a class="btn btn-outline-success hidden-md-up iconic" href="tel:+5531995810804">
 					<img src="<?php echo get_bloginfo('template_url') ?>/images/icons/whatsapp.svg">
 					Adicionar aos contatos
