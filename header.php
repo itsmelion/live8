@@ -26,42 +26,6 @@
 	</head>
 	<body <?php body_class(); ?> >
 
-
-
 <nav class="menu">
-  <input type="checkbox" href="#" class="menu-open" name="menu-open" id="menu-open"/>
-  <label class="menu-open-button" for="menu-open">
-    <span class="hamburger hamburger-1"></span>
-    <span class="hamburger hamburger-2"></span>
-    <span class="hamburger hamburger-3"></span>
-  </label>
-  
-  <a href="<?php echo home_url();?>" class="menu-item"> <img src="<?php echo get_bloginfo('template_url') ?>/images/home.svg" alt="Home" /></a>
-  <a href="../soundhunter" class="menu-item"> <img src="<?php echo get_bloginfo('template_url') ?>/images/SoundHunter.svg" alt="SoundHunter" /></a>
-  <a href="../virtual-reality" class="menu-item"> <img src="<?php echo get_bloginfo('template_url') ?>/images/vr-menu.svg" alt="virtual reality" /></a>
-  <a href="../audio-effects" class="menu-item"> <img src="<?php echo get_bloginfo('template_url') ?>/images/soundfx.svg" alt="Sound effects" /></a>
-  
-  
+  <a  title="Página inicial" href="<?php echo home_url();?>" class="menu-item"> <img src="<?php echo get_bloginfo('template_url') ?>/images/home.svg" alt="Home" /></a>  
 </nav>
-
-
-<!-- filters -->
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1" id="filtersvg">
-    <defs>
-      <filter id="shadowed-goo">
-          
-          <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
-          <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
-          <feGaussianBlur in="goo" stdDeviation="3" result="shadow" />
-          <feColorMatrix in="shadow" mode="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 -0.2" result="shadow" />
-          <feOffset in="shadow" dx="1" dy="1" result="shadow" />
-          <feComposite in2="shadow" in="goo" result="goo" />
-          <feComposite in2="goo" in="SourceGraphic" result="mix" />
-      </filter>
-      <filter id="goo">
-          <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
-          <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
-          <feComposite in2="goo" in="SourceGraphic" result="mix" />
-      </filter>
-    </defs>
-</svg>

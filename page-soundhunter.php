@@ -63,18 +63,19 @@
 	include( locate_template( 'partials/wave.php', false, false ) );
 ?>
 <div class="container">
-
 	<?php include( locate_template( 'partials/applecards.php', false, false ) ); ?>
 
 	<div class="row text-center" style="margin-top: 2em; margin-bottom: 2em;">
-		<a class="btn btn-primary btn-block" href="#joinCast">
-			Eu tenho uma banda
-		</a>
+		<div class="col-md-12">
+			<a class="btn btn-primary btn-block" href="#joinCast">
+				Eu tenho uma banda
+			</a>
+		</div>
 	</div>
-	
-<?php include( locate_template( 'partials/combo.php', false, false ) ); ?>
 
 </div>
+
+<?php include( locate_template( 'partials/combo.php', false, false ) ); ?>
 
 <div id="joinCast" class="overlay">
 		<aside class="social text-center" tabindex="-1" role="dialog" aria-labelledby="modal-label" aria-hidden="true">
