@@ -1,6 +1,7 @@
 <?php if(get_field('apple-card')): ?>
 	<div class="row">
-		<section class="d-flex flex-wrap flex-row align-items-stretch align-content-stretch justify-content-around" style="width: 100%">
+		<div class="col-md-12">
+			<section class="d-flex flex-wrap flex-row align-items-stretch align-content-stretch justify-content-around" style="width: 100%">
 			<?php while(has_sub_field('apple-card')): ?>
 			<article class="apple-card" style="background-image: url('<?php the_sub_field('img'); ?>')">
 					<a href="<?php the_sub_field('url'); ?>" title="play">
@@ -14,5 +15,6 @@
 			</article>
 			<?php endwhile; ?>
 		</section>
+		</div>
 	</div>
 <?php endif; ?>

@@ -52,16 +52,10 @@ queue alive8 scripts
  * @return void
  */
 function alive8_enqueue_scripts() {
-	if( is_front_page() )
-    {
-        wp_enqueue_script( 'swipe', get_template_directory_uri() . '/js/swipe.js', array(), '1.0', true );
-    }
 wp_enqueue_style( 'alive8-styles', get_stylesheet_uri(), array(), '1.0' );
 wp_enqueue_script( 'jquery' );
 wp_register_script('jquery-ui', 'https://code.jquery.com/ui/1.12.1/jquery-ui.min.js', false, '1.12.1', true);
 wp_enqueue_script('jquery-ui');
-wp_register_script('tether',  'https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js', false, '1.4.0', true);
-wp_enqueue_script('tether');
 wp_register_script('bootstrap-js', 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/js/bootstrap.min.js', false, '4.0.0-alpha.6', true);
 wp_enqueue_script('bootstrap-js');
 wp_register_script( 'touchswipe', 'https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js', false, '1.6.18', true);

@@ -36,9 +36,10 @@
   background-position: center center;
   background-origin: border-box;
   background-size: cover;
-  margin: .5rem;
-  height: 280px;
-  max-width: 500px;
+  margin-bottom: 1em;
+  height: 250px;
+  max-width: 420px;
+  width: 100%;
   flex: 0 1 auto;
   border-radius: $radius;
   overflow: hidden;
@@ -58,7 +59,7 @@
     padding: 3px 24px 20px 36px;
     overflow: hidden;
     @include long-transition;
-    transform: translate3d(0, 238px, 0);
+    transform: translate3d(0, 203px, 0);
     color: white;
     background-color: $black3;
     h3 {
@@ -135,19 +136,26 @@
   white-space: nowrap;
   vertical-align: middle;
   user-select: none;
-  color: $alien;
-  @include hover-focus {
-    text-decoration: none;
-    color: $alien;
-    @include shadow;
+  outline: none;
+  border: 1px solid #999999;
+  img{
+    width: 24px;
+    height: 24px;
+    pointer-events: none;
   }
   &.slick-prev{
     left: 0px;
     border-radius: 0 $radius $radius 0;
+    img{
+      transform: rotate(-90deg);
+    }
   }
   &.slick-next{
     right: 0px;
     border-radius: $radius 0 0 $radius;
+    img{
+      transform: rotate(90deg);
+    }
   }
 }
 
@@ -280,6 +288,10 @@ $ratio: 5em !default;
         list-style: none;
         transition-duration: .2s;
         cursor: pointer;
+        @include media-breakpoint-down(sm) {
+          width: auto;
+          min-width: $ratio;
+        }
         &.active {
           background-color: rgba($alien,.2);
           border: 1px solid transparent;

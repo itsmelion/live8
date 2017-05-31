@@ -43,9 +43,7 @@
 <div class="container">
 
 <section id="insight360">
-
 	<div class="row">
-
 		<div class="col-md-12 text-center" style="margin-top: 2em">
 			<h1><?= $fields['sessao-titulo']; ?></h1>
 			<p style="margin: 1rem .5rem"><?= $fields['sessao-texto']; ?></p>
@@ -55,15 +53,16 @@
 			<img id="box-open" src="<?php echo get_bloginfo('template_url') ?>/images/vr/2.png" alt="oculos <?php bloginfo( 'name' );?>" />
 		</div>
 	</div>
-
-	<div class="row">
-		<div class="col text-center" style="margin-top: 3em">
-			<h2>Exemplos</h2>
-			<p>Veja abaixo alguns vídeos 360º</p>
-		</div>
-	</div>
-	<?php include( locate_template( 'partials/applecards.php', false, false ) ); ?>
 </section>
+
+<div class="row">
+	<div class="col text-center" style="margin-top: 3em">
+		<h2>Exemplos</h2>
+		<p>Veja abaixo alguns vídeos 360º</p>
+	</div>
+</div>
+
+<?php include( locate_template( 'partials/applecards.php', false, false ) ); ?>
 
 </div>
 

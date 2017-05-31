@@ -41,27 +41,26 @@
 <div class="tip">
 	<img src="<?php echo get_bloginfo('template_url') ?>/images/icons/soundhunter.svg" alt="soundwave" />
 	<article class="d-flex flex-column align-items-stretch align-content-stretch">
-		<h3 style="padding-right: 90px ">O que é um SoundHunter?</h3>
+		<h3 style="padding-right: 90px "><?= $fields['o_que_e_soundhunter']; ?></h3>
 		<p>
-			É um serviço para ajudar a escolher o melhor tipo de música para o seu evento 
-			e te oferecer uma melhor experiência de show ao vivo.
+			<?= $fields['sound_hunter_descricao']; ?>
 		</p>
 	</article>
 </div>
 
 <div class="container">
-<div class="row">
-		<div class="col-md-12 text-center" style="margin-top: 3em">
-			<h1>Como Funciona?</h1>
-			<p style="margin: 1rem .5rem">É bem simples, são 3 etapas te oferecer a melhor experiencia possível.</p>
-		</div>
+	<div class="row">
+			<div class="col-md-12 text-center" style="margin-top: 3em">
+				<h1>Como Funciona?</h1>
+				<p style="margin: 1rem .5rem">É bem simples, são 3 etapas te oferecer a melhor experiencia possível.</p>
+			</div>
+	</div>
 </div>
- </div>
-<?php
-	$itemCaption = array('Briefing', 'Triagem', 'Apresentação');
-	$edgeColor = '#eaeaea';
+
+<?php $edgeColor = '#eaeaea';
 	include( locate_template( 'partials/wave.php', false, false ) );
 ?>
+
 <div class="container">
 	<?php include( locate_template( 'partials/applecards.php', false, false ) ); ?>
 

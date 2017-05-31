@@ -72,6 +72,10 @@
 		variableWidth: true,
 		adaptiveHeight: false,
 		lazyLoad: 'ondemand',
+		centerMode: true,
+		mobileFirst: true,
+		prevArrow: '<button type="button" class="slick-prev"><img src="http://live8.com.br/wp-content/themes/alive8/images/icons/arrow.svg" alt="Slide"/></button>',
+		nextArrow: '<button type="button" class="slick-next"><img src="http://live8.com.br/wp-content/themes/alive8/images/icons/arrow.svg" alt="Slide"/></button>',
 		responsive: [
     {
       breakpoint: 1366,
