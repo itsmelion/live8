@@ -12,29 +12,45 @@
 	$fields = get_fields(get_the_ID());
 	the_post();
 ?>
- <header id="headerVR" class="d-flex flex-column align-items-start justify-content-center">
+<?php $applecard = get_fields('video'); ?>
+<?php $background = get_field('bg'); if( $background ): ?>
+<style>
+#headerVR2{
+	background-image: url('<?php echo $bg; ?>') !important;
+	@media screen and (max-width: 720px){
+		background-image: url('<?php echo $bg_mobile; ?>') !important;
+	};
+}
+</style>
+<header id="headerVR2" class="d-flex flex-column align-items-start justify-content-center">
  	<div class="lead">
 		<h1 class="display"><?= get_the_title() ?></h1>
 		<h3><?= $fields['subtitulo']; ?></h3>
 		<p><?= $fields['paragrafo_cabeçalho']; ?></p>
 	</div>
  </header>
+<?php endif; ?>
+<?php if( !$background ): ?>
+<header id="headerVR" class="d-flex flex-column align-items-start justify-content-center">
+ 	<div class="lead">
+		<h1 class="display"><?= get_the_title() ?></h1>
+		<h3><?= $fields['subtitulo']; ?></h3>
+		<p><?= $fields['paragrafo_cabeçalho']; ?></p>
+	</div>
+ </header>
+<?php endif; ?>
 
 <div class="container">
 
 <section id="insight360">
-	<!-- 360 Insight -->
 
 	<div class="row">
-		<div class="col-md-6">
-			<!--<img src="<?php echo get_bloginfo('template_url') ?>/images/360.gif" alt="360 gif" width="75" />-->
-				<h1 class="display"><?= $fields['sessao-titulo']; ?></h1>
-				<h3><?= $fields['sessao-titulo']; ?></h3>
-				<p class="text-justify">
-					<?= $fields['sessao-texto']; ?>
-				</p>
+
+		<div class="col-md-12 text-center" style="margin-top: 2em">
+			<h1><?= $fields['sessao-titulo']; ?></h1>
+			<p style="margin: 1rem .5rem"><?= $fields['sessao-texto']; ?></p>
 		</div>
-		<div class="col-md-6">
+		<div class="col-md-12 text-center">
 			<img id="box-closed" src="<?php echo get_bloginfo('template_url') ?>/images/vr/1.png" alt="oculos <?php bloginfo( 'name' );?>" />
 			<img id="box-open" src="<?php echo get_bloginfo('template_url') ?>/images/vr/2.png" alt="oculos <?php bloginfo( 'name' );?>" />
 		</div>
@@ -46,18 +62,7 @@
 			<p>Veja abaixo alguns vídeos 360º</p>
 		</div>
 	</div>
-	<div id="videoSample" class="row">
-		<div class="col-md-6 col-sm-12">
-			<div class="videoWrapper">
-				<iframe src="<?= $fields['video1']; ?>?autoplay=0&showinfo=0&wmode=transparent&autohide=1&modestbranding=1&rel=0&hd=1" width="100%" height="auto" frameborder="0" allowfullscreen></iframe>
-			</div>
-		</div>
-		<div class="col-md-6 col-sm-12">
-			<div class="videoWrapper">
-				<iframe src="<?= $fields['video2']; ?>?autoplay=0&showinfo=0&wmode=transparent&autohide=1&modestbranding=1&rel=0&hd=1" width="100%" height="auto" frameborder="0" allowfullscreen></iframe>
-			</div>
-		</div>
-	</div>
+	<?php include( locate_template( 'partials/applecards.php', false, false ) ); ?>
 </section>
 
 </div>

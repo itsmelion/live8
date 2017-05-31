@@ -2,7 +2,7 @@
 
 if( $images ): ?>
   <?php foreach( $images as $image ): ?>
-    <article class="swipe-card">
+    <article class="swipe-card" style="background-image: url('<?php echo $image['sizes']['medium']; ?>')">
           <img src="<?php echo $image['sizes']['medium']; ?>"
             data-original-src="<?php echo $image['url']; ?>"
             data-original-src-width="<?php echo $image['width']; ?>"

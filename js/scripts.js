@@ -91,7 +91,7 @@
   ]
 	});
 
-	$('.apple-card').click(function(){
+	$('.apple-card, .menu-open-button').click(function(){
 		$(this).toggleClass('touched');
 	});
 

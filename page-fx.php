@@ -11,6 +11,27 @@
 	$fields = get_fields(get_the_ID());
 	the_post();
 ?>
+
+<?php $background = get_field('bg');
+if( $background ): ?>
+<style>
+#headerFX2{
+	background-image: url('<?php echo $bg; ?>') !important;
+	@media screen and (max-width: 720px){
+		background-image: url('<?php echo $bg_mobile; ?>') !important;
+	};
+}
+</style>
+<header id="headerFX2" class="d-flex flex-column align-items-center justify-content-center">
+	<div class="lead text-center">
+		<h1 class="display"><?= get_the_title() ?></h1>
+		<h3><?= $fields['subtitulo']; ?></h3>
+	</div>
+</header>
+<?php endif; ?>
+
+<?php if( !$background ): ?>
+
 <header id="headerFX" class="d-flex flex-column align-items-center justify-content-center">
 	<div class="swipe fx1"></div>
 	<div class="swipe fx2"></div>
@@ -20,6 +41,9 @@
 		<h3><?= $fields['subtitulo']; ?></h3>
 	</div>
 </header>
+
+<?php endif; ?>
+
 <div class="container-fluid" style="background-color: #fafafa">
 	<div class="container">
 		<article class="row duplex">
@@ -37,21 +61,20 @@
 </div>
 
 <div class="container-fluid">
+	
 	<div class="row">
 		<div class="col-md-12 text-center" style="margin-top: 3em; margin-bottom: 2em;">
 			<h2>Galeria</h2>
 			<p>Veja abaixo nossas fotos</p>
 		</div>
 	</div>
+
 	<div class="row" style="margin-bottom: 2em;">
 		<section class="card-container" style="width: 100%">
 			<?php include( locate_template( 'partials/fx-gallery.php', false, false ) ); ?>
 		</section>
 	</div>
 
-	<div class="row">
-		
-	</div>
 </div>
 
 <?php include( locate_template( 'partials/combo.php', false, false ) ); ?>

@@ -13,12 +13,30 @@
 	$fields = get_fields(get_the_ID());
 	the_post();
 ?>
+<?php $background = get_field('bg'); if( $background ): ?>
+<style>
+#headerhunter2{
+	background-image: url('<?php echo $bg; ?>') !important;
+	@media screen and (max-width: 720px){
+		background-image: url('<?php echo $bg_mobile; ?>') !important;
+	};
+}
+</style>
+ <header id="headerhunter2" class="d-flex flex-column align-items-center justify-content-center">
+ 	<div class="lead text-center">
+		<h1 class="display"><?= get_the_title() ?></h1>
+		<h3><?= $fields['subtitulo']; ?></h3>
+	</div>
+ </header>
+<?php endif; ?>
+<?php if( !$background ): ?>
  <header id="headerhunter" class="d-flex flex-column align-items-center justify-content-center">
  	<div class="lead text-center">
 		<h1 class="display"><?= get_the_title() ?></h1>
 		<h3><?= $fields['subtitulo']; ?></h3>
 	</div>
  </header>
+ <?php endif; ?>
 
 <div class="tip">
 	<img src="<?php echo get_bloginfo('template_url') ?>/images/icons/soundhunter.svg" alt="soundwave" />
@@ -45,24 +63,8 @@
 	include( locate_template( 'partials/wave.php', false, false ) );
 ?>
 <div class="container">
-	<div class="row">
-		<section class="d-flex flex-wrap flex-row align-items-stretch align-content-stretch justify-content-around" style="width: 100%">
-			<?php foreach( $applecard as $card ): ?>
-			<article class="apple-card" style="background-image: url('<?php echo $card['img']; ?>')">
-					<?php if( $card['url'] ): ?>
-					<a href="<?php echo $card['url']; ?>" title="play">
-					<img class="play-btn" src="<?php echo get_bloginfo('template_url') ?>/images/play.svg" alt="play" />
-					</a>
-					<?php endif; ?>
-				<div class="legenda">
-					<img src="<?php echo get_bloginfo('template_url') ?>/images/icons/arrow.svg" alt="Swipe up"/>
-					<h3><?php echo $card['title']; ?></h3>
-					<p><?php echo $card['caption']; ?></p>
-				</div>
-			</article>
-			<?php endforeach; ?>
-		</section>
-	</div>
+
+	<?php include( locate_template( 'partials/applecards.php', false, false ) ); ?>
 
 	<div class="row text-center" style="margin-top: 2em; margin-bottom: 2em;">
 		<a class="btn btn-primary btn-block" href="#joinCast">
@@ -80,7 +82,7 @@
 			<p class="text-left">Inscreva a sua banda, seja visto!
 				<br>Nós temos uma excelente infraestrutura para os seus shows,
 				e conosco voce ganha mais visibilidade</p>
-			<a class="btn btn-primary" href="mailto:daniel@live8.com.br?cc=alexandre@live8.com.br?subject=Quero%20participar%20do%20Elenco&amp;body=Oi%20vi%20o%20site%20de%20voces%20e%20gostaria%20de%20saber%20mais">
+			<a class="btn btn-primary" href="mailto:daniel@live8.com.br?cc=alexandre@live8.com.br&subject=Quero%20participar%20do%20Elenco&amp;&body=Oi%20vi%20o%20site%20de%20voces%20e%20gostaria%20de%20saber%20mais">
 				Entre em contato
 			</a>
 			<img src="<?php echo get_bloginfo('template_url') ?>/images/soundhunter/i-want-you.png" alt="Queremos você!">
