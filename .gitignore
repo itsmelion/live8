@@ -24,4 +24,7 @@ grunt/.sass-cache
 
 dist/
 ./dist
-./dist/
+
+alive8/
+./alive8
+./alive8/

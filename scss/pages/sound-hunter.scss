@@ -7,7 +7,9 @@
 	margin: 0;
 	background-image: url('./images/soundhunter/header1.jpg');
 	background-size: cover;
+	-webkit-background-size: cover;
 	background-attachment: fixed;
+	-webkit-background-attachment: fixed;
 	background-position: center bottom;
 	color: white;
 	.lead{
@@ -26,6 +28,8 @@
 	border: none;
 	margin: 0;
 	background-size: cover;
+	-webkit-background-size: cover;
+	-webkit-background-attachment: fixed;
 	background-attachment: fixed;
 	background-position: center center;
 	color: white;

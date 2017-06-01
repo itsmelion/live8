@@ -63,6 +63,6 @@ wp_enqueue_script('touchswipe');
 wp_register_script('jquery-slick', '//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js', false, '1.6.0', true);
 wp_enqueue_script('jquery-slick');
 wp_enqueue_script( 'lightbox', get_template_directory_uri() . '/js/jquery-photoswipe/min/jquery.photoswipe-global.js', array(), '1.0', true );
-wp_enqueue_script( 'default-scripts', get_template_directory_uri() . '/js/scripts.js', array(), '1.0', true );
+wp_enqueue_script( 'default-scripts', get_template_directory_uri() . '/js/scripts.min.js', array(), '1.0', true );
 }
 add_action( 'wp_enqueue_scripts', 'alive8_enqueue_scripts' );

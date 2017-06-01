@@ -35,7 +35,7 @@
 				<img src="<?php echo get_bloginfo('template_url') ?><?php echo $itemSVG[1];?>">
 				<h2><?php echo $itemCaption[1];?></h2>
 				<p class="text-left"><?php echo $itemText[1];?></p>
-				<a href="virtual-reality" class="btn btn-primary">Veja mais</a>
+				<a href="audio-effects" class="btn btn-primary">Veja mais</a>
 			</aside>
 	<a href="#close" class="btn-close" aria-hidden="true"><span class="sr-only">Close</span></a>
 </div>
@@ -44,7 +44,7 @@
 				<img src="<?php echo get_bloginfo('template_url') ?><?php echo $itemSVG[2];?>">
 				<h2><?php echo $itemCaption[2];?></h2>
 				<p class="text-left"><?php echo $itemText[2];?></p>
-				<a href="audio-effects" class="btn btn-primary">Veja mais</a>
+				<a href="virtual-reality" class="btn btn-primary">Veja mais</a>
 			</aside>
 	<a href="#close" class="btn-close" aria-hidden="true"><span class="sr-only">Close</span></a>
 </div>

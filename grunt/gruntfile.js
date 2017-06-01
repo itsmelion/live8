@@ -46,7 +46,7 @@ module.exports = function (grunt) {
 		},
 
 		// compile your sass
-		sass: {
+		/*sass: {
 			dev: {
 				options: {
 					style: 'expanded'
@@ -56,27 +56,62 @@ module.exports = function (grunt) {
 			},
 			prod: {
 				options: {
-					style: 'compressed'
+					// or
+					map: {
+							inline: false, // save all sourcemaps as separate files...
+							annotation: '../alive8/css/maps/' // ...to the specified directory
+					},
+
+					processors: [
+						require('pixrem')(), // add fallbacks for rem units
+						require('autoprefixer')({browsers: 'last 2 versions'}), // add vendor prefixes
+						require('cssnano')() // minify the result
+					]
 				},
-				src: ['../scss/style.scss'],
-				dest: '../style.css'
-			},
-			editorstyles: {
-				options: {
-					style: 'expanded'
-				},
-				src: ['../scss/wp-editor-style.scss'],
-				dest: '../css/wp-editor-style.css'
+				dist: {
+					src: ['../scss/style.scss'],
+					dest: '../style.css'
+				}
 			}
+		},*/
+
+	sass: {
+		dist: {
+			files: {
+				'../style.css': '../scss/style.scss'
+			},
+			processors: [
+				require('autoprefixer')(),
+				require('cssnano')()
+			]
 		},
+		},
+	postcss: {
+				options: {
+					// or
+					map: {
+							inline: false, // save all sourcemaps as separate files...
+							annotation: '../alive8/css/maps/' // ...to the specified directory
+					},
+
+					processors: [
+						require('pixrem')(), // add fallbacks for rem units
+						require('autoprefixer')({browsers: 'last 2 versions'}), // add vendor prefixes
+						require('cssnano')() // minify the result
+					]
+				},
+				dist: {
+					src: ['../style.css'],
+					dest: '../style.css'
+				}
+			},
 
 		// watch for changes
 		watch: {
 			scss: {
 				files: ['../scss/**/*.scss'],
 				tasks: [
-					'sass:dev',
-					'sass:editorstyles',
+					'css',
 					'notify:scss'
 				]
 			},
@@ -119,7 +154,7 @@ module.exports = function (grunt) {
 
 		clean: {
 			dist: {
-				src: ['../dist'],
+				src: ['../alive8'],
 				options: {
 					force: true
 				}
@@ -131,12 +166,12 @@ module.exports = function (grunt) {
 				files: [{
 					cwd: '../',
 					src: ['**/*'],
-					dest: '../dist/',
+					dest: '../alive8/',
 					expand: true
 				}],
 				options: {
 					ignore: [
-						'../dist{,/**/*}',
+						'../alive8{,/**/*}',
 						'../doc{,/**/*}',
 						'../grunt{,/**/*}',
 						'../scss{,/**/*}'
@@ -149,11 +184,12 @@ module.exports = function (grunt) {
 	// Load NPM's via matchdep
 	require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
+	grunt.registerTask('css', ['sass', 'postcss']);
+
 	// Development task
 	grunt.registerTask('default', [
 		'jshint',
-		'sass:dev',
-		'sass:editorstyles'
+		'css'
 	]);
 
 	// Production task
@@ -161,8 +197,7 @@ module.exports = function (grunt) {
 		grunt.task.run([
 			'jshint',
 			'uglify',
-			'sass:prod',
-			'sass:editorstyles',
+			'css',
 			'clean:dist',
 			'copyto:dist',
 			'notify:dist'
