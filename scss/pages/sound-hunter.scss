@@ -12,6 +12,9 @@
 	-webkit-background-attachment: fixed;
 	background-position: center bottom;
 	color: white;
+	@include media-breakpoint-down(sm) {
+		background-attachment: scroll;
+	}
 	.lead{
 		margin-top: -30%;
 		margin-top: -30vh;
@@ -33,6 +36,9 @@
 	background-attachment: fixed;
 	background-position: center center;
 	color: white;
+	@include media-breakpoint-down(sm) {
+		background-attachment: scroll;
+	}
 	.lead{
 		margin-top: -30%;
 		margin-top: -30vh;

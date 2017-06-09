@@ -28,6 +28,7 @@ body.home{
 	@include media-breakpoint-down(sm) {
 		background-image: url('./images/header-iphone.jpg');
 		overflow: hidden;
+		background-attachment: scroll;
 	}
 }
 header.home{
@@ -72,6 +73,7 @@ header#headerVR {
 	@include media-breakpoint-down(sm) {
 		background-size: auto 280px;
 		height: auto;
+		background-attachment: scroll;
 		.lead{
 			width: 95%;
 			margin: 2.5%;
@@ -116,7 +118,9 @@ header#headerFX {
 	border: none;
 	margin: 0;
 	background-color: black;
-	@media screen and (max-width: 720px){
+	color: white;
+	@include media-breakpoint-down(sm) {
+		background-attachment: scroll;
 		background-image: url('./images/fx/fxSM.jpg');
 		animation: none;
 		background-size: cover;
@@ -124,7 +128,6 @@ header#headerFX {
 		opacity: 1;
 		.swipe{animation: none;}
 	}
-	color: white;
 	.lead{
 		z-index: 1;
 		margin-top: -120px;
@@ -138,7 +141,8 @@ header#headerFX2 {
 	border: none;
 	margin: 0;
 	background-color: black;
-	@media screen and (max-width: 720px){
+	@include media-breakpoint-down(sm) {
+		background-attachment: scroll;
 		animation: none;
 		background-size: cover;
 		background-position: center center;
@@ -160,6 +164,9 @@ header#headerFX2 {
 	-webkit-animation: flash ease-out 6s infinite;
 	-moz-animation: flash ease-out 6s infinite;
 	animation: flash ease-out 6s infinite;
+	@include media-breakpoint-down(sm) {
+		background-attachment: scroll;
+	}
 }
 
 @-webkit-keyframes flash {
