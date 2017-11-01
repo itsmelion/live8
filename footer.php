@@ -1,13 +1,3 @@
-<?php
-/**
- * alive8 template for displaying the footer
- *
- * @package WordPress
- * @subpackage alive8
- * @since alive8 1.0
- */
-?>
-
 <footer>
 	<section class="text-center arrow down dark">
 		<img src="<?php echo get_bloginfo('template_url') ?>/images/icons/arrow.svg" alt="Swipe up"/>
@@ -41,5 +31,6 @@
 </footer>
 
 		<?php wp_footer(); ?>
+		<link href="https://fonts.googleapis.com/css?family=Heebo:100,400,900" rel="stylesheet">
 	</body>
 </html>

@@ -1,13 +1,4 @@
-<?php
-/**
- * alive8 template for displaying Archives
- *
- * @package WordPress
- * @subpackage alive8
- * @since alive8 1.0
- */
-
-get_header(); ?>
+<?php get_header(); ?>
 
 	<section class="page-content primary" role="main"><?php
 

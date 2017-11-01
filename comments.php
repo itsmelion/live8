@@ -1,14 +1,4 @@
 <?php
-/**
- * alive8 template for generating comments
- *
- * @package WordPress
- * @subpackage alive8
- * @since alive8 1.0
- */
-?>
-
-<?php
 	if ( post_password_required() ) {
 		return;
 	}
