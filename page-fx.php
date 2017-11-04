@@ -1,13 +1,5 @@
-<?php /* Template Name: Audio FX */ ?>
-<?php 
-/*
-@package WordPress
- * @subpackage alive8
- * @since alive8 1.0
- */
-?>
-<?php get_header(); ?>
-<?php
+<?php /* Template Name: Audio FX */ 
+	get_header();
 	$fields = get_fields(get_the_ID());
 	the_post();
 ?>
