@@ -5,7 +5,7 @@
 <!--[if IE 9]>         <html class="ie ie9" <?php language_attributes(); ?>> <![endif]-->
 <!--[if gt IE 9]><!--> <html <?php language_attributes(); ?>> <!--<![endif]-->
 <head>
-	<link href="//www.google-analytics.com" rel="dns-prefetch">
+	<link href="//google-analytics.com" rel="dns-prefetch">
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
 	<title>
 		<?php wp_title(''); ?>

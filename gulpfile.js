@@ -1,4 +1,4 @@
-const project = 'Planet Expat'; // Project name, used for build zip.
+const project = 'Live8'; // Project name, used for build zip.
 const appURL = 'http://alive8.dev:7888/'; // Local Development URL for BrowserSync. Change as-needed.
 const build = './alive8'; // Files that you want to package into a zip go here
 const source = './src';
@@ -7,10 +7,9 @@ const dist = './build';
 const vendors = [
   "./node_modules/jquery/dist/jquery.js",
   "./node_modules/pace-js/pace.js",
-  "./node_modules/tether/dist/js/tether.js",
-  "./node_modules/tether-drop/dist/js/drop.js",
-  // "./node_modules/tether-tooltip/dist/js/tooltip.js",
+  "./node_modules/jquery-touchswipe/jquery.touchSwipe.js",
   "./node_modules/slick-carousel/slick/slick.js",
+  "./node_modules/jquery.photoswipe/dist/jquery.photoswipe-global.js",
   // "./node_modules/photoswipe/dist/photoswipe-ui-default.js",
   // "./node_modules/gsap/TweenLite.js",
   source + '/scripts/vendors/*.js'
@@ -24,6 +23,7 @@ const buildInclude = [
   dist + '/**/*',
   '**/*.gz',
   // include specific files and folders
+  'default-skin.png',
   'screenshot.png',
   // exclude files and folders
   '!node_modules/**/*',
@@ -73,16 +73,6 @@ gulp.task('zip', () => {
 
 gulp.task('serve', () => {
   runsequence('build', () => {
-    browserSync.init({
-      proxy: appURL,
-      notify: false,
-      open: true,
-      port: 9000,
-      logLevel: "info",
-      logPrefix: project,
-      logConnections: false
-    });
-
     gulp.watch([
       source + '/**/*.html',
       dist + '/images/**/*',
@@ -94,6 +84,16 @@ gulp.task('serve', () => {
     gulp.watch(source + '/scripts/core/**/*.js', ['scripts']);
     gulp.watch(source + '/scripts/vendors/**/*.js', ['vendors']);
     gulp.watch(source + '/scripts/lazy/**/*.js', ['lazy']);
+    
+    browserSync.init({
+      proxy: appURL,
+      notify: false,
+      open: true,
+      port: 9000,
+      logLevel: "info",
+      logPrefix: project,
+      logConnections: false
+    });
   });
 });
 
@@ -136,13 +136,15 @@ gulp.task('scripts', () => {
       "presets": ["env"]
     }))
     .pipe(gulpif(argv.production, uglify()))
-    .pipe(gulp.dest(dist + '/scripts'))
+    .pipe(
+      gulpif(
+        argv.production,
+        gulp.dest(dist + '/scripts'),
+        gulp.dest('./scripts')
+      )
+    )
     .pipe(reload({
       stream: true
-    }))
-    .pipe(notify({
-      message: 'scripts complete',
-      onLast: true
     }));
 });
 
@@ -150,21 +152,29 @@ gulp.task('vendors', () => {
   return gulp.src(vendors)
     .pipe(concat('vendors.js'))
     .pipe(gulpif(argv.production, uglify()))
-    .pipe(gulp.dest(dist + '/scripts'))
+    .pipe(
+        gulpif(
+          argv.production,
+          gulp.dest(dist + '/scripts'),
+          gulp.dest('./scripts')
+        )
+      )
     .pipe(reload({
       stream: true
-    }))
-    .pipe(notify({
-      message: 'scripts complete',
-      onLast: true
-    }));;
+    }));
 });
 
 gulp.task('lazy', () => {
   return gulp.src(source + '/scripts/lazy/*.js')
     .pipe(concat('lazy.js'))
     .pipe(gulpif(argv.production, uglify()))
-    .pipe(gulp.dest(dist + '/scripts'))
+    .pipe(
+      gulpif(
+        argv.production,
+        gulp.dest(dist + '/scripts'),
+        gulp.dest('./scripts')
+      )
+    )
     .pipe(reload({
       stream: true
     }));
@@ -191,16 +201,19 @@ gulp.task('html', () => {
 
 gulp.task('images', () => {
   return gulp.src(source + '/images/**/*')
-    .pipe(newer(dist + '/images'))
-    .pipe(imageMin({
-      interlaced: true,
-      progressive: true,
-      optimizationLevel: 6,
-      svgoPlugins: [{
-        removeViewBox: true
-      }]
-    }))
-    .pipe(gulp.dest(dist + '/images'));
+    // .pipe(newer(dist + '/images'))
+    // .pipe(imageMin({
+    //   interlaced: true,
+    //   progressive: true,
+    //   optimizationLevel: 6
+    // }))
+    .pipe(
+      gulpif(
+        argv.production,
+        gulp.dest(dist + '/images'),
+        gulp.dest('./images')
+      )
+    );
 });
 
 gulp.task('gzip', () => {
@@ -212,7 +225,13 @@ gulp.task('gzip', () => {
 
 gulp.task('fonts', () => {
   return gulp.src(source + '/fonts/**/*.{eot,svg,ttf,woff,woff2}')
-    .pipe(gulp.dest(dist + '/fonts'));
+  .pipe(
+    gulpif(
+      argv.production,
+      gulp.dest(dist + '/fonts'),
+      gulp.dest('./fonts')
+    )
+  );
 });
 
 
@@ -224,7 +243,7 @@ gulp.task('clean', function () {
   return gulp.src(['**/.sass-cache', '**/.DS_Store'], {
     read: false
   })
-  del.bind(null, ['.tmp', dist])
+  del.bind(null, ['.tmp', build])
     .pipe(ignore('node_modules/**'))
 });
 

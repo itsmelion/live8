@@ -10,12 +10,13 @@
 	License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
 
-@import "vendor/normalize";
-@import "vendor/bootstrap/scss/bootstrap.scss";
-@import "vendor/slick/slick.scss";
-@import "vendor/photoSwipe/photoswipe";
-@import "vendor/photoSwipe/default-skin/default-skin";
+// @import "vendor/normalize";
 @import "base";
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+@import "vendor/slick";
+@import "vendor/pace-theme-flash";
+@import "vendor/photoswipe";
+@import "vendor/default-skin";
 @import "typography";
 @import "components";
 @import "header";
