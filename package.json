@@ -6,7 +6,7 @@
     "start": "gulp serve",
     "prod": "gulp serve --production",
     "compile": "gulp build --production && gulp gzip && gulp buildFiles",
-    "ssh": "ssh -t chrlio2@live8.com.br 'cd ~/live8.com.br/wp-content/themes/ ; bash"
+    "ssh": "ssh -t chrlio2@live8.com.br 'cd ~/live8.com.br/wp-content/themes/ ; bash'"
   },
   "dependencies": {
     "bootstrap": "^4.0.0-beta.2",

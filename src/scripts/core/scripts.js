@@ -101,44 +101,29 @@ $(function() {
 
 	$('.card-container').photoSwipe();
 
-  $(function () {
-		$('footer').css({ bottom: '-105vh' });
-		$(".arrow.up").on("click", function () {
-			$("footer").animate({bottom: '0'});
-		}
-		);
-		$(".arrow.down").on("click", function () {
-			$("footer").animate({bottom: '-105vh'});
-		}
-		);
-		$(".arrow").swipe( {
-      swipe: function (event, direction, distance, duration) {
-				if (direction === 'up') {
-          $("footer").animate(
-            {
-              bottom: '0'
-            }
-					);
-				}
-			},
-			allowPageScroll:"none"
-		});
-		
-		$("footer").swipe( {
-			swipe:function(event, direction, distance, duration) {
+	$('footer').css({ bottom: '-105vh' });
 
-				if (direction === 'down') {
-					console.log("Down");
-					$("footer").animate(
-						{
-							bottom: '-105vh'
-						}
-					);
-				}
-			
-			},
-			allowPageScroll:"none"
-		});
-	
+	$(".arrow").swipe({
+		swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
+			console.log('Swiped ' + direction);
+			if (direction == 'Up' || direction == 'Left' || direction == 'Right') {
+				$("footer").animate({bottom: '0'});
+			}
+			else if (direction == 'Down' || direction == 'Left' || direction == 'Right') {
+				console.log("Down");
+				$("footer").animate({bottom: '-105vh'});
+			}
+		},
+		allowPageScroll:"none"
 	});
+
+	$(".arrow.down").on("click", function () {
+		$("footer").animate({bottom: '-105vh'});
+	});
+	$(".arrow.up").on("click", function () {
+		$("footer").animate({bottom: '0'});
+	});
+
+	console.log('actual');
+
 });

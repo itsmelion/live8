@@ -1,4 +1,10 @@
+.home *{
+	user-select: none;
+}
 .overlay {
+	>*{
+		user-select: text;
+	}
 	position: absolute;
 	right: 0;
 	left: 0;
