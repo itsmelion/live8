@@ -1,4 +1,4 @@
-.arrow{
+.arrow {
   width: 100%;
   height: 96px;
   position: relative;
@@ -30,11 +30,15 @@
     animation: pulse ease-in-out 1.2s infinite;
     animation-direction: alternate;
   }
+
   &.light{
     background-color: rgba(white, .05);
+    color: white;
   }
+
   &.dark{
-    background-color: black, .1;
+    background-color: rgba(black, .1);
+    color: rgba(black, .6);
   }
   &.down{ height: 48px; img{transform: rotate(180deg);}}
 }

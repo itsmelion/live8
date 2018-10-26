@@ -12,7 +12,9 @@
 
 // @import "vendor/normalize";
 @import "base";
-@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+@import "~bootstrap/scss/bootstrap";
+@import "~flamework";
+
 @import "vendor/slick";
 @import "vendor/pace-theme-flash";
 @import "vendor/photoswipe";

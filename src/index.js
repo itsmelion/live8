@@ -4,9 +4,8 @@ import { render } from 'react-dom';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Navigation from './components/Navigation/Navigation';
 import Footer from './components/Footer/Footer';
-import Home from './Home';
+import Home from './components/Home/Home';
 import * as serviceWorker from './serviceWorker';
-
 
 render(
   <BrowserRouter>
