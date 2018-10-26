@@ -1,33 +1,23 @@
-**/node_modules
-**/node_modules/
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+.DS_Store*
+Thumbs.db*
 
-**/.sass-cache
-**/.sass-cache/
+# dependencies
+node_modules
 
-**/.DS_Store
-**/Thumbs.db
+# testing
+/coverage
 
-.tmp/
+# production
+/build
 
-**/bower_components/
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
 
-grunt/node_modules/
-./grunt/node_modules/
-/grunt/node_modules/
-grunt/node_modules
-./grunt/node_modules
-/grunt/node_modules
-
-grunt/.sass-cache/
-./grunt/.sass-cache/
-/grunt/.sass-cache/
-grunt/.sass-cache
-./grunt/.sass-cache
-/grunt/.sass-cache
-
-dist/
-./dist
-
-alive8/
-./alive8
-./alive8/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

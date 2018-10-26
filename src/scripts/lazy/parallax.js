@@ -1,9 +1,9 @@
-$(window).on("load", function () {
+$(window).on('load', () => {
   // Start Parallax
 
   /* detect touch */
   if ('ontouchstart' in window) {
-    document.documentElement.className = document.documentElement.className + ' touch';
+    document.documentElement.className = `${document.documentElement.className} touch`;
   }
   if (!$('html').hasClass('touch')) {
     /* background fix */
@@ -12,22 +12,22 @@ $(window).on("load", function () {
 
   /* resize background images */
   function backgroundResize() {
-    var windowH = $(window).height();
-    $('.background').each(function (i) {
-      var path = $(this);
+    const windowH = $(window).height();
+    $('.background').each(function parallax(i) {
+      const path = $(this);
       // variables
-      var contW = path.width();
-      var contH = path.height();
-      var imgW = path.attr('data-img-width');
-      var imgH = path.attr('data-img-height');
-      var ratio = imgW / imgH;
+      const contW = path.width();
+      const contH = path.height();
+      let imgW = path.attr('data-img-width');
+      let imgH = path.attr('data-img-height');
+      const ratio = imgW / imgH;
       // overflowing difference
-      var diff = parseFloat(path.attr('data-diff'));
-      diff = diff ? diff : 0;
+      let diff = parseFloat(path.attr('data-diff'));
+      diff = diff || 0;
       // remaining height to have fullscreen image only on parallax
-      var remainingH = 0;
+      let remainingH = 0;
       if (path.hasClass('parallax') && !$('html').hasClass('touch')) {
-        var maxH = contH > windowH ? contH : windowH;
+        const maxH = contH > windowH ? contH : windowH;
         remainingH = windowH - contH;
       }
       // set img values depending on cont
@@ -41,7 +41,7 @@ $(window).on("load", function () {
       //
       path.data('resized-imgW', imgW);
       path.data('resized-imgH', imgH);
-      path.css('background-size', imgW + 'px ' + imgH + 'px');
+      path.css('background-size', `${imgW}px ${imgH}px`);
     });
   }
   $(window).resize(backgroundResize);
@@ -50,41 +50,40 @@ $(window).on("load", function () {
 
   /* set parallax background-position */
   function parallaxPosition(e) {
-    var heightWindow = $(window).height();
-    var topWindow = $(window).scrollTop();
-    var bottomWindow = topWindow + heightWindow;
-    var currentWindow = (topWindow + bottomWindow) / 2;
-    $('.parallax').each(function (i) {
-      var path = $(this);
-      var height = path.height();
-      var top = path.offset().top;
-      var bottom = top + height;
+    const heightWindow = $(window).height();
+    const topWindow = $(window).scrollTop();
+    const bottomWindow = topWindow + heightWindow;
+    const currentWindow = (topWindow + bottomWindow) / 2;
+    $('.parallax').each(function displace(i) {
+      const path = $(this);
+      const height = path.height();
+      let top = path.offset().top;
+      let bottom = top + height;
       // only when in range
       if (bottomWindow > top && topWindow < bottom) {
-        var imgW = path.data('resized-imgW');
-        var imgH = path.data('resized-imgH');
+        const imgW = path.data('resized-imgW');
+        const imgH = path.data('resized-imgH');
         // min when image touch top of window
-        var min = 0;
+        const min = 0;
         // max when image touch bottom of window
-        var max = -imgH + heightWindow;
+        const max = -imgH + heightWindow;
         // overflow changes parallax
-        var overflowH = height < heightWindow ? imgH - height : imgH - heightWindow; // fix height on overflow
-        top = top - overflowH;
-        bottom = bottom + overflowH;
+        const overflowH = height < heightWindow ? imgH - height : imgH - heightWindow; // fix height on overflow
+        top -= overflowH;
+        bottom += overflowH;
         // value with linear interpolation
-        var value = min + (max - min) * (currentWindow - top) / (bottom - top);
+        const value = min + ((max - min) * (currentWindow - top)) / (bottom - top);
         // set background-position
-        var orizontalPosition = path.attr('data-oriz-pos');
-        orizontalPosition = orizontalPosition ? orizontalPosition : '50%';
-        $(this).css('background-position', orizontalPosition + ' ' + value + 'px');
+        let orizontalPosition = path.attr('data-oriz-pos');
+        orizontalPosition = orizontalPosition || '50%';
+        $(this).css('background-position', `${orizontalPosition} ${value}px`);
       }
     });
   }
   if (!$('html').hasClass('touch')) {
     $(window).resize(parallaxPosition);
-    //$(window).focus(parallaxPosition);
+    // $(window).focus(parallaxPosition);
     $(window).scroll(parallaxPosition);
     parallaxPosition();
   }
-
 });
