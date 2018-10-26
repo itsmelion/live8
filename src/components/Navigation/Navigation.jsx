@@ -1,10 +1,12 @@
 import React from 'react';
-// import './Navigation.scss';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHome } from '@fortawesome/free-solid-svg-icons';
+import './Navigation.scss';
 
 const Navigation = () => (
-  <nav class="menu">
+  <nav className="menu">
     <a title="Página inicial" href="/" className="menu-item">
-      <img src="/images/home.svg" alt="Home" />
+      <FontAwesomeIcon icon={faHome} alt="Home" />
     </a>
   </nav>
 );

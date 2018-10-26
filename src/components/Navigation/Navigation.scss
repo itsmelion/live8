@@ -1,0 +1,19 @@
+nav.menu {
+  position: fixed;
+  top: 1em;
+  right: 1em;
+  width: auto;
+  height: auto;
+  z-index: 90;
+
+  a {
+    color: white;
+    position: relative;
+    display: block;
+    border-radius: 50%;
+    background-color: rgba(black, 0.7);
+    font-size: 21px;
+    line-height: 1;
+    padding: 12px;
+  }
+}

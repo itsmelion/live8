@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <title>Live8: provided by ΛLIΛ</title>
     <meta charset="utf-8">
     <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
     <meta http-equiv="content-type" content="text/html;charset=UTF-8">
@@ -17,13 +18,52 @@
 
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
 
-    <title>Live8: provided by Alia</title>
+    <link
+      rel="preload"
+      as="style"
+      async
+      href="https://fonts.googleapis.com/css?family=Heebo:100,400,900"
+      onload="this.rel='stylesheet'"
+    />
+
+    <base href="/">
+
+    <style>
+      #loading {
+        opacity: 0;
+        transition: opacity 1s ease-out;
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #191a18;
+        z-index: 100;
+        pointer-events: none;
+      }
+
+      #loading h1 {
+        color: #b4e166;
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        text-align: center;
+        transform: translate(0, -50%);
+      }
+
+      #root:empty + #loading { opacity: 1; }
+    </style>
   </head>
   <body>
     <noscript>
       You need to enable JavaScript to run this app.
     </noscript>
-    <div id="root"></div>
+    <div id="root" flex column fill></div>
 
+    <div id="loading">
+      <h1>Loading... <br>Carregando</h1>
+    </div>
   </body>
 </html>
