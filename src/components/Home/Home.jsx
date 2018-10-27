@@ -1,6 +1,4 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
 
 import SonicButtons from 'components/SonicButtons/SonicButtons';
 import logo from 'images/logo-white.svg';
@@ -13,18 +11,6 @@ const Home = () => (
     <img src={logo} alt="Live8 Logo" width="125px" height="auto" />
 
     <SonicButtons />
-
-    <div
-      className="text-center arrow light up"
-      style={{
-        marginTop: '-96px',
-        bottom: '0',
-        position: 'absolute',
-      }}
-    >
-
-      <FontAwesomeIcon icon={faChevronUp} alt="Swipe up" />
-    </div>
 
     {
       (() => {
