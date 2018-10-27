@@ -51,13 +51,15 @@ footer {
   width: 100%;
   z-index: 100;
   height: 98vh;
-  @include media-breakpoint-up(md) {
+  @media #{$mobile} {
     height: auto;
     padding: 3em 0;
   }
+
   #footer-brand{
     text-align: center;
   }
+
   address {
     text-align: center;
     font-style: none;
@@ -66,6 +68,7 @@ footer {
     font-size: .8rem;
     p{margin: 1.5rem 0 .5rem 0;}
   }
+
   li {
     list-style: none;
   }
@@ -86,7 +89,7 @@ footer {
     display: block;
     margin: auto;
     position: relative;
-    img{ width: 100%; height: auto;}
+    img { width: 100%; height: auto;}
   }
 }
 #instagram{
@@ -113,7 +116,7 @@ a.iconic{
   margin: auto;
   margin-bottom: .5rem;
   position: relative;
-  img{
+  img {
     width: 24px;
     height: auto;
   }

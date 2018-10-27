@@ -1,13 +1,15 @@
 @import '~flamework/src/vars';
 
-body.home {
+main.Home {
   position: relative;
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: top;
+  background-image: url(./header.jpg);
 
   @media #{$mobile} {
+    background-image: url(./header-iphone.jpg);
     overflow: hidden;
     background-attachment: scroll;
   }

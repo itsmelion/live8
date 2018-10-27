@@ -10,20 +10,23 @@
 	License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
 
-// @import "vendor/normalize";
-@import "base";
-@import "~bootstrap/scss/bootstrap";
+@import "vars";
+
+// @import "~bootstrap/scss/bootstrap";
 @import "~flamework";
+@import "base";
 
 @import "vendor/slick";
 @import "vendor/pace-theme-flash";
 @import "vendor/photoswipe";
 @import "vendor/default-skin";
+
 @import "typography";
 @import "components";
 @import "header";
 @import "content";
 @import "footer";
+
 @import "pages/sound-hunter";
 @import "pages/fx";
 @import "pages/vr";

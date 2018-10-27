@@ -1,0 +1,117 @@
+@import '~flamework/src/_vars.scss';
+@import 'styles/vars.scss';
+
+#Wave {
+  svg {
+    color: #e0e0e0;
+  }
+}
+
+.wave-section {
+  max-width: 100%;
+  margin-top: 0;
+  margin-bottom: 4rem;
+  padding: 0;
+  @include transition;
+  .tab__content {
+    margin: 0;
+    padding: 0;
+  }
+  .wave-btn-container {
+    display: flex;
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    svg {
+      position: absolute;
+      height: $ratio + 0.5em;
+      @media #{$mobile} {
+        display: none;
+      }
+    }
+    .wave-bg {
+      opacity: 0;
+      @include transition;
+      &.active {
+        opacity: 1;
+      }
+    }
+    .tabs {
+      display: inline-flex;
+      position: relative;
+      width: 100%;
+      height: $ratio + 0.7em;
+      margin: 0 auto;
+      padding: 0;
+      flex-wrap: nowrap;
+      align-content: center;
+      align-items: center;
+      justify-content: center;
+      li {
+        display: flex;
+        width: $ratio;
+        height: $ratio;
+        margin: 0 0.2em;
+        border: 1px solid rgba($alien, 0.3);
+        border-radius: 50%;
+        background-color: rgba(white, 0.3);
+        box-sizing: border-box;
+        text-align: center;
+        list-style: none;
+        transition-duration: 0.2s;
+        cursor: pointer;
+        @media #{$mobile} {
+          width: auto;
+          min-width: $ratio;
+        }
+        &.active {
+          border: 1px solid transparent;
+          background-color: rgba($alien, 0.2);
+        }
+        a {
+          display: block;
+          position: relative;
+          width: 100%;
+          height: 100%;
+          color: $white7;
+          z-index: 10;
+          text-align: center;
+          @include transition;
+          > span.caption {
+            color: $black5;
+            text-align: center;
+            white-space: nowrap;
+            line-height: $ratio + 1em;
+            font-size: 0.85rem;
+            user-select: none;
+            letter-spacing: -0.025rem;
+          }
+        }
+        &:hover,
+        &:focus {
+          border: 1px solid transparent;
+          background-color: rgba($alien, 0.3);
+        }
+      }
+    }
+  }
+}
+
+.tab__content {
+  position: relative;
+  width: 100%;
+  > li {
+    display: none;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    list-style: none;
+    .content__wrapper {
+      width: 100%;
+    }
+  }
+}

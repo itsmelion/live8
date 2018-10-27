@@ -12,7 +12,7 @@
   -webkit-background-attachment: fixed;
   background-position: center bottom;
   color: white;
-  @include media-breakpoint-down(sm) {
+  @media #{$mobile} {
     background-attachment: scroll;
   }
   .lead {
@@ -31,12 +31,10 @@
   border: none;
   margin: 0;
   background-size: cover;
-  -webkit-background-size: cover;
-  -webkit-background-attachment: fixed;
   background-attachment: fixed;
   background-position: center center;
   color: white;
-  @include media-breakpoint-down(sm) {
+  @media #{$mobile} {
     background-attachment: scroll;
   }
   .lead {

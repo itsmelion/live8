@@ -1,10 +1,10 @@
 import React, { PureComponent } from 'react';
 import { Link } from 'react-router-dom';
 
-import soundhunter from './soundhunter.svg';
+import soundhunter from 'images/icons/soundhunter.svg';
 import soundfx from './soundfx.svg';
 import vr from './vr.svg';
-// import './SonicButtons.scss';
+import './SonicButtons.scss';
 
 const items = [
   {
