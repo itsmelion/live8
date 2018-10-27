@@ -5,6 +5,10 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Navigation from './components/Navigation/Navigation';
 import Footer from './components/Footer/Footer';
 import Home from './components/Home/Home';
+import SoundHunter from './components/SoundHunter/SoundHunter';
+import VR from './components/VR/VR';
+import FX from './components/FX/FX';
+
 import * as serviceWorker from './serviceWorker';
 
 render(
@@ -13,6 +17,9 @@ render(
       <Navigation />
       <Switch>
         <Route exact path="/" component={Home} />
+        <Route exact path="/soundhunter" component={SoundHunter} />
+        <Route exact path="/virtual-reality" component={VR} />
+        <Route exact path="/sound-effects" component={FX} />
       </Switch>
       <Footer />
     </>

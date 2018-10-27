@@ -16,7 +16,7 @@ const items = [
   },
   {
     icon: soundfx,
-    route: '/audio-effects',
+    route: '/sound-effects',
     text: `Locação e montagem de equipamentos profissionais de audio e efeitos visuais,
     desenvolvimento de projetos personalizados em plataforma 3D`,
     caption: 'Audio & Effects',
