@@ -2,9 +2,15 @@ import React from 'react';
 import './SoundHunter.scss';
 import soundhunter from 'images/icons/soundhunter.svg';
 import Wave from 'components/Wave/Wave';
+import Header from 'components/Header/Header';
 
 const SoundHunter = () => (
   <main id="SoundHunter">
+    <Header
+      title="SoundHunter"
+      subtitle="saidjasidjia asdasdadmasd asdas dqwd qwd fiomrgoerm"
+      classe="soundhunter-header" />
+
     <div className="tip">
       <img src={soundhunter} alt="soundwave" />
 
