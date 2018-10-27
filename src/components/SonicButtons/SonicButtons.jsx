@@ -1,22 +1,29 @@
 import React, { PureComponent } from 'react';
+import { Link } from 'react-router-dom';
 
+import soundhunter from './soundhunter.svg';
+import soundfx from './soundfx.svg';
+import vr from './vr.svg';
 // import './SonicButtons.scss';
 
 const items = [
   {
-    icon: '/images/icons/soundhunter.svg',
+    icon: soundhunter,
+    route: '/soundhunter',
     text: `Briefing e assessoria personalizada para escolha das atrações musicais,
     consultoria técnica especializada em infraestrutura para eventos`,
     caption: 'Sound Hunter',
   },
   {
-    icon: '/images/icons/soundfx.svg',
+    icon: soundfx,
+    route: '/audio-effects',
     text: `Locação e montagem de equipamentos profissionais de audio e efeitos visuais,
     desenvolvimento de projetos personalizados em plataforma 3D`,
     caption: 'Audio & Effects',
   },
   {
-    icon: '/images/icons/vr.svg',
+    icon: vr,
+    route: '/virtual-reality',
     text: `Cobertura de eventos com filmagem e edição em 360º, técnicas de realidade
     aumentada e time-lapse, entrega de box para reprodução de vídeos
     em realidade virtual`,
@@ -32,8 +39,8 @@ class SonicButtons extends PureComponent {
 
   render() {
     return (
-      <header className="home">
-        <section className="container-fluid degrade-icons">
+      <header className="home text-center">
+        <section className="degrade-icons">
           <div className="row">
             <ul className="justify-content-center">
               {items.map((item, i) => (
@@ -51,7 +58,7 @@ class SonicButtons extends PureComponent {
         {items.map((item, i) => (
           <div key={item.caption} id={`bottom-sheet${i}`} className="overlay">
             <aside
-              className="social"
+              className="contain social"
               tabIndex="-1"
               role="dialog"
               aria-labelledby="modal-label"
@@ -60,7 +67,7 @@ class SonicButtons extends PureComponent {
               <img src={item.icon} alt={item.caption} />
               <h2>{item.caption}</h2>
               <p>{item.text}</p>
-              <a href="soundhunter" className="btn btn-primary">Veja mais</a>
+              <Link to={item.route} className="btn btn-primary">Veja mais</Link>
             </aside>
 
             <a href="#close" className="btn-close" aria-hidden="true">

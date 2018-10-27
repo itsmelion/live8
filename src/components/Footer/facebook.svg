@@ -1,7 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="facebook" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+<svg version="1.1" id="facebook" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
 <style type="text/css">
 	.st0{fill:url(#gradient_1_);}
 	.st1{opacity:0.15;enable-background:new    ;}
@@ -11,22 +8,21 @@
 </style>
 <g id="base_1_">
 	<linearGradient id="gradient_1_" gradientUnits="userSpaceOnUse" x1="11.1154" y1="837.4269" x2="38.9612" y2="804.2418" gradientTransform="matrix(1 0 0 1 0 -795.88)">
-		<stop  offset="0" style="stop-color:#554FC4"/>
-		<stop  offset="0.1389" style="stop-color:#5056C3"/>
-		<stop  offset="1" style="stop-color:#3480BF"/>
+		<stop offset="0" style="stop-color:#554FC4"/>
+		<stop offset="0.1389" style="stop-color:#5056C3"/>
+		<stop offset="1" style="stop-color:#3480BF"/>
 	</linearGradient>
 	<circle id="gradient" class="st0" cx="25" cy="25" r="21.6"/>
 	<circle id="screen" class="st1" cx="25" cy="25" r="19"/>
 	<circle id="screen_1_" class="st1" cx="25" cy="25" r="16"/>
 </g>
 <g id="line">
-	
-		<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="11.0958" y1="837.4504" x2="38.954" y2="804.2504" gradientTransform="matrix(1 0 0 1 0 -795.88)">
-		<stop  offset="0" style="stop-color:#365592"/>
-		<stop  offset="0.2223" style="stop-color:#335D9A"/>
-		<stop  offset="0.5635" style="stop-color:#2A72AF"/>
-		<stop  offset="0.9793" style="stop-color:#1B95D2"/>
-		<stop  offset="1" style="stop-color:#1A97D4"/>
+  <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="11.0958" y1="837.4504" x2="38.954" y2="804.2504" gradientTransform="matrix(1 0 0 1 0 -795.88)">
+		<stop offset="0" style="stop-color:#365592"/>
+		<stop offset="0.2223" style="stop-color:#335D9A"/>
+		<stop offset="0.5635" style="stop-color:#2A72AF"/>
+		<stop offset="0.9793" style="stop-color:#1B95D2"/>
+		<stop offset="1" style="stop-color:#1A97D4"/>
 	</linearGradient>
 	<path class="st2" d="M42.4,8.3c4.1,4.3,6.7,10.2,6.7,16.7c0,13.3-10.8,24.1-24.1,24.1S0.9,38.3,0.9,25S11.7,0.9,25,0.9
 		c2.9,0,5.8,0.5,8.4,1.5"/>
