@@ -1,6 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
+import Swipeable from 'react-swipeable';
 import {
   faInstagram,
   faFacebook,
@@ -13,17 +14,17 @@ import logo from './logo.svg';
 
 const Footer = () => (
   <>
-    <div
+    <Swipeable
       className="text-center arrow light up"
       style={{
         marginTop: '-96px',
         bottom: '0',
         position: 'absolute',
       }}
-    >
+      onSwipedUp={this.swipeUp}>
 
       <FontAwesomeIcon icon={faChevronUp} alt="Swipe up" />
-    </div>
+    </Swipeable>
     <footer>
       <section className="text-center arrow down dark">
         <FontAwesomeIcon icon={faFacebook} />

@@ -1,0 +1,101 @@
+@import '~flamework/src/_vars.scss';
+
+header#headerVR {
+  height: 60vh;
+  color: #191919;
+  background-color: #fafafa;
+  background-image: url(../images/vr/vrGuy.png);
+  background-size: contain;
+  background-position: bottom right;
+  background-repeat: no-repeat;
+
+  @media #{$mobile} {
+    height: auto;
+    background-size: auto 280px;
+    background-attachment: scroll;
+    .lead {
+      width: 95%;
+      margin: 2.5%;
+      margin-top: 1.5em;
+      margin-bottom: 290px;
+      p {
+        margin-top: 1em;
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .lead {
+    width: 45%;
+    min-width: 300px;
+    max-width: 680px;
+    margin-left: 10%;
+    padding: 1rem;
+    text-align: left;
+    box-sizing: border-box;
+  }
+}
+
+header#headerVR2 {
+  height: 60vh;
+  color: #191919;
+  background-color: #fafafa;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  @media #{$mobile} {
+    .lead {
+      width: 95%;
+      margin: 2.5%;
+      margin-top: 1.5em;
+      margin-bottom: 290px;
+      p {
+        margin-top: 1em;
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .lead {
+    width: 45%;
+    min-width: 300px;
+    max-width: 680px;
+    margin-left: 10%;
+    padding: 1rem;
+    text-align: left;
+    box-sizing: border-box;
+  }
+}
+
+#videoSample{
+  .videoWrapper{
+    margin: 1em 0;
+  }
+}
+
+#box-open, #box-closed {
+  position: relative;
+  display: inline-block;
+  border: 0;
+  box-sizing: border-box;
+  height: auto;
+}
+
+#box-open{
+  width: 60%;
+  top: 0;
+  right: 0;
+  @media #{$mobile} {
+    width: 100%;
+  }
+}
+
+#box-closed{
+  width: 39%;
+  left: 0;
+  bottom: 0;
+  @media #{$mobile} {
+    width: 70%;
+    margin-left: 15%;
+  }
+}
