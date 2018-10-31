@@ -2,11 +2,7 @@ import React, { PureComponent } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
 import Swipeable from 'react-swipeable';
-import {
-  faInstagram,
-  faFacebook,
-  faWhatsapp
-} from '@fortawesome/free-brands-svg-icons';
+import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 
 import './Footer.scss';
 import facebook from './facebook.svg';
@@ -30,7 +26,7 @@ class Footer extends PureComponent {
     return (
       <>
         <Swipeable
-          className="text-center arrow light up"
+          className="text-center arrow pulse light up"
           style={{
             marginTop: '-72px',
             bottom: '0',
@@ -41,13 +37,13 @@ class Footer extends PureComponent {
         >
           <FontAwesomeIcon icon={faChevronUp} alt="Swipe up" />
         </Swipeable>
+
         <footer className={open ? 'open' : 'closed'}>
           <Swipeable
-            onSwipedUp={this.swipeUp}
+            onSwipedDown={this.swipeUp}
             onClick={this.swipeUp}
-            className="text-center arrow down dark"
+            className="text-center pulse arrow down dark"
           >
-            <FontAwesomeIcon icon={faFacebook} />
             <FontAwesomeIcon icon={faChevronUp} alt="Swipe up" />
           </Swipeable>
 
@@ -59,12 +55,10 @@ class Footer extends PureComponent {
 
               <div className="row social-links" align="center center">
                 <a id="instagram" href="//instagram.com/grupolive8">
-                  <FontAwesomeIcon icon={faInstagram} />
                   <img src={instagram} alt="Instagram" />
                 </a>
 
                 <a id="facebook" href="//facebook.com/grupolive8">
-                  <FontAwesomeIcon icon={faFacebook} />
                   <img src={facebook} alt="Facebook" />
                 </a>
               </div>
