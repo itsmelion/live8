@@ -9,6 +9,13 @@ import facebook from './facebook.svg';
 import instagram from './instagram-wave.svg';
 import logo from './logo.svg';
 
+const email = {
+  subject: encodeURI('Quero participar do Elenco!'),
+  content: encodeURI('Oi, vi o site de vocês e gostaria de saber mais!'),
+  to: 'daniel@live8.com.br',
+  cc: 'alexandre@live8.com.br'
+};
+
 class Footer extends PureComponent {
   constructor(props) {
     super(props);
@@ -27,11 +34,6 @@ class Footer extends PureComponent {
       <>
         <Swipeable
           className="text-center arrow pulse light up"
-          style={{
-            marginTop: '-72px',
-            bottom: '0',
-            position: 'absolute'
-          }}
           onClick={this.swipeUp}
           onSwipedUp={this.swipeUp}
         >
@@ -72,7 +74,9 @@ class Footer extends PureComponent {
 
                 <a
                   className="btn btn-success iconic"
-                  href="mailto:daniel@live8.com.br?cc=alexandre@live8.com.br&subject=Quero%20participar%20do%20Elenco&amp;&body=Oi%20vi%20o%20site%20de%20voces%20e%20gostaria%20de%20saber%20mais"
+                  href={`mailto:${email.to}?cc=${email.cc}&subject=${
+                    email.subject
+                  }&body=${email.content}`}
                 >
                   Escrever email
                 </a>
