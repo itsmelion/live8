@@ -1,12 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 2839 410">
   <defs>
-    <style>
-      #wave0{fill:url(#item0)}
-      #wave1{fill:url(#item1)}
-      #wave2{fill:url(#item2)}
-      #wave-none{fill:url(#item-none)}
-    </style>
-
     <linearGradient id="item-none" y1="50%" x2="100%" y2="50%">
       <stop offset="0" stop-color="currentColor" />
       <stop offset="0.5" stop-color="#A1CD3A"/>

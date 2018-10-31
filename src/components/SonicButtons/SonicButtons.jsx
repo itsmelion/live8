@@ -12,14 +12,14 @@ const items = [
     route: '/soundhunter',
     text: `Briefing e assessoria personalizada para escolha das atrações musicais,
     consultoria técnica especializada em infraestrutura para eventos`,
-    caption: 'Sound Hunter',
+    caption: 'Sound Hunter'
   },
   {
     icon: soundfx,
     route: '/sound-effects',
     text: `Locação e montagem de equipamentos profissionais de audio e efeitos visuais,
     desenvolvimento de projetos personalizados em plataforma 3D`,
-    caption: 'Audio & Effects',
+    caption: 'Audio & Effects'
   },
   {
     icon: vr,
@@ -27,8 +27,8 @@ const items = [
     text: `Cobertura de eventos com filmagem e edição em 360º, técnicas de realidade
     aumentada e time-lapse, entrega de box para reprodução de vídeos
     em realidade virtual`,
-    caption: 'Virtual Reality',
-  },
+    caption: 'Virtual Reality'
+  }
 ];
 
 class SonicButtons extends PureComponent {
@@ -45,7 +45,7 @@ class SonicButtons extends PureComponent {
             <ul className="justify-content-center">
               {items.map((item, i) => (
                 <li key={item.caption} data-id={i}>
-                  <a className="wave-btn wave-thing" href={`#bottom-sheet${i}`}>
+                  <a href={`#bottom-sheet${i}`}>
                     <img src={item.icon} alt={item.caption} />
                     <span className="caption">{item.caption}</span>
                   </a>
@@ -67,7 +67,9 @@ class SonicButtons extends PureComponent {
               <img src={item.icon} alt={item.caption} />
               <h2>{item.caption}</h2>
               <p>{item.text}</p>
-              <Link to={item.route} className="btn btn-primary">Veja mais</Link>
+              <Link to={item.route} className="btn btn-primary">
+                Veja mais
+              </Link>
             </aside>
 
             <a href="#close" className="btn-close" aria-hidden="true">

@@ -2,10 +2,13 @@
 @import 'styles/vars.scss';
 
 #Wave {
-  svg {
-    color: #e0e0e0;
-  }
+  svg { color: #ffffff; }
 }
+
+#wave0{fill:url(#item0)}
+#wave1{fill:url(#item1)}
+#wave2{fill:url(#item2)}
+#wave-none{fill:url(#item-none)}
 
 .wave-section {
   max-width: 100%;
@@ -13,10 +16,7 @@
   margin-bottom: 4rem;
   padding: 0;
   @include transition;
-  .tab__content {
-    margin: 0;
-    padding: 0;
-  }
+
   .wave-btn-container {
     display: flex;
     position: relative;
@@ -98,6 +98,11 @@
       }
     }
   }
+}
+
+.wave-btn {
+  &:hover, &:focus { box-shadow: none; outline: 0; }
+  overflow: hidden;
 }
 
 .tab__content {

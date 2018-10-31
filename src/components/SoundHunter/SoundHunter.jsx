@@ -9,7 +9,8 @@ const SoundHunter = () => (
     <Header
       title="SoundHunter"
       subtitle="saidjasidjia asdasdadmasd asdas dqwd qwd fiomrgoerm"
-      classe="soundhunter-header" />
+      classe="soundhunter-header"
+    />
 
     <div className="tip">
       <img src={soundhunter} alt="soundwave" />
@@ -18,8 +19,9 @@ const SoundHunter = () => (
         <h3 style={{ paddingRight: '90px' }}>O que é um SoundHunter?</h3>
         <p>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi,
-          laborum tempora perspiciatis adipisci ut libero iusto, provident quidem commodi,
-          alias nam nihil velit illum. Impedit illum ea corrupti perspiciatis porro.
+          laborum tempora perspiciatis adipisci ut libero iusto, provident
+          quidem commodi, alias nam nihil velit illum. Impedit illum ea corrupti
+          perspiciatis porro.
         </p>
       </article>
     </div>
@@ -32,7 +34,7 @@ const SoundHunter = () => (
       </p>
     </div>
 
-    <Wave edges="#e0e0e0" />
+    <Wave />
   </main>
 );
 
