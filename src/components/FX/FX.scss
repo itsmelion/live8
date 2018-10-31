@@ -1,3 +1,5 @@
+@import '~flamework/src/_vars.scss';
+
 .duplex {
   background-color: #fafafa;
 
@@ -19,7 +21,7 @@ header#headerFX {
   border: none;
   background-color: black;
   @media #{$mobile} {
-    background-image: url(../images/fx/fxSM.jpg);
+    background-image: url(./images/fxSM.jpg);
     background-size: cover;
     background-position: center center;
     background-attachment: scroll;
@@ -59,10 +61,10 @@ header#headerFX2 {
   opacity: 1;
   animation-delay: 0;
   @media screen and (max-width: 1360px) {
-    background-image: url(../images/fx/fxMD.jpg);
+    background-image: url(./images/fxMD.jpg);
   }
   @media screen and (min-width: 1361px) {
-    background-image: url(../images/fx/fxHD.jpg);
+    background-image: url(./images/fxHD.jpg);
   }
   @media screen and (max-width: 720px) {
     display: none;
@@ -72,10 +74,10 @@ header#headerFX2 {
   opacity: 0;
   animation-delay: 2s;
   @media screen and (max-width: 1360px) {
-    background-image: url(../images/fx/fxhue1MD.jpg);
+    background-image: url(./images/fxhue1MD.jpg);
   }
   @media screen and (min-width: 1361px) {
-    background-image: url(../images/fx/fxhue1HD.jpg);
+    background-image: url(./images/fxhue1HD.jpg);
   }
   @media screen and (max-width: 720px) {
     display: none;
@@ -86,10 +88,10 @@ header#headerFX2 {
   opacity: 0;
   animation-delay: 4s;
   @media screen and (max-width: 1360px) {
-    background-image: url(../images/fx/fxhue2MD.jpg);
+    background-image: url(./images/fxhue2MD.jpg);
   }
   @media screen and (min-width: 1361px) {
-    background-image: url(../images/fx/fxhue2HD.jpg);
+    background-image: url(./images/fxhue2HD.jpg);
   }
   @media screen and (max-width: 720px) {
     display: none;

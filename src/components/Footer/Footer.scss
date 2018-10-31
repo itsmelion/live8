@@ -1,46 +1,50 @@
+@import '~flamework/src/_vars.scss';
+
 .arrow {
   width: 100%;
-  height: 96px;
+  height: 72px;
   position: relative;
   user-select: none;
-  &:before{
-      // pointer-events: visible;
-      user-select: none;
-      // display: block;
-      // width: auto;
-      width: 100%;
-      // margin: auto;
-      content: 'arraste ou clique';
-      position: absolute;
-      top: 29px;
-      font-size: .8rem;
-      line-height: 1;
-      color: #888888;
-      left: 0;
-      text-align: center;
-      animation: pulse ease-in-out 1.2s infinite;
-      animation-direction: alternate;
-    }
-  img{
+
+  &:before {
+    user-select: none;
+    width: 100%;
+    content: 'arraste ou clique';
+    position: absolute;
+    top: 2rem;
+    font-size: 0.8rem;
+    line-height: 1;
+    color: #888888;
+    left: 0;
+    text-align: center;
+    animation: pulse ease-in-out 1.2s infinite;
+    animation-direction: alternate;
+  }
+
+  img {
     margin-top: 3px;
     user-select: none;
-    // pointer-events: visible;
     width: 24px;
     height: auto;
     animation: pulse ease-in-out 1.2s infinite;
     animation-direction: alternate;
   }
 
-  &.light{
-    background-color: rgba(white, .05);
+  &.light {
+    background-color: rgba(white, 0.05);
     color: white;
   }
 
-  &.dark{
-    background-color: rgba(black, .1);
-    color: rgba(black, .6);
+  &.dark {
+    background-color: rgba(black, 0.1);
+    color: rgba(black, 0.6);
   }
-  &.down{ height: 48px; img{transform: rotate(180deg);}}
+  &.down {
+    height: 48px;
+    img {
+      transform: rotate(180deg);
+    }
+  }
 }
 
 footer {
@@ -56,7 +60,7 @@ footer {
     padding: 3em 0;
   }
 
-  #footer-brand{
+  #footer-brand {
     text-align: center;
   }
 
@@ -65,15 +69,17 @@ footer {
     font-style: none;
     font-style: normal;
     font-weight: 400;
-    font-size: .8rem;
-    p{margin: 1.5rem 0 .5rem 0;}
+    font-size: 0.8rem;
+    p {
+      margin: 1.5rem 0 0.5rem 0;
+    }
   }
 
   li {
     list-style: none;
   }
 }
-.social-links{
+.social-links {
   position: relative;
   padding: 0;
   margin: 0 auto;
@@ -85,23 +91,26 @@ footer {
   align-content: center;
   align-items: flex-end;
   justify-content: flex-end;
-  >a{
+  > a {
     display: block;
     margin: auto;
     position: relative;
-    img { width: 100%; height: auto;}
+    img {
+      width: 100%;
+      height: auto;
+    }
   }
 }
-#instagram{
+#instagram {
   width: 58%;
 }
-#facebook{
+#facebook {
   margin-left: -18%;
   margin-top: 38%;
   width: 23%;
 }
 #alia-footer {
-  padding: .5rem 3rem;
+  padding: 0.5rem 3rem;
   background-color: #181818;
   color: #333333;
   img {
@@ -111,10 +120,10 @@ footer {
   }
 }
 
-a.iconic{
+a.iconic {
   display: block;
   margin: auto;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
   position: relative;
   img {
     width: 24px;
