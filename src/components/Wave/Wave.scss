@@ -22,7 +22,7 @@
     justify-content: center;
 
     &.0 {
-      #wave-none.wave-bg { opacity: 1 !important; }
+      #wave-none.wave-bg { opacity: 1; }
     }
 
     > svg {
