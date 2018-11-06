@@ -41,7 +41,7 @@ class Footer extends PureComponent {
           <p>Clique ou arraste</p>
         </Swipeable>
 
-        <section className="row footer-content" align="around center">
+        <section className="footer-content">
           <Swipeable
             onSwipedDown={this.swipeUp}
             onClick={this.swipeUp}
@@ -51,44 +51,53 @@ class Footer extends PureComponent {
             <p>Clique ou arraste</p>
           </Swipeable>
 
-          <div id="footer-brand">
-            <img src={logo} width="80px" height="auto" alt="logo live8" />
+          <div contain="" row="" align="around center">
+            <div id="footer-brand">
+              <img src={logo} width="80px" height="auto" alt="logo live8" />
+            </div>
+
+            <div className="row social-links" align="center center">
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                id="instagram"
+                href="//instagram.com/grupolive8"
+              >
+                <img src={instagram} alt="Instagram" />
+              </a>
+
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                id="facebook"
+                href="//facebook.com/grupolive8"
+              >
+                <img src={facebook} alt="Facebook" />
+              </a>
+            </div>
+
+            <address>
+              <p className="card-text">
+                Belo Horizonte - Minas Gerais
+                <br />
+                <a href="tel:+5531995810804">(31) 9 9581-0804</a>
+              </p>
+
+              <a
+                className="iconic"
+                href={`mailto:${email.to}?cc=${email.cc}&subject=${
+                  email.subject
+                }&body=${email.content}`}
+              >
+                Escrever email
+              </a>
+
+              <a className="iconic" href="tel:+5531995810804">
+                <FontAwesomeIcon icon={faWhatsapp} alt="WhatsApp" />
+                Adicionar aos contatos
+              </a>
+            </address>
           </div>
-
-          <div className="row social-links" align="center center">
-            <a id="instagram" href="//instagram.com/grupolive8">
-              <img src={instagram} alt="Instagram" />
-            </a>
-
-            <a id="facebook" href="//facebook.com/grupolive8">
-              <img src={facebook} alt="Facebook" />
-            </a>
-          </div>
-
-          <address>
-            <p className="card-text">
-              Belo Horizonte/MG
-              <br />
-              telefone: (31) 9 9581-0804
-            </p>
-
-            <a
-              className="btn btn-success iconic"
-              href={`mailto:${email.to}?cc=${email.cc}&subject=${
-                email.subject
-              }&body=${email.content}`}
-            >
-              Escrever email
-            </a>
-
-            <a
-              className="btn btn-outline-success hidden-md-up iconic"
-              href="tel:+5531995810804"
-            >
-              <FontAwesomeIcon icon={faWhatsapp} alt="WhatsApp" />
-              Adicionar aos contatos
-            </a>
-          </address>
         </section>
       </footer>
     );
