@@ -10,13 +10,13 @@ class Wave extends PureComponent {
   constructor(props) {
     super(props);
     this.state = {
-      selectedItem: 0
+      selectedItem: 0,
     };
   }
 
   showDetails(i) {
     this.setState({
-      selectedItem: i + 1
+      selectedItem: i + 1,
     });
   }
 

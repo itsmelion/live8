@@ -18,10 +18,10 @@
   "rules": {
     "comma-dangle": ["warn"],
     "prettier/prettier": [
-      "error",
+      "warn",
       {
         "singleQuote": true,
-        "trailingComma": "es5"
+        "trailingComma": "all"
       }
     ],
     "react/jsx-filename-extension": 0,
