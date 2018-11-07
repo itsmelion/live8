@@ -1,14 +1,16 @@
 import React from 'react';
 import './SoundHunter.scss';
+// eslint-disable-next-line import/no-unresolved
 import soundhunter from 'images/icons/soundhunter.svg';
-import Wave from 'components/Wave/Wave';
-import Header from 'components/Header/Header';
+import Wave from '../Wave/Wave';
+import Header from '../Header/Header';
+import AppleCards from '../AppleCards/AppleCards';
 
 const SoundHunter = () => (
   <main id="SoundHunter">
     <Header
-      title="SoundHunter"
-      subtitle="saidjasidjia asdasdadmasd asdas dqwd qwd fiomrgoerm"
+      title="Sound Hunter"
+      subtitle="Lorem, ipsum dolor sit amet consectetur adipisicing elit."
       classe="soundhunter-header"
     />
 
@@ -26,7 +28,7 @@ const SoundHunter = () => (
       </article>
     </div>
 
-    <div className="text-center" style={{ marginTop: '3em' }}>
+    <div contain="" className="text-center" style={{ marginTop: '3em' }}>
       <h1>Como Funciona?</h1>
 
       <p style={{ margin: '1rem .5rem' }}>
@@ -35,6 +37,10 @@ const SoundHunter = () => (
     </div>
 
     <Wave />
+
+    <div contain="">
+      <AppleCards />
+    </div>
   </main>
 );
 

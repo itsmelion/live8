@@ -1,8 +1,8 @@
 import React, { PureComponent } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
-import Swipeable from 'react-swipeable';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+import Swipeable from 'react-swipeable';
 import './Footer.scss';
 import facebook from './facebook.svg';
 import instagram from './instagram-wave.svg';
@@ -12,14 +12,14 @@ const email = {
   subject: encodeURI('Quero participar do Elenco!'),
   content: encodeURI('Oi, vi o site de vocês e gostaria de saber mais!'),
   to: 'daniel@live8.com.br',
-  cc: 'alexandre@live8.com.br'
+  cc: 'alexandre@live8.com.br',
 };
 
 class Footer extends PureComponent {
   constructor(props) {
     super(props);
     this.state = {
-      open: false
+      open: false,
     };
   }
 
