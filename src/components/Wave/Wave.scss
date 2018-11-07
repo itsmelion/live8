@@ -1,72 +1,72 @@
 @import '~flamework/src/_vars.scss';
 @import 'styles/vars.scss';
 
-#wave0{fill: url(#item0);}
-#wave1{fill: url(#item1);}
-#wave2{fill: url(#item2);}
-#wave-none{fill: url(#item-none);}
+#wave-none{ fill: url(#item-none); }
+#wave0{ fill: url(#item0); }
+#wave1{ fill: url(#item1); }
+#wave2{ fill: url(#item2); }
 
 .wave-bg {
-  opacity: 0;
+  fill-opacity: 0;
   @include transition;
 }
 
-.wave-section {
-  .wave-btn-container {
-    display: flex;
+.wave-btn-container {
+  display: flex;
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+
+  &.none #wave-none { fill-opacity: 1; }
+  &.one #wave0 { fill-opacity: 1; }
+  &.two #wave1 { fill-opacity: 1; }
+  &.three #wave2 { fill-opacity: 1; }
+
+  > svg {
+    position: absolute;
+    height: $ratio + 0.5em;
+    color: #ffffff;
+
+    @media #{$mobile} {
+      display: none;
+    }
+  }
+
+  .tabs {
+    display: inline-flex;
     position: relative;
-    max-width: 100%;
-    overflow: hidden;
+    width: 100%;
+    height: $ratio + 2em;
+    margin: 0 auto;
+    padding: 0;
+    flex-wrap: nowrap;
     align-content: center;
     align-items: center;
     justify-content: center;
 
-    &.0 {
-      #wave-none.wave-bg { opacity: 1; }
-    }
-
-    > svg {
-      position: absolute;
-      height: $ratio + 0.5em;
-      color: #ffffff;
-
+    button {
+      display: flex;
+      width: $ratio;
+      height: $ratio;
+      margin: 0;
+      color: rgba($alien, 0.55);
+      border: 1px solid rgba($alien, 0.15);
+      border-radius: 50%;
+      text-align: center;
+      list-style: none;
+      transition-duration: 0.2s;
+      cursor: pointer;
       @media #{$mobile} {
-        display: none;
+        width: auto;
+        min-width: $ratio;
       }
-    }
 
-    .tabs {
-      display: inline-flex;
-      position: relative;
-      width: 100%;
-      height: $ratio + 0.7em;
-      margin: 0 auto;
-      padding: 0;
-      flex-wrap: nowrap;
-      align-content: center;
-      align-items: center;
-      justify-content: center;
-      button {
-        display: flex;
-        width: $ratio;
-        height: $ratio;
-        margin: 0;
-        color: rgba($alien, 0.55);
-        border: 1px solid rgba($alien, 0.3);
-        border-radius: 50%;
-        text-align: center;
-        list-style: none;
-        transition-duration: 0.2s;
-        cursor: pointer;
-        @media #{$mobile} {
-          width: auto;
-          min-width: $ratio;
-        }
-
-        &.true {
-          color: rgba($alien, 0.8);
-          background-color: rgba($alien, 0.15);
-        }
+      &.true {
+        color: rgba($alien, 0.8);
+        background-color: rgba($alien, 0.15);
       }
     }
   }

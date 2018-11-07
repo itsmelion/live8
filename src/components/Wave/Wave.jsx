@@ -9,6 +9,7 @@ const etapas = ['Sample Step 1', 'Sample Step 2', 'Sample Step 3'];
 class Wave extends PureComponent {
   constructor(props) {
     super(props);
+    this.classes = ['none', 'one', 'two', 'three'];
     this.state = {
       selectedItem: 0,
     };
@@ -25,7 +26,7 @@ class Wave extends PureComponent {
 
     return (
       <section id="Wave" className="wave-section">
-        <div className={`wave-btn-container ${selectedItem}`}>
+        <div className={`wave-btn-container ${this.classes[selectedItem]}`}>
           <WaveSVG />
 
           <ul className="tabs">
