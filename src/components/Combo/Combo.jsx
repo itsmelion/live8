@@ -17,7 +17,7 @@ const Combo = React.memo(() => (
         <span flex="">Sound Hunter</span>
       </Link>
 
-      <Link to="/audio-effects" row="" align="start center">
+      <Link to="/sound-effects" row="" align="start center">
         <span className="plus">
           <FontAwesomeIcon icon={faPlus} />
         </span>
