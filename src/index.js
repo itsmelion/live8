@@ -1,5 +1,6 @@
 import './styles/main.scss';
 import React from 'react';
+import Pace from 'pace-js-amd-fix';
 import { render } from 'react-dom';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Navigation from './components/Navigation/Navigation';
@@ -25,9 +26,10 @@ render(
     </>
   </BrowserRouter>,
 
-  document.getElementById('root')
+  document.getElementById('root'),
 );
 
+Pace.start();
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: http://bit.ly/CRA-PWA
