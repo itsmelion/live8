@@ -5,6 +5,7 @@ import soundhunter from 'images/icons/soundhunter.svg';
 import Wave from '../Wave/Wave';
 import Header from '../Header/Header';
 import AppleCards from '../AppleCards/AppleCards';
+import Combo from '../Combo/Combo';
 
 const SoundHunter = () => (
   <main id="SoundHunter">
@@ -40,6 +41,14 @@ const SoundHunter = () => (
 
     <div contain="">
       <AppleCards />
+
+      <div className="row mv2" align="center">
+        <a className="button btn btn-primary center mv2" href="#joinCast">
+          Eu tenho uma banda
+        </a>
+
+        <Combo />
+      </div>
     </div>
   </main>
 );

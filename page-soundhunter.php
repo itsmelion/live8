@@ -1,7 +1,3 @@
-<a class="btn btn-primary btn-block" href="#joinCast">
-  Eu tenho uma banda
-</a>
-
 <?php include( locate_template( 'partials/combo.php', false, false ) ); ?>
 
 <div id="joinCast" class="overlay">

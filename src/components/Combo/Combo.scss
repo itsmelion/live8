@@ -1,0 +1,82 @@
+@import 'styles/vars.scss';
+
+.intercall {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  padding: 1em;
+  border-radius: $radius;
+  @include shadow;
+
+  // Logo image
+  .liveCombo {
+    height: auto;
+    max-width: 240px;
+    margin-bottom: 3em;
+    margin-top: .5em;
+    text-align: center;
+  }
+
+  .text-combo {
+    margin-top: 3em;
+    margin-bottom: 2em;
+    color: $black5;
+  }
+
+  > a {
+    position: relative;
+    width: 100%;
+    max-width: 325px;
+    margin: 0.5em 0;
+    color: $black8;
+    border: 0.3em solid rgba(black, 0.05);
+    border-radius: 4em;
+    font-family: 'walkway', sans-serif;
+    font-weight: bold;
+    @include transition;
+    text-align: center;
+
+    .plus {
+      width: 3em;
+      height: 3em;
+      color: white;
+      // border: 0.3em solid rgba(black, 0.07);
+      border-radius: 50%;
+      line-height: 3em;
+      text-align: center;
+      box-sizing: content-box;
+    }
+    &:first-of-type {
+      .plus {
+        color: $hunter;
+      }
+    }
+    &:nth-of-type(2) {
+      .plus {
+        color: lighten($fx, 10%);
+      }
+    }
+    &:nth-of-type(3) {
+      .plus {
+        color: $vr;
+      }
+    }
+    &:hover,
+    &:focus {
+      color: white;
+      border: 0.3em solid rgba(black, 0.05);
+      .plus {
+        border-color: transparent;
+        color: white;
+      }
+      &:first-of-type {
+        background-color: $hunter;
+      }
+      &:nth-of-type(2) {
+        background-color: lighten($fx, 10%);
+      }
+      &:nth-of-type(3) {
+        background-color: $vr;
+      }
+    }
+  }
+}
