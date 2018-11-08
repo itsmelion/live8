@@ -89,7 +89,7 @@ class SoundHunter extends PureComponent {
           <div className="row mv2" align="center">
             <button
               type="button"
-              className="button btn btn-primary center mv2"
+              className="button btn btn-primary center mv10"
               onClick={this.handleOpenModal}
             >
               Eu tenho uma banda

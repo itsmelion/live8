@@ -2,6 +2,7 @@ import React from 'react';
 import './FX.scss';
 import jokey from './images/jokey.png';
 import Gallery from '../Gallery/Gallery';
+import Combo from '../Combo/Combo';
 
 // FX = SoundEffects
 const FX = () => (
@@ -38,12 +39,14 @@ const FX = () => (
       </article>
     </section>
 
-    <section className="center mv2">
+    <section className="center mv10">
       <h2>Galeria</h2>
       <p>Veja abaixo nossas fotos</p>
 
       <Gallery />
     </section>
+
+    <Combo />
   </>
 );
 
