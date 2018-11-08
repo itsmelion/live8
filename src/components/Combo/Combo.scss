@@ -32,7 +32,7 @@
     border-radius: 4em;
     font-family: 'walkway', sans-serif;
     font-weight: bold;
-    @include transition;
+    transition: .15s;
     text-align: center;
 
     .plus {
@@ -63,7 +63,7 @@
     &:hover,
     &:focus {
       color: white;
-      border: 0.3em solid rgba(black, 0.05);
+      border: 0.3em solid rgba(black, 0.1);
       .plus {
         border-color: transparent;
         color: white;
