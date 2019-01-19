@@ -1,49 +1,43 @@
 {
-  "name": "alive8",
+  "name": "live8",
   "version": "2.0.0",
   "description": "theme for live8",
   "scripts": {
     "up": "npm upgrade && npm prune && npm dedupe",
-    "precommit": "lint-staged",
-    "push": "rsync -avz ./build/ lion@alia.ml:/home/lion/sites/live8/ --progress --delete",
-    "deploy": "npm run build && npm run push",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.8",
-    "@fortawesome/free-brands-svg-icons": "^5.5.0",
-    "@fortawesome/free-solid-svg-icons": "^5.5.0",
-    "@fortawesome/react-fontawesome": "^0.1.3",
-    "flamework": "^3.0.10",
+    "@fortawesome/fontawesome-svg-core": "^1.2.12",
+    "@fortawesome/free-brands-svg-icons": "^5.6.3",
+    "@fortawesome/free-solid-svg-icons": "^5.6.3",
+    "@fortawesome/react-fontawesome": "^0.1.4",
+    "flamework": "^3.1.0",
     "pace-js-amd-fix": "^1.0.5",
-    "react": "^16.6.1",
-    "react-dom": "^16.6.1",
-    "react-modal": "^3.6.1",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "react-modal": "^3.8.1",
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
-    "react-scripts": "^2.1.1",
+    "react-scripts": "^2.1.3",
     "react-slick": "^0.23.2",
-    "react-swipeable": "^4.3.0"
+    "react-swipeable": "^4.3.1"
   },
   "devDependencies": {
-    "node-sass": "^4.10.0"
+    "node-sass": "^4.11.0"
   },
   "optionalDependencies": {
     "eslint": "^5",
-    "eslint-plugin-prettier": "^3.0.0",
+    "eslint-plugin-prettier": "^3.0.1",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "^6.1.2",
-    "eslint-plugin-react": "^7.11.1",
-    "stylelint": "^9.7.1",
+    "eslint-plugin-react": "^7.12.4",
+    "stylelint": "^9.10.1",
     "stylelint-config-recommended-scss": "^3.2.0",
-    "stylelint-scss": "^3.4.0",
-    "husky": "^1.1.3",
-    "lint-staged": "^8.0.4",
-    "prettier": "^1.15.1"
+    "stylelint-scss": "^3.5.1"
   },
   "main": "src/index.js",
   "private": true,
@@ -53,17 +47,11 @@
     "not ie <= 11",
     "not op_mini all"
   ],
-  "lint-staged": {
-    "src/**/*.{js,jsx,json,css}": [
-      "prettier --single-quote --trailing-comma all --write",
-      "git add"
-    ]
-  },
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com:itsmelion/live8.git"
   },
-  "author": "Christhopher Lion",
+  "author": "Christhopher Lion <christhopherleao@icloud.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/itsmelion/live8/issues"
