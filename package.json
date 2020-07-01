@@ -29,7 +29,7 @@
     "node-sass": "4.13.1"
   },
   "optionalDependencies": {
-    "eslint": "^6.0.0",
+    "eslint": "^7.0.0",
     "eslint-plugin-prettier": "^3.0.1",
     "eslint-config-airbnb": "^18.0.0",
     "eslint-plugin-import": "^2.14.0",
