@@ -2,6 +2,7 @@
   "name": "live8",
   "version": "2.0.0",
   "description": "theme for live8",
+  "main": "src/index.js",
   "scripts": {
     "up": "npm upgrade && npm prune && npm dedupe",
     "start": "react-scripts start",
@@ -14,7 +15,7 @@
     "@fortawesome/free-brands-svg-icons": "5.15.1",
     "@fortawesome/free-solid-svg-icons": "5.15.1",
     "@fortawesome/react-fontawesome": "0.1.11",
-    "flamework": "3.1.6",
+    "flamework": "4.2.0",
     "pace-js-amd-fix": "1.0.5",
     "react": "17.0.0",
     "react-dom": "17.0.0",
@@ -23,34 +24,35 @@
     "react-router-dom": "5.2.0",
     "react-scripts": "3.4.4",
     "react-slick": "0.27.12",
-    "react-swipeable": "4.3.2"
+    "react-swipeable": "5.5.1"
   },
   "devDependencies": {
-    "node-sass": "4.14.1"
-  },
-  "optionalDependencies": {
     "eslint": "6.8.0",
     "eslint-plugin-prettier": "3.1.4",
     "eslint-config-airbnb": "18.2.0",
     "eslint-plugin-import": "2.22.1",
     "eslint-plugin-jsx-a11y": "6.3.1",
     "eslint-plugin-react": "7.21.5",
+    "node-sass": "4.14.1"
+  },
+  "optionalDependencies": {
     "stylelint": "13.7.2",
     "stylelint-config-recommended-scss": "4.2.0",
     "stylelint-scss": "3.18.0"
   },
-  "main": "src/index.js",
   "private": true,
   "browserslist": [
-    ">0.2%",
+    ">0.3%",
+    "unreleased versions",
+    "last 2 versions",
+    "not Chrome <= 60",
     "not dead",
     "not ie <= 11",
-    "not op_mini all"
+    "not op_mini all",
+    "not kaios <= 99",
+    "not Baidu <= 99"
   ],
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com:itsmelion/live8.git"
-  },
+  "repository": "https://github.com/itsmelion/live8.git",
   "author": "Christhopher Lion <christhopherleao@icloud.com>",
   "license": "MIT",
   "bugs": {
