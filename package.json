@@ -14,7 +14,7 @@
     "@fortawesome/fontawesome-svg-core": "1.2.32",
     "@fortawesome/free-brands-svg-icons": "5.15.1",
     "@fortawesome/free-solid-svg-icons": "5.15.1",
-    "@fortawesome/react-fontawesome": "0.1.11",
+    "@fortawesome/react-fontawesome": "0.1.12",
     "flamework": "4.2.0",
     "pace-js-amd-fix": "1.0.5",
     "react": "17.0.1",
