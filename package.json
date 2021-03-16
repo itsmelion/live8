@@ -11,9 +11,9 @@
     "eject": "react-scripts eject"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "1.2.34",
-    "@fortawesome/free-brands-svg-icons": "5.15.2",
-    "@fortawesome/free-solid-svg-icons": "5.15.2",
+    "@fortawesome/fontawesome-svg-core": "1.2.35",
+    "@fortawesome/free-brands-svg-icons": "5.15.3",
+    "@fortawesome/free-solid-svg-icons": "5.15.3",
     "@fortawesome/react-fontawesome": "0.1.14",
     "flamework": "4.2.1",
     "pace-js-amd-fix": "1.0.5",
