@@ -37,7 +37,7 @@
   },
   "optionalDependencies": {
     "stylelint": "13.13.1",
-    "stylelint-config-recommended-scss": "4.2.0",
+    "stylelint-config-recommended-scss": "4.3.0",
     "stylelint-scss": "3.19.0"
   },
   "private": true,
